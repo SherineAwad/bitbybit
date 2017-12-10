@@ -4,7 +4,7 @@
 
 	wget ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh37_latest/refseq_identifiers/GRCh37_latest_genomic.gff.gz	
 
-2. Use txdb to create tx2gene :: 
+2. Use txdb to create tx2gene:: 
 
 	txdb <-makeTxDbFromGFF("GRCh37_latest_genomic.gff.gz")
 	k <- keys(txdb, keytype = "GENEID")
