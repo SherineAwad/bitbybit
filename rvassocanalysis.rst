@@ -10,7 +10,9 @@ Rare variants association analysis has lots of categories, we will summarize her
 
 .. ::
 
+
     rvtest --inVcf samples.vcf.gz --pheno samples.ped --freqUpper 0.01 --out cmc --geneFile refFlat_hg19.txt.gz --burden cmc
+
 
 In the above example, we grouped the variants with MAF less than 0.01 per gene,so variants with MAF < 0.01 in each gene are grouped together for the analysis.
 
