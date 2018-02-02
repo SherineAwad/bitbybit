@@ -1,4 +1,6 @@
-# Random operations on VCF file 
+Random operations on VCF file
+-----------------------------
+
 
 Megre vcf files:: 
 
