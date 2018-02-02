@@ -18,4 +18,11 @@ Split vcf grouped samples into one sample per vcf:
         vcf-subset --exclude-ref -c $sample grouped.vcf > "${sample}.vcf"
         done
 
+
+
+Split vcf group samples per chromosome: 
+
+    bgzip -c allsamples.vcf > allsamples.vcf.gz
+    tabix -p vcf allsamples.vcf.gz
+    tabix -h allsamples.vcf.gz chr1 > allsamples_chr1.vcf
  
