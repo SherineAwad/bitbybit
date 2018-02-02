@@ -1,4 +1,4 @@
-##Random operations on VCF file 
+# Random operations on VCF file 
 
 Megre vcf files:: 
 
@@ -20,7 +20,7 @@ Split vcf grouped samples into one sample per vcf::
 
 
 
-Split vcf group samples per chromosome:: 
+Split vcf grouped samples per chromosome:: 
 
     bgzip -c allsamples.vcf > allsamples.vcf.gz
     tabix -p vcf allsamples.vcf.gz
