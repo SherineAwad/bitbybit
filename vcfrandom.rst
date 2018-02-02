@@ -1,6 +1,6 @@
 ##Random operations on VCF file 
 
-Megre vcf files: 
+Megre vcf files:: 
 
     bgzip -c file1.vcf.vcf > file1.vcf.gz
     bgzip -c file1.vcf.vcf > file1.vcf.gz
@@ -11,7 +11,7 @@ Megre vcf files:
     vcf-merge file1.vcf.gz file2.vcf.gz file3.vcf.gz > merged.vcf
 
 
-Split vcf grouped samples into one sample per vcf:
+Split vcf grouped samples into one sample per vcf::
 
     for sample in `bcftools query -l grouped.vcf`
         do
@@ -20,7 +20,7 @@ Split vcf grouped samples into one sample per vcf:
 
 
 
-Split vcf group samples per chromosome: 
+Split vcf group samples per chromosome:: 
 
     bgzip -c allsamples.vcf > allsamples.vcf.gz
     tabix -p vcf allsamples.vcf.gz
