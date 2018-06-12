@@ -27,4 +27,7 @@ Split vcf grouped samples per chromosome::
     bgzip -c allsamples.vcf > allsamples.vcf.gz
     tabix -p vcf allsamples.vcf.gz
     tabix -h allsamples.vcf.gz chr1 > allsamples_chr1.vcf
- 
+
+Sort:: 
+   
+    vcf-sort myvcf.vcf > new.vcf 

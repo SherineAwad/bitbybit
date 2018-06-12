@@ -16,7 +16,7 @@ Convert from cgatools .tsv to Annovar format to further annotate with Annovar::
 
     ${ANNOVAR}/convert2annovar.pl -format cg -out patientX.annovar.input  var-GSPatientX-ASM.tsv
 
-Now, we can use patient.annovar.input in Annovar:: 
+Now, we can use patientX.annovar.input in Annovar:: 
 
      ${ANNOVAR}/table_annovar.pl patientX.annovar.input  ${ANNOVAR}/humandb/ -buildver hg19 -out patientX -remove -protocol refGene,cytoBand,gnomad_exome,exac03,avsnp147,\
         dbnsfp30a,clinvar_20170130,mitimpact2,revel -operation g,f,f,f,f,f,f,f,f  -nastring . -csvout -polish -xref ${ANNOVAR}/example/gene_xref.txt 
