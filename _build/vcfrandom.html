@@ -25,7 +25,9 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Long nonCoding RNA Prediction" href="lncRNA.html" />
+    <link rel="prev" title="Next Generation Sequencing Essentials Operations" href="NGS.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -34,11 +36,23 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="lncRNA.html" title="Long nonCoding RNA Prediction"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NGS.html" title="Next Generation Sequencing Essentials Operations"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="NGS.html"
+                        title="previous chapter">Next Generation Sequencing Essentials Operations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lncRNA.html"
+                        title="next chapter">Long nonCoding RNA Prediction</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -90,8 +104,12 @@
 <span class="n">tabix</span> <span class="o">-</span><span class="n">h</span> <span class="n">allsamples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="n">chr1</span> <span class="o">&gt;</span> <span class="n">allsamples_chr1</span><span class="o">.</span><span class="n">vcf</span>
 </pre></div>
 </div>
-<p>Sort:</p>
+<p>From vcftools, we use vcf-sort sort:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vcf</span><span class="o">-</span><span class="n">sort</span> <span class="n">myvcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">new</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
+<p>From vcftools we filter a vcf for variants that <cite>PASS</cite> caller:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vcftools</span> <span class="o">--</span><span class="n">gzvcf</span> <span class="n">myvcf</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">remove</span><span class="o">-</span><span class="n">filtered</span><span class="o">-</span><span class="nb">all</span> <span class="o">--</span><span class="n">recode</span> <span class="o">--</span><span class="n">out</span> <span class="n">myvcf</span><span class="o">.</span><span class="k">pass</span>
 </pre></div>
 </div>
 </div>
@@ -108,6 +126,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="lncRNA.html" title="Long nonCoding RNA Prediction"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NGS.html" title="Next Generation Sequencing Essentials Operations"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
       </ul>
     </div>

@@ -18,6 +18,7 @@ Welcome to BitByBit's documentation!
    NGS.rst 
    vcfrandom.rst 
    lncRNA.rst 
+   somatics.rst  
 
 Indices and tables
 ==================

@@ -30,6 +30,11 @@ Split vcf grouped samples per chromosome::
     tabix -p vcf allsamples.vcf.gz
     tabix -h allsamples.vcf.gz chr1 > allsamples_chr1.vcf
 
-Sort:: 
+From vcftools, we use vcf-sort sort:: 
    
-    vcf-sort myvcf.vcf > new.vcf 
+    vcf-sort myvcf.vcf > new.vcf
+
+
+From vcftools we filter a vcf for variants that `PASS` caller:: 
+
+   vcftools --gzvcf myvcf.vcf.gz --remove-filtered-all --recode --out myvcf.pass 
