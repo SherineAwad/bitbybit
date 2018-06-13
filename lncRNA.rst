@@ -10,6 +10,6 @@ Install lncScore::
 We use MyTranscripts.fa which contains our transcript in fasta format ::
 
     python lncScore.py -f MyTranscripts.fa -g ${GTF}/genes.gtf \
-    -o ourlncRNA.results -p 1 -x ${LNCSCORE}/dat/Human_Hexamer.tsv \
-    -t ${LNCSCORE}/dat/Human_training.dat 
+    -o ourlncRNA.results -p 1 -x dat/Human_Hexamer.tsv \
+    -t dat/Human_training.dat 
 
