@@ -67,3 +67,12 @@ Assuming post recabliration is better than before recabliration, we create our b
   -BQSR sample.post_recal_data.table -o sample.bam  
 
 
+
+if you are interested in variant calling, then let use haplotype caller::
+
+  java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R hg38.fasta -I sample.bam \
+  -dontUseSoftClippedBases -stand_call_conf 20.0 -o sample.vcf 
+
+Or go to the somatic mutations tutorial for further analysis and detection of somatic mutations.
+
+  :ref:`somatics`  

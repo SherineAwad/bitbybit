@@ -132,6 +132,14 @@ VALIDATION_STRINGENCY=SILENT M=output.metrics
 <span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span>
 </pre></div>
 </div>
+<p>if you are interested in variant calling, then let use haplotype caller:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">HaplotypeCaller</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">dontUseSoftClippedBases</span> <span class="o">-</span><span class="n">stand_call_conf</span> <span class="mf">20.0</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
+<p>Or go to the somatic mutations tutorial for further analysis and detection of somatic mutations.</p>
+<blockquote>
+<div><span class="xref std std-ref">somatics</span></div></blockquote>
 </div>
 
 

@@ -26,7 +26,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Long nonCoding RNA Prediction" href="lncRNA.html" /> 
+    <link rel="next" title="Long nonCoding RNA Prediction" href="lncRNA.html" />
+    <link rel="prev" title="Variant Calling for RNASeq Data" href="RNAseqvariants.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -37,6 +38,9 @@
              accesskey="I">index</a></li>
         <li class="right" >
           <a href="lncRNA.html" title="Long nonCoding RNA Prediction"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RNAseqvariants.html" title="Variant Calling for RNASeq Data"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
       </ul>
@@ -44,8 +48,11 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
+  <p class="topless"><a href="RNAseqvariants.html"
+                        title="previous chapter">Variant Calling for RNASeq Data</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="lncRNA.html"
-                        title="previous chapter">Long nonCoding RNA Prediction</a></p>
+                        title="next chapter">Long nonCoding RNA Prediction</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -76,12 +83,7 @@
 <p>Here we will follow GATK pipeline for detecting somatic mutations from RNAseq data</p>
 <p>Creating panel of normals:</p>
 <p>first we need to create a <cite>NORMALS.list</cite> file that contains the name of the normal vcfs perceded by -V</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">less</span> <span class="n">NORMALS</span><span class="o">.</span><span class="n">list</span>
-
-<span class="p">:</span>
-       <span class="o">-</span><span class="n">V</span> <span class="n">normal1</span><span class="o">.</span><span class="n">vcf</span>
-       <span class="o">-</span><span class="n">V</span> <span class="n">normal2</span><span class="o">.</span><span class="n">vcf</span>
-       <span class="o">-</span><span class="n">V</span> <span class="n">normal3</span><span class="o">.</span><span class="n">vcf</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">less</span> <span class="n">NORMALS</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <p>Then we create the panel of normals as follows:</p>
@@ -118,6 +120,9 @@
              >index</a></li>
         <li class="right" >
           <a href="lncRNA.html" title="Long nonCoding RNA Prediction"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RNAseqvariants.html" title="Variant Calling for RNASeq Data"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
       </ul>

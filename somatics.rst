@@ -10,7 +10,7 @@ first we need to create a `NORMALS.list` file that contains the name of the norm
 
   less NORMALS.list 	
 
- : 	
+.. : 	
 	-V normal1.vcf
 	-V normal2.vcf
 	-V normal3.vcf
