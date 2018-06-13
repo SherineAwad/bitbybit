@@ -93,13 +93,16 @@
 </pre></div>
 </div>
 <p>Here we used 2 threads, and assumed the genomeDir is current/</p>
-<blockquote>
-<div>STAR &#8211;genomeDir ${WHERE} &#8211;readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq &#8211;runThreadN 2</div></blockquote>
+<div class="highlight-default"><div class="highlight"><pre><span></span>STAR --genomeDir ${WHERE} --readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq --runThreadN 2
+</pre></div>
+</div>
 <p>And by this step, we will have our alignments in Aligned.out.sam</p>
 <p>Now, we use picard to mark duplicates as follows:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar AddOrReplaceReadGroups I=Aligned.out.sam O=rg_added_sorted.bam \
 SO=coordinate RGID=&quot;@E00461_116.Sp1483_S13&quot; RGLB=Sp1483_S13 RGPL=ILLUMINA RGPU=&quot;@E00461_116_GW170602261_1.Sp1483_S13&quot; RGSM=Sp1483
-java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar MarkDuplicates I=rg_added_sorted.bam O=sample.dedupped.bam  CREATE_INDEX=true \
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar MarkDuplicates I=rg_added_sorted.bam O=sample.dedupped.bam  CREATE_INDEX=true \
 VALIDATION_STRINGENCY=SILENT M=output.metrics
 </pre></div>
 </div>
@@ -110,40 +113,24 @@ VALIDATION_STRINGENCY=SILENT M=output.metrics
 </div>
 <p>This step is not necessary if you will use haplotype caller or Mutect2, here we do realign around indels</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">RealignerTargetCreator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
-<span class="o">-</span><span class="n">known</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">realignertargetcreator</span><span class="o">.</span><span class="n">intervals</span>
- <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
- <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> \
- <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
- <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
- <span class="o">-</span><span class="n">knownSites</span> <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> \
- <span class="o">-</span><span class="n">knownSites</span> <span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span> \
- <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>
- <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
- <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> \
- <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
- <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
- <span class="o">-</span><span class="n">knownSites</span>  <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> \
- <span class="o">-</span><span class="n">knownSites</span> <span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span> \
- <span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> \
- <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>
+ <span class="o">-</span><span class="n">known</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">realignertargetcreator</span><span class="o">.</span><span class="n">intervals</span> \
+ <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">knownSites</span> <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span>
+
+<span class="p">::</span>
+
+
+ <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">knownSites</span>  <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> \
+ <span class="o">-</span><span class="n">knownSites</span> <span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span>  <span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>
 </pre></div>
 </div>
 <p>Then lets generate some plots to check whether post recabliration is better than pre recabliration:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
-<span class="o">-</span><span class="n">T</span> <span class="n">AnalyzeCovariates</span> \
-<span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
-<span class="o">-</span><span class="n">before</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> \
-<span class="o">-</span><span class="n">after</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> \
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">AnalyzeCovariates</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">before</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>  <span class="o">-</span><span class="n">after</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>  \
 <span class="o">-</span><span class="n">plots</span> <span class="n">sample</span><span class="o">.</span><span class="n">recalibration_plots</span><span class="o">.</span><span class="n">pdf</span>
 </pre></div>
 </div>
 <p>Assuming post recabliration is better than before recabliration, we create our bam file as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
-<span class="o">-</span><span class="n">T</span> <span class="n">PrintReads</span> \
-<span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  \
-<span class="o">-</span><span class="n">I</span>  <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
-<span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> \
-<span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">PrintReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span>  <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span>
 </pre></div>
 </div>
 </div>

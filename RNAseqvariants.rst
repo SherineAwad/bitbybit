@@ -19,7 +19,8 @@ Now, we will use Star to align our fastq files in 2 passes as follows::
   --sjdbFileChrStartEnd SJ.out.tab --sjdbOverhang 75 --runThreadN 2 
  
 Here we used 2 threads, and assumed the genomeDir is current/
- 
+
+::  
  
   STAR --genomeDir ${WHERE} --readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq --runThreadN 2 
 
@@ -30,6 +31,10 @@ Now, we use picard to mark duplicates as follows::
 
   java -Dlog4j.configurationFile="log4j2.xml" -jar ${PICARD}/picard.jar AddOrReplaceReadGroups I=Aligned.out.sam O=rg_added_sorted.bam \
   SO=coordinate RGID="@E00461_116.Sp1483_S13" RGLB=Sp1483_S13 RGPL=ILLUMINA RGPU="@E00461_116_GW170602261_1.Sp1483_S13" RGSM=Sp1483
+ 
+:: 
+
+ 
   java -Dlog4j.configurationFile="log4j2.xml" -jar ${PICARD}/picard.jar MarkDuplicates I=rg_added_sorted.bam O=sample.dedupped.bam  CREATE_INDEX=true \
   VALIDATION_STRINGENCY=SILENT M=output.metrics 
         
@@ -45,41 +50,25 @@ This step is not necessary if you will use haplotype caller or Mutect2, here we 
 
  
   java -jar GenomeAnalysisTK.jar -T RealignerTargetCreator -R hg38.fasta \
- -known Homo_sapiens_assembly38.known_indels.vcf -I sample.split.bam -o sample.realignertargetcreator.intervals  
-  java -jar GenomeAnalysisTK.jar \
-  -T BaseRecalibrator \
-  -R hg38.fasta \
-  -I sample.split.bam \
-  -knownSites dbsnp138.vcf \
-  -knownSites Mills_and_1000G_gold_standard.indels.hg38.vcf \
-  -o sample.recal_data.table 
-  java -jar GenomeAnalysisTK.jar \
-  -T BaseRecalibrator \
-  -R hg38.fasta \
-  -I sample.split.bam \
-  -knownSites  dbsnp138.vcf \
-  -knownSites Mills_and_1000G_gold_standard.indels.hg38.vcf \
-  -BQSR sample.recal_data.table \
-  -o sample.post_recal_data.table 
+  -known Homo_sapiens_assembly38.known_indels.vcf -I sample.split.bam -o sample.realignertargetcreator.intervals \ 
+  java -jar GenomeAnalysisTK.jar -T BaseRecalibrator -R hg38.fasta -I sample.split.bam -knownSites dbsnp138.vcf   
+
+ :: 
+
+ 
+  java -jar GenomeAnalysisTK.jar  -T BaseRecalibrator -R hg38.fasta  -I sample.split.bam -knownSites  dbsnp138.vcf \
+  -knownSites Mills_and_1000G_gold_standard.indels.hg38.vcf  -BQSR sample.recal_data.table -o sample.post_recal_data.table 
 
 Then lets generate some plots to check whether post recabliration is better than pre recabliration:: 
  
  
-  java -jar GenomeAnalysisTK.jar \
-  -T AnalyzeCovariates \
-  -R hg38.fasta \
-  -before sample.recal_data.table \
-  -after sample.post_recal_data.table \
+  java -jar GenomeAnalysisTK.jar -T AnalyzeCovariates -R hg38.fasta -before sample.recal_data.table  -after sample.post_recal_data.table  \
   -plots sample.recalibration_plots.pdf
 
 Assuming post recabliration is better than before recabliration, we create our bam file as follows::  
 
 
-  java -jar GenomeAnalysisTK.jar \
-  -T PrintReads \
-  -R hg38.fasta  \
-  -I  sample.split.bam \
-  -BQSR sample.post_recal_data.table \
-  -o sample.bam
+  java -jar GenomeAnalysisTK.jar  -T PrintReads -R hg38.fasta -I  sample.split.bam \
+  -BQSR sample.post_recal_data.table -o sample.bam  
 
 
