@@ -74,5 +74,5 @@ if you are interested in variant calling, then let use haplotype caller::
   -dontUseSoftClippedBases -stand_call_conf 20.0 -o sample.vcf 
 
 Or go to the somatic mutations tutorial for further analysis and detection of somatic mutations.
-
-  :ref:`somatics`  
+ 
+   .. _`somatics`
