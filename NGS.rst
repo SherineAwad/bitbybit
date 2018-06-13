@@ -1,3 +1,12 @@
+============================================
+Next Generation Sequencing Essentials
+============================================
+
+
+Estimating Insert Size 
+###########################
+
+
 Here, we estimate the insert size using bbmap by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt::
  
    ./bbmap.sh -Xmx50g  in1=pair1.fastq.gz in2=pair2.fastq.gz ihist=histmap4m.txt reads=4000000 ref=human_genome.fa

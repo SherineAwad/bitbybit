@@ -1,3 +1,6 @@
-# Tutorials
+===============================
+BitByBit Tutorials
+==============================
 
-A quick and easy steps for random problems in bioinformatics. 
+BitByBit is a set of tutorials for how toi simply do many tasks in bioinformatics. 
+
