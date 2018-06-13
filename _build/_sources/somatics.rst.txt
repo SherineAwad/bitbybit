@@ -10,7 +10,7 @@ first we need to create a `NORMALS.list` file that contains the name of the norm
 
   less NORMALS.list 	
 
-.. 	
+ : 	
 	-V normal1.vcf
 	-V normal2.vcf
 	-V normal3.vcf
@@ -18,7 +18,7 @@ first we need to create a `NORMALS.list` file that contains the name of the norm
 
 Then we create the panel of normals as follows:: 
 
-  java -jar ${GATK}/GenomeAnalysisTK.jar \
+  java -jar GenomeAnalysisTK.jar \
   -T CombineVariants \
   --arg_file NORMALS.list \
   -minN 2 \
@@ -26,12 +26,12 @@ Then we create the panel of normals as follows::
   --filteredAreUncalled \
   --filteredrecordsmergetype KEEP_IF_ANY_UNFILTERED \
   -o pon.vcf.gz \
-  -R ${hg38}.fasta
+  -R hg38.fasta
 
 
 Then we will create panel of normals only sites as follows::
 
 
-   java -Dlog4j.configurationFile="log4j2.xml" -jar ${PICARD}/picard.jar MakeSitesOnlyVcf \
+   java -Dlog4j.configurationFile="log4j2.xml" -jar picard.jar MakeSitesOnlyVcf \
    I= pon.vcf.gz \
    O= pon_siteonly.vcf.gz 
