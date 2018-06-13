@@ -86,13 +86,15 @@
 </pre></div>
 </div>
 <p>Using our reference fasta files hg38.fasta, we created the index hg38Index, which will be used in further steps.</p>
-<dl class="docutils">
-<dt>Now, we will use Star to align our fastq files in 2 passes as follows::</dt>
-<dd>STAR &#8211;genomeDir hg38Index &#8211;readFilesIn pair1.fq pair2.fq &#8211;runThreadN 2
-STAR &#8211;runMode genomeGenerate &#8211;genomeDir current/ &#8211;genomeFastaFiles  hg38.fasta &#8211;sjdbFileChrStartEnd SJ.out.tab &#8211;sjdbOverhang 75 &#8211;runThreadN 2</dd>
-<dt>Here we used 2 threads, and assumed the genomeDir is current/</dt>
-<dd>STAR &#8211;genomeDir ${WHERE} &#8211;readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq &#8211;runThreadN 2</dd>
-</dl>
+<p>Now, we will use Star to align our fastq files in 2 passes as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">readFilesIn</span> <span class="n">pair1</span><span class="o">.</span><span class="n">fq</span> <span class="n">pair2</span><span class="o">.</span><span class="n">fq</span> <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">2</span>
+<span class="n">STAR</span> <span class="o">--</span><span class="n">runMode</span> <span class="n">genomeGenerate</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">current</span><span class="o">/</span> <span class="o">--</span><span class="n">genomeFastaFiles</span>  <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
+<span class="o">--</span><span class="n">sjdbFileChrStartEnd</span> <span class="n">SJ</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">tab</span> <span class="o">--</span><span class="n">sjdbOverhang</span> <span class="mi">75</span> <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Here we used 2 threads, and assumed the genomeDir is current/</p>
+<blockquote>
+<div>STAR &#8211;genomeDir ${WHERE} &#8211;readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq &#8211;runThreadN 2</div></blockquote>
 <p>And by this step, we will have our alignments in Aligned.out.sam</p>
 <p>Now, we use picard to mark duplicates as follows:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar AddOrReplaceReadGroups I=Aligned.out.sam O=rg_added_sorted.bam \
@@ -109,7 +111,6 @@ VALIDATION_STRINGENCY=SILENT M=output.metrics
 <p>This step is not necessary if you will use haplotype caller or Mutect2, here we do realign around indels</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">RealignerTargetCreator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
 <span class="o">-</span><span class="n">known</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">realignertargetcreator</span><span class="o">.</span><span class="n">intervals</span>
-
  <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
  <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> \
  <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
@@ -117,7 +118,6 @@ VALIDATION_STRINGENCY=SILENT M=output.metrics
  <span class="o">-</span><span class="n">knownSites</span> <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> \
  <span class="o">-</span><span class="n">knownSites</span> <span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span> \
  <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>
-
  <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
  <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> \
  <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
@@ -128,10 +128,15 @@ VALIDATION_STRINGENCY=SILENT M=output.metrics
  <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>Then lets generate some plots to check whether post recabliration is better than pre recabliration::</dt>
-<dd>java -jar GenomeAnalysisTK.jar -T AnalyzeCovariates -R hg38.fasta -before sample.recal_data.table -after sample.post_recal_data.table -plots sample.recalibration_plots.pdf</dd>
-</dl>
+<p>Then lets generate some plots to check whether post recabliration is better than pre recabliration:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
+<span class="o">-</span><span class="n">T</span> <span class="n">AnalyzeCovariates</span> \
+<span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
+<span class="o">-</span><span class="n">before</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> \
+<span class="o">-</span><span class="n">after</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> \
+<span class="o">-</span><span class="n">plots</span> <span class="n">sample</span><span class="o">.</span><span class="n">recalibration_plots</span><span class="o">.</span><span class="n">pdf</span>
+</pre></div>
+</div>
 <p>Assuming post recabliration is better than before recabliration, we create our bam file as follows:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
 <span class="o">-</span><span class="n">T</span> <span class="n">PrintReads</span> \
