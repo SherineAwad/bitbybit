@@ -89,8 +89,9 @@
 <p>Instead of testing whether a single variant is associated with a specific phenotype, we can study the cummulative effect of a group of variants in a gene or region on a specific phenotype.
 Rare variants association analysis has lots of categories, we will summarize here a few categories:</p>
 <ol class="arabic simple">
-<li>Burden test: is prefered when we have variants in the same direction and the same effect, i.e. variants are risk increasing or risk decreasing. Many methods fall under this category including <strong>CMC</strong>, <strong>CMAT</strong>, etc. Below is an example of using rvtest for burden test using CMC method.</li>
+<li>Burden Test</li>
 </ol>
+<p>Burden test is prefered when we have variants in the same direction and the same effect, i.e. variants are risk increasing or risk decreasing. Many methods fall under this category including <strong>CMC</strong>, <strong>CMAT</strong>, etc. Below is an example of using rvtest for burden test using CMC method.</p>
 <p>Using rvtest for Burden Test CMC:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">burden</span> <span class="n">cmc</span>
 </pre></div>
@@ -101,28 +102,30 @@ Rare variants association analysis has lots of categories, we will summarize her
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">gene</span> <span class="n">GPR98</span><span class="p">,</span><span class="n">USH2A</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">burden</span> <span class="n">cmc</span>
 </pre></div>
 </div>
-<ol class="arabic simple">
-<li>Adaptive Burden Test: is more robust than Burden test as it allows for adjusting weights.</li>
+<ol class="arabic simple" start="2">
+<li>Adaptive Burden Test</li>
 </ol>
+<p>Adaptive is more robust than Burden test as it allows for adjusting weights.</p>
 <p>KBAC is famous approach that fall under the Adaptive burden test category, and we can run as follows:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">kernel</span> <span class="n">kbac</span>
 </pre></div>
 </div>
-<ol class="arabic simple">
-<li>Variance Components Tests: are powerful if there exist both trait-increasing and trait-decreasing variants or a small fraction of causal variants.</li>
+<ol class="arabic simple" start="3">
+<li>Variance Components Tests</li>
 </ol>
+<p>These tests are powerful if there exist both trait-increasing and trait-decreasing variants or a small fraction of causal variants.</p>
 <p>These types of tests are less powerful when the variants are in the same direction.</p>
 <p>A famous approach under this category is SKAT, and can be calculated using rvtests as follows:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">skat</span>
 </pre></div>
 </div>
-<ol class="arabic simple">
-<li><dl class="first docutils">
-<dt>Combined Tests:  When we don&#8217;t have any prior information about the variants we have, these approaches are robust regardless of the percentage of causal variants and</dt>
+<ol class="arabic simple" start="4">
+<li>Combined Tests</li>
+</ol>
+<dl class="docutils">
+<dt>When we don&#8217;t have any prior information about the variants we have, these approaches are robust regardless of the percentage of causal variants and</dt>
 <dd>the existence of both trait-increasing and trait-decreasing variants.</dd>
 </dl>
-</li>
-</ol>
 <p>A famous approach under this category is SKATO:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">skato</span>
 </pre></div>

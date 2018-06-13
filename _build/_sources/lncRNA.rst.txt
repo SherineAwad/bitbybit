@@ -1,5 +1,6 @@
-Infering long non Coding RNA using lncScore
---------------------------------------------
+=============================================
+Prediction of Long nonCoding RNA Prediction 
+=============================================
 
 Install lncScore:: 
 
@@ -8,7 +9,7 @@ Install lncScore::
        
 We use MyTranscripts.fa which contains our transcript in fasta format ::
 
-    python ${LNCSCORE}/lncScore.py -f MyTranscripts.fa -g ${GTF}/genes.gtf \
+    python lncScore.py -f MyTranscripts.fa -g ${GTF}/genes.gtf \
     -o ourlncRNA.results -p 1 -x ${LNCSCORE}/dat/Human_Hexamer.tsv \
     -t ${LNCSCORE}/dat/Human_training.dat 
 

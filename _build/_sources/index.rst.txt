@@ -12,6 +12,7 @@ Welcome to BitByBit's documentation!
   
    rvassocanalysis.rst	
    wholegenomes.rst 
+   lncRNA.rst 
 
 Indices and tables
 ==================
