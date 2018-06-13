@@ -8,8 +8,6 @@ Welcome to BitByBit's documentation!
 
 :author: Sherine Awad
 
-This is a part of BitByBit Tutorials. see `the main
-page for this version <../index.html>`__ for citation information  
 
 .. toctree::
    :maxdepth: 1 
