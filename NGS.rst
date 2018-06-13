@@ -1,5 +1,5 @@
 ====================================================
-Next Generation Sequencing Essentials Operations 
+Next Generation Sequencing Essentials 
 ====================================================
 
 

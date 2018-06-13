@@ -17,8 +17,10 @@ Welcome to BitByBit's documentation!
    wholegenomes.rst
    NGS.rst 
    vcfrandom.rst 
-   lncRNA.rst 
+   RNAseqvariants.rst 
    somatics.rst  
+   lncRNA.rst 
+
 
 Indices and tables
 ==================
