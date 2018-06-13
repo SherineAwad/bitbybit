@@ -1,6 +1,8 @@
-Random operations on VCF file
------------------------------
+====================================
+VCF Handler 
+====================================
 
+Here is a bunch of different operation we need regulary to do with vcf files. 
 
 Megre vcf files:: 
 

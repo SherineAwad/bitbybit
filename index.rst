@@ -6,12 +6,18 @@
 Welcome to BitByBit's documentation!
 ====================================
 
+:author: Sherine Awad
+
+This is a part of BitByBit Tutorials. see `the main
+page for this version <../index.html>`__ for citation information  
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1 
    :caption: Contents:
   
    rvassocanalysis.rst	
    wholegenomes.rst 
+   vcfrandom.rst 
    lncRNA.rst 
 
 Indices and tables
