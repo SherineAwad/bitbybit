@@ -18,14 +18,12 @@ Now, we will use Star to align our fastq files in 2 passes as follows::
   STAR --runMode genomeGenerate --genomeDir current/ --genomeFastaFiles  hg38.fasta \  
   --sjdbFileChrStartEnd SJ.out.tab --sjdbOverhang 75 --runThreadN 2 
  
-Here we used 2 threads, and assumed the genomeDir is current/
-
-::  
+Here we used 2 threads, and assumed the genomeDir is current/  :: 
+ 
  
   STAR --genomeDir ${WHERE} --readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq --runThreadN 2 
 
 And by this step, we will have our alignments in Aligned.out.sam 
-
 Now, we use picard to mark duplicates as follows:: 
 
 
@@ -34,14 +32,12 @@ Now, we use picard to mark duplicates as follows::
  
 :: 
 
- 
   java -Dlog4j.configurationFile="log4j2.xml" -jar ${PICARD}/picard.jar MarkDuplicates I=rg_added_sorted.bam O=sample.dedupped.bam  CREATE_INDEX=true \
   VALIDATION_STRINGENCY=SILENT M=output.metrics 
         
        
 Then, we need to split N in caring in Cigar reads :: 
 
-	
   java -jar GenomeAnalysisTK.jar -T SplitNCigarReads -R hg38.fasta -I sample.dedupped.bam -o sample.split.bam \
   -rf ReassignOneMappingQuality -RMQF 255 -RMQT 60 -U ALLOW_N_CIGAR_READS
 
@@ -53,9 +49,8 @@ This step is not necessary if you will use haplotype caller or Mutect2, here we 
   -known Homo_sapiens_assembly38.known_indels.vcf -I sample.split.bam -o sample.realignertargetcreator.intervals \ 
   java -jar GenomeAnalysisTK.jar -T BaseRecalibrator -R hg38.fasta -I sample.split.bam -knownSites dbsnp138.vcf   
 
- :: 
+and now do recabliration  :: 
 
- 
   java -jar GenomeAnalysisTK.jar  -T BaseRecalibrator -R hg38.fasta  -I sample.split.bam -knownSites  dbsnp138.vcf \
   -knownSites Mills_and_1000G_gold_standard.indels.hg38.vcf  -BQSR sample.recal_data.table -o sample.post_recal_data.table 
 
