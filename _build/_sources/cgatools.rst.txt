@@ -1,7 +1,5 @@
-============================
-Whole Genomes Analysis 
-============================
-Here, we will show various operations in whole genome Complete Genomics or BGI. 
+Random Operations to handle Complete Genomics/BGI
+--------------------------------------------------
 
 Convert to bam from cgatools, and then we can view the sorted bam in IGV:: 
  
