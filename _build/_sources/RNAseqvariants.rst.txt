@@ -75,4 +75,4 @@ if you are interested in variant calling, then let use haplotype caller::
 
 Or go to the somatic mutations tutorial for further analysis and detection of somatic mutations.
  
-   .. _`somatics`
+   .. _somatics:

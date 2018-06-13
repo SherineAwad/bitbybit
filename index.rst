@@ -6,7 +6,7 @@
 Welcome to BitByBit's documentation!
 ====================================
 
-:author: Sherine Awad
+:Author: Sherine Awad
 
 
 .. toctree::
