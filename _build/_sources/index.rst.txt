@@ -14,7 +14,8 @@ Welcome to BitByBit's documentation!
    :caption: Contents:
   
    rvassocanalysis.rst	
-   wholegenomes.rst 
+   wholegenomes.rst
+   NGS.rst 
    vcfrandom.rst 
    lncRNA.rst 
 

@@ -1,5 +1,5 @@
 =============================================
-Prediction of Long nonCoding RNA Prediction 
+Long nonCoding RNA Prediction 
 =============================================
 
 Install lncScore:: 

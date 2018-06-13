@@ -1,6 +1,6 @@
-============================================
-Next Generation Sequencing Essentials
-============================================
+====================================================
+Next Generation Sequencing Essentials Operations 
+====================================================
 
 
 Estimating Insert Size 
