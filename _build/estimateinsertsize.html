@@ -1,5 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<!doctype html>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +9,7 @@
     
     <title>&lt;no title&gt; &#8212; BitByBit  documentation</title>
     
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -24,44 +25,26 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
   </head>
   <body role="document">
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <p>Here, we estimate the insert size using bbmap by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bbmap</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">Xmx50g</span>  <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">histmap4m</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">ref</span><span class="o">=</span><span class="n">human_genome</span><span class="o">.</span><span class="n">fa</span>
-</pre></div>
-</div>
-<p>If you don&#8217;t have enough memory, you can use bbmerge, however, bbmap estimation is more accurate as it is based on alignment to reference:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bbmerge</span><span class="o">.</span><span class="n">sh</span> <span class="n">in1</span><span class="o">=</span> <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">hist_merge</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">prefilter</span><span class="o">=</span><span class="mi">2</span> <span class="n">rem</span> <span class="n">extend2</span><span class="o">=</span><span class="mi">100</span>
-</pre></div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
+      </ul>
+    </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
+        <div class="sphinxsidebarwrapper">
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -81,22 +64,39 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>Here, we estimate the insert size using bbmap by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bbmap</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">Xmx50g</span>  <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">histmap4m</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">ref</span><span class="o">=</span><span class="n">human_genome</span><span class="o">.</span><span class="n">fa</span>
+</pre></div>
+</div>
+<p>If you don&#8217;t have enough memory, you can use bbmerge, however, bbmap estimation is more accurate as it is based on alignment to reference:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bbmerge</span><span class="o">.</span><span class="n">sh</span> <span class="n">in1</span><span class="o">=</span> <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">hist_merge</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">prefilter</span><span class="o">=</span><span class="mi">2</span> <span class="n">rem</span> <span class="n">extend2</span><span class="o">=</span><span class="mi">100</span>
+</pre></div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2018, Sherine Awad.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3+</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
-      
-      |
-      <a href="_sources/estimateinsertsize.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Sherine Awad.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3+.
+    </div>
   </body>
 </html>
