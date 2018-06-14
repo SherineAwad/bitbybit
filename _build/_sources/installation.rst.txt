@@ -18,7 +18,18 @@ Install lncScore `<https://www.nature.com/articles/srep34838>`__ ::
 Install Trimgalore 
 ---------------------
 
-Install Trimgalore `https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/`__ :: 
+Install Trimgalore `<https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/>`__ :: 
 
    wget https://github.com/FelixKrueger/TrimGalore/archive/0.4.5.zip 
-   unzip 0.4.5.zip
+   unzip 0.4.5.zip 
+
+
+.. _set_cutadapt: 
+
+Install Cutadapt:
+--------------------
+
+Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`__:: 
+
+    conda install -c bioconda cutadapt
+ 

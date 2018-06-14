@@ -6,7 +6,7 @@
 Reads Trimming
 ########################
 
-We need to install Trimgalore and Cutadapt :ref:`set_trimgalore`
+We need to install Trimgalore :ref:`set_trimgalore` and Cutadapt  :ref:`set_cutadapt`
  
 Then we remove adaptors and quality trim data as follows:: 
 
