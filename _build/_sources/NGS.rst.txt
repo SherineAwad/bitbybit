@@ -1,5 +1,5 @@
 ====================================================
-Next Generation Sequencing Essentials 
+Next Generation Sequencing Toolkit 
 ====================================================
 
 
