@@ -88,13 +88,12 @@
 <h1><strong>Somatic Mutations from RNAseq</strong><a class="headerlink" href="#somatic-mutations-from-rnaseq" title="Permalink to this headline">¶</a></h1>
 <p>Here we will follow GATK pipeline for detecting somatic mutations from RNAseq data</p>
 <p>Creating panel of normals:</p>
-<p>first we need to create a <cite>NORMALS.list</cite> file that contains the name of the normal vcfs perceded by -V</p>
-<dl class="docutils">
-<dt>literalinclude:: NORMALS.list</dt>
-<dd>:-V normal1.vcf
-:-V normal2.vcf
-:-V normal3.vcf</dd>
-</dl>
+<p>first we need to create a <cite>NORMALS.list</cite> file that contains the name of the normal vcfs perceded by -V:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">V</span> <span class="n">normal1</span><span class="o">.</span><span class="n">vcf</span>
+<span class="o">-</span><span class="n">V</span> <span class="n">normal2</span><span class="o">.</span><span class="n">vcf</span>
+<span class="o">-</span><span class="n">V</span> <span class="n">normal3</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
 <p>Then we create the panel of normals as follows:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> \
 <span class="o">-</span><span class="n">T</span> <span class="n">CombineVariants</span> \

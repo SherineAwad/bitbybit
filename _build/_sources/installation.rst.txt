@@ -2,6 +2,14 @@
 **Installation Assistance**
 ================================
 
+
+.. _set_rvtests: 
+
+Install rvtests 
+-----------------
+
+  git clone https://github.com/zhanxw/rvtests
+
 .. _set_lncscore:
 
 Install lncScore
@@ -40,4 +48,5 @@ Install FastQC:
 
 Install FastQC `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__:: 
 
-  
+   conda install -c bioconda fastqc 
+     
