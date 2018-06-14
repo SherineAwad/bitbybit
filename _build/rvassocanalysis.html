@@ -2,26 +2,14 @@
 
 <!doctype html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Rare Variants Association Analysis &#8212; BitByBit  documentation</title>
-    
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -34,8 +22,7 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -53,9 +40,20 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><strong>Rare Variants Association Analysis</strong></a><ul>
+<li><a class="reference internal" href="#burden-test">Burden Test</a></li>
+<li><a class="reference internal" href="#adaptive-burden-test">Adaptive Burden Test</a></li>
+<li><a class="reference internal" href="#variance-components-tests">Variance Components Tests</a></li>
+<li><a class="reference internal" href="#combined-tests">Combined Tests</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
-                        title="previous chapter">Welcome to BitByBit&#8217;s documentation!</a></p>
+                        title="previous chapter">Welcome to BitByBit’s documentation!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="wholegenomes.html"
                         title="next chapter"><strong>Whole Genomes Toolkit</strong></a></p>
@@ -68,12 +66,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -86,50 +86,50 @@
             
   <div class="section" id="rare-variants-association-analysis">
 <h1><strong>Rare Variants Association Analysis</strong><a class="headerlink" href="#rare-variants-association-analysis" title="Permalink to this headline">¶</a></h1>
-<p>Lets install <a class="reference internal" href="installation.html#set-rvtests"><span class="std std-ref">Install rvtests</span></a> before starting this tutorial.</p>
+<p>Lets <a class="reference internal" href="installation.html#set-rvtests"><span class="std std-ref">Install rvtests</span></a> before starting this tutorial.</p>
 <p>Instead of testing whether a single variant is associated with a specific phenotype, we can study the cummulative effect of a group of variants in a gene or region on a specific phenotype.
 Rare variants association analysis has lots of categories, we will summarize here a few categories:</p>
-<ol class="arabic simple">
-<li>Burden Test</li>
-</ol>
+<div class="section" id="burden-test">
+<h2>Burden Test<a class="headerlink" href="#burden-test" title="Permalink to this headline">¶</a></h2>
 <p>Burden test is prefered when we have variants in the same direction and the same effect, i.e. variants are risk increasing or risk decreasing. Many methods fall under this category including <strong>CMC</strong>, <strong>CMAT</strong>, etc. Below is an example of using rvtest for burden test using CMC method.</p>
 <p>Using rvtest for Burden Test CMC:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">burden</span> <span class="n">cmc</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">burden</span> <span class="n">cmc</span>
 </pre></div>
 </div>
 <p>In the above example, we grouped the variants with MAF less than 0.01 per gene,so variants with MAF &lt; 0.01 in each gene are grouped together for the analysis.</p>
-<p>If you are interested in specific set of genes instead of all genes, you can specify using &#8211;gene parameter as follows</p>
+<p>If you are interested in specific set of genes instead of all genes, you can specify using –gene parameter as follows</p>
 <p>And to specify a specific set of genes:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">gene</span> <span class="n">GPR98</span><span class="p">,</span><span class="n">USH2A</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">burden</span> <span class="n">cmc</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">gene</span> <span class="n">GPR98</span><span class="p">,</span><span class="n">USH2A</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">burden</span> <span class="n">cmc</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li>Adaptive Burden Test</li>
-</ol>
+</div>
+<div class="section" id="adaptive-burden-test">
+<h2>Adaptive Burden Test<a class="headerlink" href="#adaptive-burden-test" title="Permalink to this headline">¶</a></h2>
 <p>Adaptive is more robust than Burden test as it allows for adjusting weights.</p>
 <p>KBAC is famous approach that fall under the Adaptive burden test category, and we can run as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">kernel</span> <span class="n">kbac</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">kernel</span> <span class="n">kbac</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li>Variance Components Tests</li>
-</ol>
+</div>
+<div class="section" id="variance-components-tests">
+<h2>Variance Components Tests<a class="headerlink" href="#variance-components-tests" title="Permalink to this headline">¶</a></h2>
 <p>These tests are powerful if there exist both trait-increasing and trait-decreasing variants or a small fraction of causal variants.</p>
 <p>These types of tests are less powerful when the variants are in the same direction.</p>
 <p>A famous approach under this category is SKAT, and can be calculated using rvtests as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">skat</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">skat</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li>Combined Tests</li>
-</ol>
+</div>
+<div class="section" id="combined-tests">
+<h2>Combined Tests<a class="headerlink" href="#combined-tests" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt>When we don&#8217;t have any prior information about the variants we have, these approaches are robust regardless of the percentage of causal variants and</dt>
+<dt>When we don’t have any prior information about the variants we have, these approaches are robust regardless of the percentage of causal variants and</dt>
 <dd>the existence of both trait-increasing and trait-decreasing variants.</dd>
 </dl>
 <p>A famous approach under this category is SKATO:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">skato</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rvtest</span> <span class="o">--</span><span class="n">inVcf</span> <span class="n">samples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">pheno</span> <span class="n">samples</span><span class="o">.</span><span class="n">ped</span> <span class="o">--</span><span class="n">freqUpper</span> <span class="mf">0.01</span> <span class="o">--</span><span class="n">out</span> <span class="n">cmc</span> <span class="o">--</span><span class="n">geneFile</span> <span class="n">refFlat_hg19</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">skato</span>
 </pre></div>
+</div>
 </div>
 </div>
 
@@ -156,7 +156,7 @@ Rare variants association analysis has lots of categories, we will summarize her
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2018, Sherine Awad.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3+.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.0b1.
     </div>
   </body>
 </html>

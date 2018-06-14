@@ -2,26 +2,14 @@
 
 <!doctype html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Next Generation Sequencing Toolkit &#8212; BitByBit  documentation</title>
-    
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -34,8 +22,7 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -77,12 +64,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -99,18 +88,18 @@
 <h2>Reads Trimming<a class="headerlink" href="#reads-trimming" title="Permalink to this headline">¶</a></h2>
 <p>We need to install Trimgalore <a class="reference internal" href="installation.html#set-trimgalore"><span class="std std-ref">Install Trimgalore</span></a> and its requirements Cutadapt  <a class="reference internal" href="installation.html#set-cutadapt"><span class="std std-ref">Install Cutadapt:</span></a> and FastQC <a class="reference internal" href="installation.html#set-fastqc"><span class="std std-ref">Install FastQC:</span></a></p>
 <p>Then we remove adaptors and quality trim data as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">trim_galore</span> <span class="o">--</span><span class="n">paired</span> <span class="o">--</span><span class="n">gzip</span> <span class="o">--</span><span class="n">retain_unpaired</span> <span class="o">--</span><span class="n">trim1</span> <span class="o">--</span><span class="n">fastqc</span> <span class="o">--</span><span class="n">fastqc_args</span> <span class="s2">&quot;--outdir fastqc&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">galore</span> <span class="o">--</span><span class="n">path_to_cutadapt</span> <span class="n">cutadapt_path</span>  <span class="n">pair_1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">pair_2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trim_galore</span> <span class="o">--</span><span class="n">paired</span> <span class="o">--</span><span class="n">gzip</span> <span class="o">--</span><span class="n">retain_unpaired</span> <span class="o">--</span><span class="n">trim1</span> <span class="o">--</span><span class="n">fastqc</span> <span class="o">--</span><span class="n">fastqc_args</span> <span class="s2">&quot;--outdir fastqc&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">galore</span> <span class="o">--</span><span class="n">path_to_cutadapt</span> <span class="n">cutadapt_path</span>  <span class="n">pair_1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">pair_2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="estimating-insert-size">
 <h2>Estimating Insert Size<a class="headerlink" href="#estimating-insert-size" title="Permalink to this headline">¶</a></h2>
 <p>Here, we estimate the insert size using bbmap by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">bbmap</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">Xmx50g</span>  <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">histmap4m</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">ref</span><span class="o">=</span><span class="n">human_genome</span><span class="o">.</span><span class="n">fa</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">bbmap</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">Xmx50g</span>  <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">histmap4m</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">ref</span><span class="o">=</span><span class="n">human_genome</span><span class="o">.</span><span class="n">fa</span>
 </pre></div>
 </div>
-<p>If you don&#8217;t have enough memory, you can use bbmerge, however, bbmap estimation is more accurate as it is based on alignment to reference:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">bbmerge</span><span class="o">.</span><span class="n">sh</span> <span class="n">in1</span><span class="o">=</span> <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">hist_merge</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">prefilter</span><span class="o">=</span><span class="mi">2</span> <span class="n">rem</span> <span class="n">extend2</span><span class="o">=</span><span class="mi">100</span>
+<p>If you don’t have enough memory, you can use bbmerge, however, bbmap estimation is more accurate as it is based on alignment to reference:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">bbmerge</span><span class="o">.</span><span class="n">sh</span> <span class="n">in1</span><span class="o">=</span> <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">hist_merge</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">prefilter</span><span class="o">=</span><span class="mi">2</span> <span class="n">rem</span> <span class="n">extend2</span><span class="o">=</span><span class="mi">100</span>
 </pre></div>
 </div>
 </div>
@@ -139,7 +128,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2018, Sherine Awad.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3+.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.0b1.
     </div>
   </body>
 </html>

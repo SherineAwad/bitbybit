@@ -2,26 +2,14 @@
 
 <!doctype html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>**Annotation using tx2gene and txdb ** &#8212; BitByBit  documentation</title>
-    
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -32,8 +20,7 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -54,12 +41,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -74,12 +63,12 @@
 <h1><a href="#id1"><span class="problematic" id="id2">**</span></a>Annotation using tx2gene and txdb **<a class="headerlink" href="#annotation-using-tx2gene-and-txdb" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic">
 <li><p class="first">Download your annotated GFF file, here, we download Refseq annotated GRCh37:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ncbi</span><span class="o">.</span><span class="n">nlm</span><span class="o">.</span><span class="n">nih</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">refseq</span><span class="o">/</span><span class="n">H_sapiens</span><span class="o">/</span><span class="n">annotation</span><span class="o">/</span><span class="n">GRCh37_latest</span><span class="o">/</span><span class="n">refseq_identifiers</span><span class="o">/</span><span class="n">GRCh37_latest_genomic</span><span class="o">.</span><span class="n">gff</span><span class="o">.</span><span class="n">gz</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ncbi</span><span class="o">.</span><span class="n">nlm</span><span class="o">.</span><span class="n">nih</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">refseq</span><span class="o">/</span><span class="n">H_sapiens</span><span class="o">/</span><span class="n">annotation</span><span class="o">/</span><span class="n">GRCh37_latest</span><span class="o">/</span><span class="n">refseq_identifiers</span><span class="o">/</span><span class="n">GRCh37_latest_genomic</span><span class="o">.</span><span class="n">gff</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Use txdb to create tx2gene:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">txdb</span> <span class="o">&lt;-</span><span class="n">makeTxDbFromGFF</span><span class="p">(</span><span class="s2">&quot;GRCh37_latest_genomic.gff.gz&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">txdb</span> <span class="o">&lt;-</span><span class="n">makeTxDbFromGFF</span><span class="p">(</span><span class="s2">&quot;GRCh37_latest_genomic.gff.gz&quot;</span><span class="p">)</span>
 <span class="n">k</span> <span class="o">&lt;-</span> <span class="n">keys</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span>  <span class="n">columns</span> <span class="o">=</span> <span class="s2">&quot;TXNAME&quot;</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
 <span class="n">tx2gene</span> <span class="o">&lt;-</span> <span class="n">df</span><span class="p">[,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
@@ -108,7 +97,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2018, Sherine Awad.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3+.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.0b1.
     </div>
   </body>
 </html>

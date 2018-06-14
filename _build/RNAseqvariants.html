@@ -2,26 +2,14 @@
 
 <!doctype html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Variant Calling for RNASeq Data &#8212; BitByBit  documentation</title>
-    
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -34,8 +22,7 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -68,12 +55,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -88,58 +77,58 @@
 <h1><strong>Variant Calling for RNASeq Data</strong><a class="headerlink" href="#variant-calling-for-rnaseq-data" title="Permalink to this headline">¶</a></h1>
 <p>Here we will follow GATK pipeline for variant calling from RNAseq data.</p>
 <p>Lets first create an index:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">runMode</span> <span class="n">genomeGenerate</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">genomeFastaFiles</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">runMode</span> <span class="n">genomeGenerate</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">genomeFastaFiles</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">4</span>
 </pre></div>
 </div>
 <p>Using our reference fasta files hg38.fasta, we created the index hg38Index, which will be used in further steps.</p>
 <p>Now, we will use Star to align our fastq files in 2 passes as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">readFilesIn</span> <span class="n">pair1</span><span class="o">.</span><span class="n">fq</span> <span class="n">pair2</span><span class="o">.</span><span class="n">fq</span> <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">readFilesIn</span> <span class="n">pair1</span><span class="o">.</span><span class="n">fq</span> <span class="n">pair2</span><span class="o">.</span><span class="n">fq</span> <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">2</span>
 <span class="n">STAR</span> <span class="o">--</span><span class="n">runMode</span> <span class="n">genomeGenerate</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">current</span><span class="o">/</span> <span class="o">--</span><span class="n">genomeFastaFiles</span>  <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
 <span class="o">--</span><span class="n">sjdbFileChrStartEnd</span> <span class="n">SJ</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">tab</span> <span class="o">--</span><span class="n">sjdbOverhang</span> <span class="mi">75</span> <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p>Here we used 2 threads, and assumed the genomeDir is current/</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>STAR --genomeDir ${WHERE} --readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq --runThreadN 2
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>STAR --genomeDir ${WHERE} --readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq --runThreadN 2
 </pre></div>
 </div>
 <p>And by this step, we will have our alignments in Aligned.out.sam
 Now, we use picard to mark duplicates as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar AddOrReplaceReadGroups I=Aligned.out.sam O=rg_added_sorted.bam \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar AddOrReplaceReadGroups I=Aligned.out.sam O=rg_added_sorted.bam \
 SO=coordinate RGID=&quot;@E00461_116.Sp1483_S13&quot; RGLB=Sp1483_S13 RGPL=ILLUMINA RGPU=&quot;@E00461_116_GW170602261_1.Sp1483_S13&quot; RGSM=Sp1483
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar MarkDuplicates I=rg_added_sorted.bam O=sample.dedupped.bam  CREATE_INDEX=true \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar MarkDuplicates I=rg_added_sorted.bam O=sample.dedupped.bam  CREATE_INDEX=true \
 VALIDATION_STRINGENCY=SILENT M=output.metrics
 </pre></div>
 </div>
 <p>Then, we need to split N in caring in Cigar reads</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">SplitNCigarReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">dedupped</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">SplitNCigarReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">dedupped</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
 <span class="o">-</span><span class="n">rf</span> <span class="n">ReassignOneMappingQuality</span> <span class="o">-</span><span class="n">RMQF</span> <span class="mi">255</span> <span class="o">-</span><span class="n">RMQT</span> <span class="mi">60</span> <span class="o">-</span><span class="n">U</span> <span class="n">ALLOW_N_CIGAR_READS</span>
 </pre></div>
 </div>
 <p>This step is not necessary if you will use haplotype caller or Mutect2, here we do realign around indels</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">RealignerTargetCreator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">RealignerTargetCreator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
 <span class="o">-</span><span class="n">known</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">realignertargetcreator</span><span class="o">.</span><span class="n">intervals</span> \
 <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">knownSites</span> <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span>
 </pre></div>
 </div>
 <p>and now do recabliration</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">knownSites</span>  <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">knownSites</span>  <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> \
 <span class="o">-</span><span class="n">knownSites</span> <span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span>  <span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>
 </pre></div>
 </div>
 <p>Then lets generate some plots to check whether post recabliration is better than pre recabliration:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">AnalyzeCovariates</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">before</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>  <span class="o">-</span><span class="n">after</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>  \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">AnalyzeCovariates</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">before</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>  <span class="o">-</span><span class="n">after</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>  \
 <span class="o">-</span><span class="n">plots</span> <span class="n">sample</span><span class="o">.</span><span class="n">recalibration_plots</span><span class="o">.</span><span class="n">pdf</span>
 </pre></div>
 </div>
 <p>Assuming post recabliration is better than before recabliration, we create our bam file as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">PrintReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span>  <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">PrintReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span>  <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
 <span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span>
 </pre></div>
 </div>
 <p>if you are interested in variant calling, then let use haplotype caller:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">HaplotypeCaller</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span> \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">HaplotypeCaller</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span> \
 <span class="o">-</span><span class="n">dontUseSoftClippedBases</span> <span class="o">-</span><span class="n">stand_call_conf</span> <span class="mf">20.0</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">vcf</span>
 </pre></div>
 </div>
@@ -169,7 +158,7 @@ VALIDATION_STRINGENCY=SILENT M=output.metrics
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2018, Sherine Awad.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3+.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.0b1.
     </div>
   </body>
 </html>
