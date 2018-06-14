@@ -2,11 +2,9 @@
 **Long nonCoding RNA Prediction** 
 =============================================
 
-Install lncScore:: 
-
-    wget https://github.com/WGLab/lncScore/archive/v1.0.2.tar.gz 
-    tar -xzvf v1.0.2.tar.gz 
-       
+      
+Here we will use lncScore, check  
+ 
 We use MyTranscripts.fa which contains our transcript in fasta format ::
 
     python lncScore.py -f MyTranscripts.fa -g ${GTF}/genes.gtf \

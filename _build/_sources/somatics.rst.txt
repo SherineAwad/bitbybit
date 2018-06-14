@@ -8,7 +8,7 @@ Creating panel of normals::
 
 first we need to create a `NORMALS.list` file that contains the name of the normal vcfs perceded by -V : 
 
-::
+
 	-V normal1.vcf
 	-V normal2.vcf
 	-V normal3.vcf

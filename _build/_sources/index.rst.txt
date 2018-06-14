@@ -20,11 +20,11 @@ Welcome to BitByBit's documentation!
    RNAseqvariants.rst 
    somatics.rst  
    lncRNA.rst 
+   installation.rst 
 
+#Indices and tables
+#==================
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+#* :ref:`genindex`
+#* :ref:`modindex`
+#* :ref:`search`

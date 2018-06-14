@@ -73,6 +73,6 @@ if you are interested in variant calling, then let use haplotype caller::
   java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R hg38.fasta -I sample.bam \
   -dontUseSoftClippedBases -stand_call_conf 20.0 -o sample.vcf 
 
-Or go to the somatic mutations tutorial for further analysis and detection of somatic mutations.
+
+Or check how to use these recablirated bam file to further analyze and detect somatic mutations  :doc:`somatics`.  
  
-   .. _somatics:
