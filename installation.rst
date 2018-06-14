@@ -7,6 +7,7 @@
 
 Install rvtests 
 -----------------
+Install rvtests from `<https://github.com/zhanxw/rvtests>`__:: 
 
   git clone https://github.com/zhanxw/rvtests
 
