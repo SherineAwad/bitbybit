@@ -40,6 +40,15 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><strong>Whole Genomes Toolkit</strong></a><ul>
+<li><a class="reference internal" href="#evidence-to-sam">Evidence to Sam</a></li>
+<li><a class="reference internal" href="#cgatools-tsv-to-annovar-format">CGAtools tsv to annovar format</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="rvassocanalysis.html"
                         title="previous chapter"><strong>Rare Variants Association Analysis</strong></a></p>
@@ -76,6 +85,8 @@
   <div class="section" id="whole-genomes-toolkit">
 <h1><strong>Whole Genomes Toolkit</strong><a class="headerlink" href="#whole-genomes-toolkit" title="Permalink to this headline">¶</a></h1>
 <p>Here, we will show various operations in whole genome Complete Genomics or BGI.</p>
+<div class="section" id="evidence-to-sam">
+<h2>Evidence to Sam<a class="headerlink" href="#evidence-to-sam" title="Permalink to this headline">¶</a></h2>
 <p>Convert to bam from cgatools, and then we can view the sorted bam in IGV:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cgatools</span> <span class="n">evidence2sam</span> \
 <span class="o">--</span><span class="n">evidence</span><span class="o">-</span><span class="n">dnbs</span><span class="o">=</span><span class="n">evidenceDnbs</span><span class="o">-</span><span class="n">chr9</span><span class="o">-</span><span class="n">GS000004829</span><span class="o">-</span><span class="n">ASM</span><span class="o">.</span><span class="n">tsv</span><span class="o">.</span><span class="n">bz2</span> \
@@ -85,6 +96,9 @@
 </pre></div>
 </div>
 <p>Here we used the evidence file from cgatools output, and used evidence2sam to convert it to sam then sorted bam.</p>
+</div>
+<div class="section" id="cgatools-tsv-to-annovar-format">
+<h2>CGAtools tsv to annovar format<a class="headerlink" href="#cgatools-tsv-to-annovar-format" title="Permalink to this headline">¶</a></h2>
 <p>Convert from cgatools .tsv to Annovar format to further annotate with Annovar:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">convert2annovar</span><span class="o">.</span><span class="n">pl</span> <span class="o">-</span><span class="nb">format</span> <span class="n">cg</span> <span class="o">-</span><span class="n">out</span> <span class="n">patientX</span><span class="o">.</span><span class="n">annovar</span><span class="o">.</span><span class="n">input</span>  <span class="n">var</span><span class="o">-</span><span class="n">GSPatientX</span><span class="o">-</span><span class="n">ASM</span><span class="o">.</span><span class="n">tsv</span>
 </pre></div>
@@ -95,6 +109,7 @@
 </pre></div>
 </div>
 <p>where example/gene_xref.txt is the xref file found in example folder of Annovar.</p>
+</div>
 </div>
 
 

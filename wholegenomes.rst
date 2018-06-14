@@ -3,6 +3,9 @@
 ============================
 Here, we will show various operations in whole genome Complete Genomics or BGI. 
 
+Evidence to Sam
+----------------
+
 Convert to bam from cgatools, and then we can view the sorted bam in IGV:: 
  
     cgatools evidence2sam \
@@ -13,6 +16,9 @@ Convert to bam from cgatools, and then we can view the sorted bam in IGV::
 
 Here we used the evidence file from cgatools output, and used evidence2sam to convert it to sam then sorted bam. 
 
+
+CGAtools tsv to annovar format
+-------------------------------
 
 Convert from cgatools .tsv to Annovar format to further annotate with Annovar:: 
 
