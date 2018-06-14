@@ -50,10 +50,10 @@ A famous approach under this category is SKAT, and can be calculated using rvtes
 
 
 Combined Tests  
-------------------
+----------------
 
 When we don't have any prior information about the variants we have, these approaches are robust regardless of the percentage of causal variants and 
-    the existence of both trait-increasing and trait-decreasing variants. 
+the existence of both trait-increasing and trait-decreasing variants. 
     
 A famous approach under this category is SKATO::  
    
