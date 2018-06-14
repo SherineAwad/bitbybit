@@ -6,12 +6,12 @@ Here we will follow GATK pipeline for detecting somatic mutations from RNAseq da
 
 Creating panel of normals::
 
-first we need to create a `NORMALS.list` file that contains the name of the normal vcfs perceded by -V : 
+first we need to create a `NORMALS.list` file that contains the name of the normal vcfs perceded by -V 
 
-
-	-V normal1.vcf
-	-V normal2.vcf
-	-V normal3.vcf
+literalinclude:: NORMALS.list 
+	:-V normal1.vcf
+	:-V normal2.vcf
+	:-V normal3.vcf
  
 
 Then we create the panel of normals as follows:: 

@@ -20,9 +20,7 @@ Install Trimgalore
 
 Install Trimgalore `<https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/>`__ :: 
 
-   wget https://github.com/FelixKrueger/TrimGalore/archive/0.4.5.zip 
-   unzip 0.4.5.zip 
-
+   conda install -c bioconda trim-galore 
 
 .. _set_cutadapt: 
 
@@ -32,4 +30,14 @@ Install Cutadapt:
 Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`__:: 
 
     conda install -c bioconda cutadapt
- 
+
+
+.. _set_fastqc: 
+
+
+Install FastQC: 
+-----------------
+
+Install FastQC `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__:: 
+
+  
