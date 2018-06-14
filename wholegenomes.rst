@@ -1,5 +1,5 @@
 ============================
-Whole Genomes Analysis 
+Whole Genomes Toolkit 
 ============================
 Here, we will show various operations in whole genome Complete Genomics or BGI. 
 
