@@ -19,6 +19,8 @@ Welcome to BitByBit's documentation!
    vcfrandom.rst 
    RNAseqvariants.rst 
    somatics.rst  
-   lncRNA.rst 
+   lncRNA.rst
+   pathwayanalysis.rst
+   CreateTx2gene.rst 
    installation.rst 
 

@@ -14,7 +14,7 @@ Some ID conversion to entrezid needed by KEGG::
 	keggres = gage(foldchanges, gsets=kegg.sets.hs, same.dir=TRUE)
 	lapply(keggres, head)
 
-Get the top 10 upregulated pathways::
+Get 10 upregulated pathways::
 
 	keggrespathwaysup = data.frame(id=rownames(keggres$greater), keggres$greater) %>%
   	tbl_df() %>%

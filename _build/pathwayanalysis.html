@@ -16,6 +16,8 @@
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transcripts to Genes" href="CreateTx2gene.html" />
+    <link rel="prev" title="Long nonCoding RNA Prediction" href="lncRNA.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -27,11 +29,23 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CreateTx2gene.html" title="Transcripts to Genes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lncRNA.html" title="Long nonCoding RNA Prediction"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lncRNA.html"
+                        title="previous chapter"><strong>Long nonCoding RNA Prediction</strong></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="CreateTx2gene.html"
+                        title="next chapter"><strong>Transcripts to Genes</strong></a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -73,7 +87,7 @@ keggres = gage(foldchanges, gsets=kegg.sets.hs, same.dir=TRUE)
 lapply(keggres, head)
 </pre></div>
 </div>
-<p>Get the top 10 upregulated pathways:</p>
+<p>Get 10 upregulated pathways:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>keggrespathwaysup = data.frame(id=rownames(keggres$greater), keggres$greater) %&gt;%
 tbl_df() %&gt;%
 filter(row_number()&lt;=10) %&gt;%
@@ -122,6 +136,12 @@ lapply(gobpres, head)
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="CreateTx2gene.html" title="Transcripts to Genes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lncRNA.html" title="Long nonCoding RNA Prediction"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
       </ul>
     </div>

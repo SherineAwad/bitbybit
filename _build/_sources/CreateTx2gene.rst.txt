@@ -1,5 +1,5 @@
 ========================================
-**Annotation using tx2gene and txdb **
+**Transcripts to Genes**
 ========================================
 
 
