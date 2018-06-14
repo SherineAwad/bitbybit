@@ -7,8 +7,8 @@ Lets :ref:`set_rvtests` before starting this tutorial.
 Instead of testing whether a single variant is associated with a specific phenotype, we can study the cummulative effect of a group of variants in a gene or region on a specific phenotype. 
 Rare variants association analysis has lots of categories, we will summarize here a few categories:
 
-Burden Test
-------------
+Burden Tests
+-------------
 
 Burden test is prefered when we have variants in the same direction and the same effect, i.e. variants are risk increasing or risk decreasing. Many methods fall under this category including **CMC**, **CMAT**, etc. Below is an example of using rvtest for burden test using CMC method.
 
@@ -27,7 +27,7 @@ And to specify a specific set of genes::
   rvtest --inVcf samples.vcf.gz --pheno samples.ped --freqUpper 0.01 --out cmc --gene GPR98,USH2A --geneFile refFlat_hg19.txt.gz --burden cmc
 
 
-Adaptive Burden Test
+Adaptive Burden Tests
 ---------------------
 
 Adaptive is more robust than Burden test as it allows for adjusting weights.
