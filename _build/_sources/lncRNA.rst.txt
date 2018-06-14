@@ -3,7 +3,7 @@
 =============================================
 
       
-Here we will use lncScore, check  
+Here we will use lncScore, check :doc:`installation` for installation tips. 
  
 We use MyTranscripts.fa which contains our transcript in fasta format ::
 
