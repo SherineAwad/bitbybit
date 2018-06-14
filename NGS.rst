@@ -3,6 +3,17 @@
 ====================================================
 
 
+Reads Trimming
+########################
+
+We need to install Trimgalore and Cutadapt :ref:`set_trimgalore`
+ 
+Then we remove adaptors and quality trim data as follows:: 
+
+  trim_galore --paired --gzip --retain_unpaired --trim1 --fastqc --fastqc_args "--outdir fastqc" -o galore --path_to_cutadapt cutadapt_path  pair_1.fastq.gz pair_2.fastq.gz 
+
+
+
 Estimating Insert Size 
 ###########################
 

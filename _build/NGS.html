@@ -50,6 +50,7 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#"><strong>Next Generation Sequencing Toolkit</strong></a><ul>
+<li><a class="reference internal" href="#reads-trimming">Reads Trimming</a></li>
 <li><a class="reference internal" href="#estimating-insert-size">Estimating Insert Size</a></li>
 </ul>
 </li>
@@ -88,6 +89,14 @@
             
   <div class="section" id="next-generation-sequencing-toolkit">
 <h1><strong>Next Generation Sequencing Toolkit</strong><a class="headerlink" href="#next-generation-sequencing-toolkit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reads-trimming">
+<h2>Reads Trimming<a class="headerlink" href="#reads-trimming" title="Permalink to this headline">¶</a></h2>
+<p>We need to install Trimgalore and Cutadapt <a class="reference internal" href="installation.html#set-trimgalore"><span class="std std-ref">Install Trimgalore</span></a></p>
+<p>Then we remove adaptors and quality trim data as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">trim_galore</span> <span class="o">--</span><span class="n">paired</span> <span class="o">--</span><span class="n">gzip</span> <span class="o">--</span><span class="n">retain_unpaired</span> <span class="o">--</span><span class="n">trim1</span> <span class="o">--</span><span class="n">fastqc</span> <span class="o">--</span><span class="n">fastqc_args</span> <span class="s2">&quot;--outdir fastqc&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">galore</span> <span class="o">--</span><span class="n">path_to_cutadapt</span> <span class="n">cutadapt_path</span>  <span class="n">pair_1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">pair_2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="estimating-insert-size">
 <h2>Estimating Insert Size<a class="headerlink" href="#estimating-insert-size" title="Permalink to this headline">¶</a></h2>
 <p>Here, we estimate the insert size using bbmap by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt:</p>
