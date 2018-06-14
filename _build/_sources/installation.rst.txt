@@ -1,7 +1,10 @@
 ===================================================
-**How to install the tools used in this tutorial**
+**Installation Assistance **
 ===================================================
 
+
+Install lncScore: 
+------------------
 
 Install lncScore `<https://www.nature.com/articles/srep34838>`__ ::
 
