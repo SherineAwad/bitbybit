@@ -40,6 +40,17 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><strong>VCF Toolkit</strong></a><ul>
+<li><a class="reference internal" href="#megre-vcf-files">Megre VCF Files</a></li>
+<li><a class="reference internal" href="#split-vcf">Split VCF</a></li>
+<li><a class="reference internal" href="#sort-vcf">Sort VCF</a></li>
+<li><a class="reference internal" href="#filter-a-vcf">Filter a VCF</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="NGS.html"
                         title="previous chapter"><strong>Next Generation Sequencing Toolkit</strong></a></p>
@@ -76,7 +87,8 @@
   <div class="section" id="vcf-toolkit">
 <h1><strong>VCF Toolkit</strong><a class="headerlink" href="#vcf-toolkit" title="Permalink to this headline">¶</a></h1>
 <p>Here is a bunch of different operation we need regulary to do with vcf files.</p>
-<p>Megre vcf files:</p>
+<div class="section" id="megre-vcf-files">
+<h2>Megre VCF Files<a class="headerlink" href="#megre-vcf-files" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bgzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">bgzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">bgzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
@@ -86,6 +98,9 @@
 <span class="n">vcf</span><span class="o">-</span><span class="n">merge</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="n">file2</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="n">file3</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">&gt;</span> <span class="n">merged</span><span class="o">.</span><span class="n">vcf</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="split-vcf">
+<h2>Split VCF<a class="headerlink" href="#split-vcf" title="Permalink to this headline">¶</a></h2>
 <p>Split vcf grouped samples into one sample per vcf:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for sample in `bcftools query -l grouped.vcf`
     do
@@ -99,13 +114,20 @@
 <span class="n">tabix</span> <span class="o">-</span><span class="n">h</span> <span class="n">allsamples</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="n">chr1</span> <span class="o">&gt;</span> <span class="n">allsamples_chr1</span><span class="o">.</span><span class="n">vcf</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="sort-vcf">
+<h2>Sort VCF<a class="headerlink" href="#sort-vcf" title="Permalink to this headline">¶</a></h2>
 <p>From vcftools, we use vcf-sort sort:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcf</span><span class="o">-</span><span class="n">sort</span> <span class="n">myvcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">new</span><span class="o">.</span><span class="n">vcf</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="filter-a-vcf">
+<h2>Filter a VCF<a class="headerlink" href="#filter-a-vcf" title="Permalink to this headline">¶</a></h2>
 <p>From vcftools we filter a vcf for variants that <cite>PASS</cite> caller:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcftools</span> <span class="o">--</span><span class="n">gzvcf</span> <span class="n">myvcf</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">remove</span><span class="o">-</span><span class="n">filtered</span><span class="o">-</span><span class="nb">all</span> <span class="o">--</span><span class="n">recode</span> <span class="o">--</span><span class="n">out</span> <span class="n">myvcf</span><span class="o">.</span><span class="k">pass</span>
 </pre></div>
+</div>
 </div>
 </div>
 

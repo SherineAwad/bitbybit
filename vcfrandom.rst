@@ -4,7 +4,11 @@
 
 Here is a bunch of different operation we need regulary to do with vcf files. 
 
-Megre vcf files:: 
+Megre VCF Files 
+----------------
+
+::
+
 
     bgzip -c file1.vcf.vcf > file1.vcf.gz
     bgzip -c file1.vcf.vcf > file1.vcf.gz
@@ -14,6 +18,9 @@ Megre vcf files::
     tabix -p vcf file3.vcf.gz 
     vcf-merge file1.vcf.gz file2.vcf.gz file3.vcf.gz > merged.vcf
 
+
+Split VCF 
+-----------
 
 Split vcf grouped samples into one sample per vcf::
 
@@ -30,9 +37,17 @@ Split vcf grouped samples per chromosome::
     tabix -p vcf allsamples.vcf.gz
     tabix -h allsamples.vcf.gz chr1 > allsamples_chr1.vcf
 
+
+Sort VCF 
+-----------
+
 From vcftools, we use vcf-sort sort:: 
    
     vcf-sort myvcf.vcf > new.vcf
+
+
+Filter a VCF 
+---------------
 
 
 From vcftools we filter a vcf for variants that `PASS` caller:: 
