@@ -1,11 +1,10 @@
-===============================================
-How to install the tools used in this tutorial
-===============================================
+===================================================
+**How to install the tools used in this tutorial**
+===================================================
 
 
-Install lncScore  `<https://www.nature.com/articles/srep34838>`__ ::
+Install lncScore `<https://www.nature.com/articles/srep34838>`__ ::
 
     wget https://github.com/WGLab/lncScore/archive/v1.0.2.tar.gz
     tar -xzvf v1.0.2.tar.gz
 
-=
