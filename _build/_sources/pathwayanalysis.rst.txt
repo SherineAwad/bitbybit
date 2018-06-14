@@ -1,3 +1,6 @@
+================================================
+**Pathway Analysis for RNASeq and Microarrays **
+================================================ 
 
 Some ID conversion to entrezid needed by KEGG::
 

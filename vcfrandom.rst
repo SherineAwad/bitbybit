@@ -1,5 +1,5 @@
 ====================================
-VCF Toolkit 
+**VCF Toolkit** 
 ====================================
 
 Here is a bunch of different operation we need regulary to do with vcf files. 

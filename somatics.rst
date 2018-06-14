@@ -1,5 +1,5 @@
 ====================================
-Somatic Mutations from RNAseq
+**Somatic Mutations from RNAseq**
 ====================================
 
 Here we will follow GATK pipeline for detecting somatic mutations from RNAseq data
