@@ -8,6 +8,8 @@ Welcome to BitByBit's documentation!
 
 :Author: **Sherine Awad**
 
+:In Progress 
+
 
 .. toctree::
    :maxdepth: 1 
