@@ -5,10 +5,12 @@
 
 Welcome to BitByBit's documentation!
 ====================================
+In progress 
+------------
 
 :Author: **Sherine Awad**
 
-:Status: In Progress
+
 
 .. toctree::
    :maxdepth: 1 
