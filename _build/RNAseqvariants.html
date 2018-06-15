@@ -40,6 +40,14 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><strong>Variant Calling for RNASeq Data</strong></a><ul>
+<li><a class="reference internal" href="#in-progress">In Progress</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="vcfrandom.html"
                         title="previous chapter"><strong>VCF Toolkit</strong></a></p>
@@ -75,6 +83,8 @@
             
   <div class="section" id="variant-calling-for-rnaseq-data">
 <h1><strong>Variant Calling for RNASeq Data</strong><a class="headerlink" href="#variant-calling-for-rnaseq-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-progress">
+<h2>In Progress<a class="headerlink" href="#in-progress" title="Permalink to this headline">¶</a></h2>
 <p>Here we will follow GATK pipeline for variant calling from RNAseq data.</p>
 <p>Lets first create an index:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">runMode</span> <span class="n">genomeGenerate</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">genomeFastaFiles</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">4</span>
@@ -133,6 +143,7 @@ VALIDATION_STRINGENCY=SILENT M=output.metrics
 </pre></div>
 </div>
 <p>Or check how to use these recablirated bam file to further analyze and detect somatic mutations  <a class="reference internal" href="somatics.html"><span class="doc">Somatic Mutations from RNAseq</span></a>.</p>
+</div>
 </div>
 
 

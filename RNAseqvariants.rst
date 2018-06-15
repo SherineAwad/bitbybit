@@ -2,6 +2,10 @@
 **Variant Calling for RNASeq Data** 
 ====================================
 
+In Progress
+##############
+
+
 Here we will follow GATK pipeline for variant calling from RNAseq data. 
 
 

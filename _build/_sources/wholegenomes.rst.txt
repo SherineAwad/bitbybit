@@ -1,6 +1,12 @@
 ============================
 **Whole Genomes Toolkit** 
 ============================
+
+
+In Progress 
+############
+
+
 Here, we will show various operations in whole genome Complete Genomics or BGI. 
 
 Evidence to Sam

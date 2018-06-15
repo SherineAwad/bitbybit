@@ -5,8 +5,11 @@
 
 Welcome to BitByBit's documentation!
 ====================================
+In progress 
+------------
 
 :Author: **Sherine Awad**
+
 
 
 .. toctree::

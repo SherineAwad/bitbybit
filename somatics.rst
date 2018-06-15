@@ -2,6 +2,9 @@
 **Somatic Mutations from RNAseq**
 ====================================
 
+In Progress 
+#############
+
 Here we will follow GATK pipeline for detecting somatic mutations from RNAseq data
 
 Creating panel of normals::
