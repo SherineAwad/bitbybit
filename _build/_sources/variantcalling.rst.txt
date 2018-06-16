@@ -32,8 +32,19 @@ Finally sort the bam files ::
 
   samtools sort -T reads.sorted -o reads.sorted.bam reads.bam
   samtools index reads.sorted.bam
- 
+
+.. _calling_samtools: 
+
 Calling variants using Samtools 
 #################################
 
+Here, we will call variants using samtools. We can also use the sorted BAM to call variants using Gatk pipeline :doc:`calling_gatk` ::  
+
   samtools mpileup -uf genome.fa reads.sorted.bam | bcftools call -vmO v -o reads.vcf --threads 2
+
+
+
+.. _calling_gatk: 
+
+Calling variants using GATK pipeline
+#######################################

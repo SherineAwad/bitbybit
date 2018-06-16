@@ -45,6 +45,7 @@
 <li><a class="reference internal" href="#"><strong>Variant Calling</strong></a><ul>
 <li><a class="reference internal" href="#in-progress">In Progress</a></li>
 <li><a class="reference internal" href="#calling-variants-using-samtools">Calling variants using Samtools</a></li>
+<li><a class="reference internal" href="#calling-variants-using-gatk-pipeline">Calling variants using GATK pipeline</a></li>
 </ul>
 </li>
 </ul>
@@ -112,9 +113,14 @@
 </div>
 </div>
 <div class="section" id="calling-variants-using-samtools">
-<h2>Calling variants using Samtools<a class="headerlink" href="#calling-variants-using-samtools" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>samtools mpileup -uf genome.fa reads.sorted.bam | bcftools call -vmO v -o reads.vcf –threads 2</div></blockquote>
+<span id="calling-samtools"></span><h2>Calling variants using Samtools<a class="headerlink" href="#calling-variants-using-samtools" title="Permalink to this headline">¶</a></h2>
+<p>Here, we will call variants using samtools. We can also use the sorted BAM to call variants using Gatk pipeline <span class="xref std std-doc">calling_gatk</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">mpileup</span> <span class="o">-</span><span class="n">uf</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="n">reads</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span> <span class="o">|</span> <span class="n">bcftools</span> <span class="n">call</span> <span class="o">-</span><span class="n">vmO</span> <span class="n">v</span> <span class="o">-</span><span class="n">o</span> <span class="n">reads</span><span class="o">.</span><span class="n">vcf</span> <span class="o">--</span><span class="n">threads</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calling-variants-using-gatk-pipeline">
+<span id="calling-gatk"></span><h2>Calling variants using GATK pipeline<a class="headerlink" href="#calling-variants-using-gatk-pipeline" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
