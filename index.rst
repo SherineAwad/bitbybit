@@ -27,4 +27,5 @@ In progress
    pathwayanalysis.rst
    CreateTx2gene.rst 
    installation.rst 
+   externalresources.rst
 
