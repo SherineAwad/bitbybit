@@ -29,3 +29,40 @@ If you don't have enough memory, you can use bbmerge, however, bbmap estimation 
    bash bbmerge.sh in1= in1=pair1.fastq.gz in2=pair2.fastq.gz ihist=hist_merge.txt reads=4000000 prefilter=2 rem extend2=100
 
 
+
+Get Mapped reads from a BAM file 
+###################################
+
+Here, we will get mapped reads in a BAM file:: 
+
+  samtools view -f 4 alignments.bam > mapped.reads.sam 
+
+Add -b to get the read in a BAM :: 
+
+  samtools view -b -f 4 alignments.bam > mapped.reads.bam 
+
+
+Or add -c to  count the mapped reads :: 
+
+  samtools view -c -f 4  alignments.bam >>  mapped.reads.count
+
+
+Get Mapped reads from a BAM file 
+#################################
+
+Use -F to get the mapped reads as follows:: 
+
+  samtools view -F 4 alignments.bam > mapped.reads.sam 
+
+And similarily, add -b to get the mapped reads in a bam file :: 
+
+ 
+  samtools view -b -F 4 alignments.bam > mapped.reads.bam 
+
+
+To count unmapped reads from a BAM file ::
+
+  samtools view -c -F 4  alignments.bam >>  unmapped.reads.count
+
+
+
