@@ -30,21 +30,21 @@ If you don't have enough memory, you can use bbmerge, however, bbmap estimation 
 
 
 
-Get Mapped reads from a BAM file 
+Get Unmapped reads from a BAM file 
 ###################################
 
-Here, we will get mapped reads in a BAM file:: 
+Here, we will get unmapped reads in a BAM file:: 
 
-  samtools view -f 4 alignments.bam > mapped.reads.sam 
+  samtools view -f 4 alignments.bam > unmapped.reads.sam 
 
-Add -b to get the read in a BAM :: 
+Add -b to get the unmapped reads in a BAM :: 
 
-  samtools view -b -f 4 alignments.bam > mapped.reads.bam 
+  samtools view -b -f 4 alignments.bam > unmapped.reads.bam 
 
 
-Or add -c to  count the mapped reads :: 
+Or add -c to  count the unmapped reads :: 
 
-  samtools view -c -f 4  alignments.bam >>  mapped.reads.count
+  samtools view -c -f 4  alignments.bam >> unmapped.reads.count
 
 
 Get Mapped reads from a BAM file 
@@ -60,9 +60,9 @@ And similarily, add -b to get the mapped reads in a bam file ::
   samtools view -b -F 4 alignments.bam > mapped.reads.bam 
 
 
-To count unmapped reads from a BAM file ::
+To count mapped reads from a BAM file ::
 
-  samtools view -c -F 4  alignments.bam >>  unmapped.reads.count
+  samtools view -c -F 4  alignments.bam >> mapped.reads.count
 
 
 

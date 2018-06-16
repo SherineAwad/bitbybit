@@ -45,8 +45,8 @@
 <li><a class="reference internal" href="#"><strong>Next Generation Sequencing Toolkit</strong></a><ul>
 <li><a class="reference internal" href="#reads-trimming">Reads Trimming</a></li>
 <li><a class="reference internal" href="#estimating-insert-size">Estimating Insert Size</a></li>
+<li><a class="reference internal" href="#get-unmapped-reads-from-a-bam-file">Get Unmapped reads from a BAM file</a></li>
 <li><a class="reference internal" href="#get-mapped-reads-from-a-bam-file">Get Mapped reads from a BAM file</a></li>
-<li><a class="reference internal" href="#id1">Get Mapped reads from a BAM file</a></li>
 </ul>
 </li>
 </ul>
@@ -105,23 +105,23 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="get-unmapped-reads-from-a-bam-file">
+<h2>Get Unmapped reads from a BAM file<a class="headerlink" href="#get-unmapped-reads-from-a-bam-file" title="Permalink to this headline">¶</a></h2>
+<p>Here, we will get unmapped reads in a BAM file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">f</span> <span class="mi">4</span> <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;</span> <span class="n">unmapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+<p>Add -b to get the unmapped reads in a BAM</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">f</span> <span class="mi">4</span> <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;</span> <span class="n">unmapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<p>Or add -c to  count the unmapped reads</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">f</span> <span class="mi">4</span>  <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;&gt;</span> <span class="n">unmapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">count</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="get-mapped-reads-from-a-bam-file">
 <h2>Get Mapped reads from a BAM file<a class="headerlink" href="#get-mapped-reads-from-a-bam-file" title="Permalink to this headline">¶</a></h2>
-<p>Here, we will get mapped reads in a BAM file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">f</span> <span class="mi">4</span> <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;</span> <span class="n">mapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">sam</span>
-</pre></div>
-</div>
-<p>Add -b to get the read in a BAM</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">f</span> <span class="mi">4</span> <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;</span> <span class="n">mapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">bam</span>
-</pre></div>
-</div>
-<p>Or add -c to  count the mapped reads</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">f</span> <span class="mi">4</span>  <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;&gt;</span>  <span class="n">mapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">count</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>Get Mapped reads from a BAM file<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Use -F to get the mapped reads as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">F</span> <span class="mi">4</span> <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;</span> <span class="n">mapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">sam</span>
 </pre></div>
@@ -130,8 +130,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">F</span> <span class="mi">4</span> <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;</span> <span class="n">mapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">bam</span>
 </pre></div>
 </div>
-<p>To count unmapped reads from a BAM file</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">F</span> <span class="mi">4</span>  <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;&gt;</span>  <span class="n">unmapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">count</span>
+<p>To count mapped reads from a BAM file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">view</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">F</span> <span class="mi">4</span>  <span class="n">alignments</span><span class="o">.</span><span class="n">bam</span> <span class="o">&gt;&gt;</span> <span class="n">mapped</span><span class="o">.</span><span class="n">reads</span><span class="o">.</span><span class="n">count</span>
 </pre></div>
 </div>
 </div>
