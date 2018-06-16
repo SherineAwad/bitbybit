@@ -16,9 +16,10 @@ In progress
    :maxdepth: 1 
    :caption: Contents:
   
-   rvassocanalysis.rst	
+   rvassocanalysis.rst
    wholegenomes.rst
    NGS.rst 
+   variantcalling.rst
    vcfrandom.rst 
    RNAseqvariants.rst 
    somatics.rst  
