@@ -46,6 +46,7 @@
 <li><a class="reference internal" href="#in-progress">In Progress</a></li>
 <li><a class="reference internal" href="#calling-variants-using-samtools">Calling variants using Samtools</a></li>
 <li><a class="reference internal" href="#calling-variants-using-gatk-pipeline">Calling variants using GATK pipeline</a></li>
+<li><a class="reference internal" href="#annovar-annotations">Annovar Annotations</a></li>
 </ul>
 </li>
 </ul>
@@ -150,6 +151,14 @@ So lets do base recabliration</p>
 <p>Finally, lets use haplotype caller to call variants</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">HaplotypeCaller</span> <span class="o">-</span><span class="n">R</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">I</span> <span class="n">reads</span><span class="o">.</span><span class="n">recablirated</span><span class="o">.</span><span class="n">bam</span> \
 <span class="o">-</span><span class="n">dontUseSoftClippedBases</span> <span class="o">-</span><span class="n">stand_call_conf</span> <span class="mf">20.0</span>  <span class="o">-</span><span class="n">o</span> <span class="n">reads</span><span class="o">.</span><span class="n">haplotype</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="annovar-annotations">
+<h2>Annovar Annotations<a class="headerlink" href="#annovar-annotations" title="Permalink to this headline">¶</a></h2>
+<p>Lets annotate our vcf file using Annovar</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">table_annovar</span><span class="o">.</span><span class="n">pl</span> <span class="n">reads</span><span class="o">.</span><span class="n">haplotype</span><span class="o">.</span><span class="n">vcf</span> <span class="n">humandb</span><span class="o">/</span> <span class="o">-</span><span class="n">buildver</span> <span class="n">hg19</span> <span class="o">-</span><span class="n">out</span> <span class="n">annotated_vcf</span> <span class="o">-</span><span class="n">remove</span> <span class="o">-</span><span class="n">protocol</span> <span class="n">refGene</span><span class="p">,</span><span class="n">ensGene</span><span class="p">,</span><span class="n">cytoBand</span><span class="p">,</span><span class="n">exac03</span><span class="p">,</span><span class="n">gnomad_exome</span><span class="p">,</span><span class="n">avsnp147</span><span class="p">,</span>\
+<span class="n">dbnsfp30a</span><span class="p">,</span><span class="n">clinvar_20170130</span><span class="p">,</span><span class="n">mitimpact2</span><span class="p">,</span><span class="n">revel</span> <span class="o">-</span><span class="n">operation</span> <span class="n">g</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span>  <span class="o">-</span><span class="n">nastring</span> <span class="o">.</span> <span class="o">-</span><span class="n">vcfinput</span>
 </pre></div>
 </div>
 </div>

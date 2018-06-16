@@ -81,3 +81,14 @@ Finally, lets use haplotype caller to call variants ::
 
   java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R genome.fa -I reads.recablirated.bam \
   -dontUseSoftClippedBases -stand_call_conf 20.0  -o reads.haplotype.vcf 
+
+
+Annovar Annotations 
+#####################
+
+Lets annotate our vcf file using Annovar :: 
+
+  table_annovar.pl reads.haplotype.vcf humandb/ -buildver hg19 -out annotated_vcf -remove -protocol refGene,ensGene,cytoBand,exac03,gnomad_exome,avsnp147,\
+  dbnsfp30a,clinvar_20170130,mitimpact2,revel -operation g,g,f,f,f,f,f,f,f,f  -nastring . -vcfinput 
+
+

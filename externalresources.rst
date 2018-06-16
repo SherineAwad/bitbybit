@@ -9,6 +9,12 @@ Genomes from Illumina
 `<http://emea.support.illumina.com/sequencing/sequencing_software/igenome.html#>`__ 
 
 
+Resource Bundles from GATK 
+###############################
+
+`<https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0?pli=1>`__ 
+
+
 .. _mouse: 
 
 Mouse Genome
@@ -26,7 +32,7 @@ And download dict and indeces ::
 
 .. _mouse_indesl_snps: 
 
-Mouse Indels and SNPS 
+Mouse Indels and SNPs 
 ########################
 
 To download mouse indels and snps used for variant calling :: 
