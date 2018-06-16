@@ -121,6 +121,37 @@
 </div>
 <div class="section" id="calling-variants-using-gatk-pipeline">
 <span id="calling-gatk"></span><h2>Calling variants using GATK pipeline<a class="headerlink" href="#calling-variants-using-gatk-pipeline" title="Permalink to this headline">¶</a></h2>
+<p>Lets add read groups to our sam file reads.sam</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">Dlog4j</span><span class="o">.</span><span class="n">configurationFile</span><span class="o">=</span><span class="s2">&quot;log4j2.xml&quot;</span> <span class="o">-</span><span class="n">jar</span> <span class="n">picard</span><span class="o">.</span><span class="n">jar</span> <span class="n">AddOrReplaceReadGroups</span> <span class="n">I</span><span class="o">=</span><span class="n">reads</span><span class="o">.</span><span class="n">sam</span> <span class="n">O</span><span class="o">=</span><span class="n">rg_added_sorted</span><span class="o">.</span><span class="n">bam</span> \
+ <span class="n">SO</span><span class="o">=</span><span class="n">coordinate</span> <span class="n">RGID</span><span class="o">=</span><span class="nd">@HWI</span><span class="o">-</span><span class="n">D00380_37_C4H2JACXX_2</span> <span class="n">RGLB</span><span class="o">=</span><span class="n">D109573_TAAGGCGA</span> <span class="n">RGPL</span><span class="o">=</span><span class="n">ILLUMINA</span> <span class="n">RGPU</span><span class="o">=</span><span class="nd">@HWI</span><span class="o">-</span><span class="n">D00380_37_C4H2JACXX_2</span><span class="o">.</span><span class="n">D109573_TAAGGCGA</span> <span class="n">RGSM</span><span class="o">=</span><span class="n">D109573</span>
+</pre></div>
+</div>
+<p>Then lets do some sorting</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">sort</span> <span class="o">-</span><span class="n">T</span> <span class="n">reads</span><span class="o">.</span><span class="n">sorted</span> <span class="o">-</span><span class="n">o</span> <span class="n">reads</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span> <span class="n">rg_added_sorted</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">samtools</span> <span class="n">index</span> <span class="n">reads</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<p>Indel realignments is optional since we will use haplotype caller.
+So lets do base recabliration</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">I</span> <span class="n">reads</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">knownSites</span> <span class="n">dbsnp_138</span><span class="o">.</span><span class="n">hg19</span><span class="o">.</span><span class="n">vcf</span>  <span class="o">-</span><span class="n">o</span> <span class="n">reads</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>
+</pre></div>
+</div>
+<p>And post recabliration</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">I</span> <span class="n">reads</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">knownSites</span> <span class="n">dbsnp_138</span><span class="o">.</span><span class="n">hg19</span><span class="o">.</span><span class="n">vcf</span> <span class="o">-</span><span class="n">BQSR</span> <span class="n">reads</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">reads</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>
+</pre></div>
+</div>
+<p>Then get our recablirated bam file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">PrintReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">I</span> <span class="n">reads</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">BQSR</span> <span class="n">reads</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">reads</span><span class="o">.</span><span class="n">recablirated</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<p>Finally, lets use haplotype caller to call variants</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">HaplotypeCaller</span> <span class="o">-</span><span class="n">R</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">I</span> <span class="n">reads</span><span class="o">.</span><span class="n">recablirated</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">dontUseSoftClippedBases</span> <span class="o">-</span><span class="n">stand_call_conf</span> <span class="mf">20.0</span>  <span class="o">-</span><span class="n">o</span> <span class="n">reads</span><span class="o">.</span><span class="n">haplotype</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
 </div>
 </div>
 

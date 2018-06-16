@@ -48,3 +48,36 @@ Here, we will call variants using samtools. We can also use the sorted BAM to ca
 
 Calling variants using GATK pipeline
 #######################################
+
+Lets add read groups to our sam file reads.sam :: 
+
+   java -Dlog4j.configurationFile="log4j2.xml" -jar picard.jar AddOrReplaceReadGroups I=reads.sam O=rg_added_sorted.bam \
+    SO=coordinate RGID=@HWI-D00380_37_C4H2JACXX_2 RGLB=D109573_TAAGGCGA RGPL=ILLUMINA RGPU=@HWI-D00380_37_C4H2JACXX_2.D109573_TAAGGCGA RGSM=D109573
+
+Then lets do some sorting :: 
+
+  samtools sort -T reads.sorted -o reads.sorted.bam rg_added_sorted.bam
+  samtools index reads.sorted.bam 
+
+
+Indel realignments is optional since we will use haplotype caller.
+So lets do base recabliration :: 
+ 
+  java -jar GenomeAnalysisTK.jar -T BaseRecalibrator -R genome.fa -I reads.sorted.bam \
+  -knownSites dbsnp_138.hg19.vcf  -o reads.recal_data.table 
+
+And post recabliration :: 
+
+  java -jar GenomeAnalysisTK.jar -T BaseRecalibrator -R genome.fa -I reads.sorted.bam \
+  -knownSites dbsnp_138.hg19.vcf -BQSR reads.recal_data.table -o reads.post_recal_data.table
+
+
+Then get our recablirated bam file :: 
+
+  java -jar GenomeAnalysisTK.jar -T PrintReads -R genome.fa -I reads.sorted.bam \
+  -BQSR reads.post_recal_data.table -o reads.recablirated.bam 
+
+Finally, lets use haplotype caller to call variants :: 
+
+  java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R genome.fa -I reads.recablirated.bam \
+  -dontUseSoftClippedBases -stand_call_conf 20.0  -o reads.haplotype.vcf 
