@@ -9,7 +9,7 @@ Welcome to BitByBit Bioinformatics Tutorials
 In progress 
 ------------
 
-:Author: **Sherine Awad**
+:Author: **Sherine Awad Mahmoud**
 
 
 
