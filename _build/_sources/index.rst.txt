@@ -27,7 +27,8 @@ In progress
    somatics.rst  
    lncRNA.rst
    pathwayanalysis.rst
-   CreateTx2gene.rst 
+   CreateTx2gene.rst
+   metagenomics.rst 
    installation.rst 
    externalresources.rst
 
