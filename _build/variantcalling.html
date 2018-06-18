@@ -47,7 +47,7 @@
 <li><a class="reference internal" href="#calling-variants-using-samtools">Calling variants using Samtools</a></li>
 <li><a class="reference internal" href="#calling-variants-using-gatk-pipeline">Calling variants using GATK pipeline</a></li>
 <li><a class="reference internal" href="#annovar-annotations">Annovar Annotations</a></li>
-<li><a class="reference internal" href="#notes-on-filtering-variants">Notes on filtering variants</a></li>
+<li><a class="reference internal" href="#notes-on-variants-filtering">Notes on variants filtering</a></li>
 </ul>
 </li>
 </ul>
@@ -163,12 +163,15 @@ So lets do base recabliration</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="notes-on-filtering-variants">
-<h2>Notes on filtering variants<a class="headerlink" href="#notes-on-filtering-variants" title="Permalink to this headline">¶</a></h2>
-<p>Be very cautious  with hard filtering.
-High/low GC content have an effect on coverage in NGS. Ignoring variants with lower coverage in these regions could lead to missing an interesting variant. Be very cautious.</p>
-<p>Take a deep look into variants in duplicate genes. Human genome  exhibits lots of similarity. Ignoring variants just becasuse it is in a duplicate gene could lead  to missing interesting variants.
-When it comes to duplicate gene, investigate the mapping quality and region mappability.</p>
+<div class="section" id="notes-on-variants-filtering">
+<h2>Notes on variants filtering<a class="headerlink" href="#notes-on-variants-filtering" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Be Cautious</p>
+<p>Be very cautious  with hard filtering</p>
+<p>High/low GC content have an effect on coverage in NGS. Ignoring variants with lower coverage in these regions could lead to missing an interesting variant. Be very cautious.</p>
+<p>Take a deep look into variants in duplicate genes. Human genome  exhibits lots of similarity. Ignoring variants just becasuse it is in a duplicate gene could lead  to missing interesting variants.</p>
+<p>When it comes to duplicate gene, investigate cautiously the mapping quality and region mappability.</p>
+</div>
 </div>
 </div>
 

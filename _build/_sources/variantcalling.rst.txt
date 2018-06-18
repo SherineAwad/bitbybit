@@ -92,14 +92,17 @@ Lets annotate our vcf file using Annovar ::
   dbnsfp30a,clinvar_20170130,mitimpact2,revel -operation g,g,f,f,f,f,f,f,f,f  -nastring . -vcfinput 
 
 
-Notes on filtering variants 
-##################################
+Notes on variants filtering 
+#############################
 
+.. topic:: Be Cautious 
 
-Be very cautious  with hard filtering.
-High/low GC content have an effect on coverage in NGS. Ignoring variants with lower coverage in these regions could lead to missing an interesting variant. Be very cautious. 
-
-Take a deep look into variants in duplicate genes. Human genome  exhibits lots of similarity. Ignoring variants just becasuse it is in a duplicate gene could lead  to missing interesting variants.
-When it comes to duplicate gene, investigate the mapping quality and region mappability.
+  Be very cautious  with hard filtering
+  
+  High/low GC content have an effect on coverage in NGS. Ignoring variants with lower coverage in these regions could lead to missing an interesting variant. Be very cautious. 
+  
+  Take a deep look into variants in duplicate genes. Human genome  exhibits lots of similarity. Ignoring variants just becasuse it is in a duplicate gene could lead  to missing interesting variants.
+ 
+  When it comes to duplicate gene, investigate cautiously the mapping quality and region mappability.
 
 
