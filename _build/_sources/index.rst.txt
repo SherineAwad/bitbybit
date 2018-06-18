@@ -32,4 +32,4 @@ In progress
    metagenomics.rst 
    installation.rst 
    externalresources.rst
-
+   databases.rst 
