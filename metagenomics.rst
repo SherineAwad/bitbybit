@@ -1,7 +1,6 @@
-============================================
-Metagenomics Toolkit 
-=============================================
+==========================
+**Metagenomics Toolkit** 
+==========================
 
 
-
-Refer to `<http://khmer-protocols.readthedocs.io/en/latest/metagenomics/index.html>`__:: 
+Refer to `<http://khmer-protocols.readthedocs.io/en/latest/metagenomics/index.html>`__ 
