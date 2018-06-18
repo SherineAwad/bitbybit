@@ -96,7 +96,7 @@
 </div>
 <div class="section" id="estimating-insert-size">
 <h2>Estimating Insert Size<a class="headerlink" href="#estimating-insert-size" title="Permalink to this headline">¶</a></h2>
-<p>Here, we estimate the insert size using bbmap by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt:</p>
+<p>Here, we estimate the insert size using bbmap <a class="reference internal" href="installation.html#set-bbmap"><span class="std std-ref">Install BBMap:</span></a> by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">bbmap</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">Xmx50g</span>  <span class="n">in1</span><span class="o">=</span><span class="n">pair1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">pair2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">ihist</span><span class="o">=</span><span class="n">histmap4m</span><span class="o">.</span><span class="n">txt</span> <span class="n">reads</span><span class="o">=</span><span class="mi">4000000</span> <span class="n">ref</span><span class="o">=</span><span class="n">human_genome</span><span class="o">.</span><span class="n">fa</span>
 </pre></div>
 </div>

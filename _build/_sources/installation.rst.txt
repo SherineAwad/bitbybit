@@ -33,7 +33,7 @@ Install Trimgalore `<https://www.bioinformatics.babraham.ac.uk/projects/trim_gal
 
 .. _set_cutadapt: 
 
-Install Cutadapt:
+Install Cutadapt
 --------------------
 
 Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`__:: 
@@ -43,11 +43,29 @@ Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`_
 
 .. _set_fastqc: 
 
-
-Install FastQC: 
+Install FastQC 
 -----------------
 
 Install FastQC `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__:: 
 
    conda install -c bioconda fastqc 
-     
+
+
+.. _set_bbmap: 
+
+Install BBMap
+---------------
+
+Lets downlowd BBMap source :: 
+ 
+  wget https://sourceforge.net/projects/bbmap/files/BBMap_38.07.tar.gz
+
+Then lets unzip the files :: 
+
+  tar -xzvf BBMap_38.07.tar.gz 
+
+    
+BBMap scripts are ready to use in bbmap directory :: 
+
+  cd bbmap 
+ 
