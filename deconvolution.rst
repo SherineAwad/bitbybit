@@ -7,5 +7,5 @@ In progress
 -------------
 
 
-We will use xCell from <`http://xcell.ucsf.edu/`>__ 
+We will use xCell from `<http://xcell.ucsf.edu/>`__ 
  
