@@ -27,6 +27,7 @@ In progress
    lncRNA.rst
    pathwayanalysis.rst
    CreateTx2gene.rst 
+   snparray.rst 
    installation.rst 
    externalresources.rst
 
