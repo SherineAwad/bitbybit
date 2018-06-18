@@ -2,7 +2,7 @@
 **Rare Variants Association Analysis** 
 ============================================
 
-Lets :ref:`set_rvtests` before starting this tutorial. 
+Lets install :ref:`set_rvtests` before starting this tutorial. 
 
 Instead of testing whether a single variant is associated with a specific phenotype, we can study the cummulative effect of a group of variants in a gene or region on a specific phenotype. 
 Rare variants association analysis has lots of categories, we will summarize here a few categories:
