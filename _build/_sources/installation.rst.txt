@@ -68,4 +68,15 @@ Then lets unzip the files ::
 BBMap scripts are ready to use in bbmap directory :: 
 
   cd bbmap 
+
+
+.. _set_vcftools: 
+
+Install vcftools
+------------------
+
+We will use conda :: 
+
+  conda install vcftools
+
  

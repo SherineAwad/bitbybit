@@ -6,6 +6,7 @@ Here is a bunch of different operation we need regulary to do with vcf files.
 
 Megre VCF Files 
 ----------------
+We will use vcf-merge from vcftools :ref:`set_vcftools`
 
 ::
 
@@ -41,7 +42,7 @@ Split vcf grouped samples per chromosome::
 Sort VCF 
 -----------
 
-From vcftools, we use vcf-sort sort:: 
+From vcftools :ref:`set_vcftools` , we use vcf-sort sort:: 
    
     vcf-sort myvcf.vcf > new.vcf
 
@@ -50,6 +51,6 @@ Filter a VCF
 ---------------
 
 
-From vcftools we filter a vcf for variants that `PASS` caller:: 
+From vcftools :ref:`set_vcftools`, we filter a vcf for variants that `PASS` caller:: 
 
    vcftools --gzvcf myvcf.vcf.gz --remove-filtered-all --recode --out myvcf.pass 
