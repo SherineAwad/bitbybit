@@ -32,3 +32,16 @@ Gene Expressions Gtex
   `<https://www.gtexportal.org/home/>`__
 
 
+Human Phenotype Ontology 
+#########################
+
+  `<http://human-phenotype-ontology.github.io/>`__ 
+
+Biogrid
+#########
+ 
+  `<https://thebiogrid.org/>`__ 
+
+
+
+

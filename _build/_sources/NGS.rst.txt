@@ -29,7 +29,7 @@ The output histogram will be written to histmap4m.txt::
 
 If you don't have enough memory, you can use bbmerge, however, bbmap estimation is more accurate as it is based on alignment to reference:: 
 
-   bash bbmerge.sh in1= in1=pair1.fastq.gz in2=pair2.fastq.gz ihist=hist_merge.txt reads=4000000 prefilter=2 rem extend2=100
+   bash bbmerge.sh in1=pair1.fastq.gz in2=pair2.fastq.gz ihist=hist_merge.txt reads=4000000 prefilter=2 rem extend2=100
 
 
 
