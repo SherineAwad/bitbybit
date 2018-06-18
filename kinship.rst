@@ -1,5 +1,5 @@
 ===============================================
-**Kinship and Relatdness**
+**Kinship and Relatedness**
 ===============================================
 
 In progress 
