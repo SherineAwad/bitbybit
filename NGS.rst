@@ -8,7 +8,7 @@
 Reads Trimming
 ########################
 
-We need to install Trimgalore :ref:`set_trimgalore` and its requirements Cutadapt :ref:`set_cutadapt` and FastQC :ref:`set_fastqc`
+We need to install :ref:`set_trimgalore` and its requirements :ref:`set_cutadapt` and :ref:`set_fastqc`
  
 Then we remove adaptors and quality trim data as follows:: 
 
@@ -20,7 +20,8 @@ Estimating Insert Size
 ###########################
 
 
-Here, we estimate the insert size using bbmap :ref:`set_bbmap` by aligning 4 million reads to the reference genome, pretty enough for a good estimation. The output histogram will be written to histmap1mtxt::
+Here, we estimate the insert size using :ref:`set_bbmap` by aligning 4 million reads to the reference genome, pretty enough for a good estimation.
+The output histogram will be written to histmap4m.txt::
  
    bash bbmap.sh -Xmx50g  in1=pair1.fastq.gz in2=pair2.fastq.gz ihist=histmap4m.txt reads=4000000 ref=human_genome.fa
 

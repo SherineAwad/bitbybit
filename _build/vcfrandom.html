@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>VCF Toolkit &#8212; BitByBit  documentation</title>
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -89,7 +89,7 @@
 <p>Here is a bunch of different operation we need regulary to do with vcf files.</p>
 <div class="section" id="megre-vcf-files">
 <h2>Megre VCF Files<a class="headerlink" href="#megre-vcf-files" title="Permalink to this headline">¶</a></h2>
-<p>We will use vcf-merge from vcftools <a class="reference internal" href="installation.html#set-vcftools"><span class="std std-ref">Install vcftools</span></a></p>
+<p>We will use vcf-merge from vcftools <a class="reference internal" href="installation.html#set-vcftools"><span class="std std-ref">vcftools</span></a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bgzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">bgzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">bgzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">file1</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
@@ -118,14 +118,14 @@
 </div>
 <div class="section" id="sort-vcf">
 <h2>Sort VCF<a class="headerlink" href="#sort-vcf" title="Permalink to this headline">¶</a></h2>
-<p>From vcftools <a class="reference internal" href="installation.html#set-vcftools"><span class="std std-ref">Install vcftools</span></a> , we use vcf-sort sort:</p>
+<p>From vcftools <a class="reference internal" href="installation.html#set-vcftools"><span class="std std-ref">vcftools</span></a> , we use vcf-sort sort:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcf</span><span class="o">-</span><span class="n">sort</span> <span class="n">myvcf</span><span class="o">.</span><span class="n">vcf</span> <span class="o">&gt;</span> <span class="n">new</span><span class="o">.</span><span class="n">vcf</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="filter-a-vcf">
 <h2>Filter a VCF<a class="headerlink" href="#filter-a-vcf" title="Permalink to this headline">¶</a></h2>
-<p>From vcftools <a class="reference internal" href="installation.html#set-vcftools"><span class="std std-ref">Install vcftools</span></a>, we filter a vcf for variants that <cite>PASS</cite> caller:</p>
+<p>From vcftools <a class="reference internal" href="installation.html#set-vcftools"><span class="std std-ref">vcftools</span></a>, we filter a vcf for variants that <cite>PASS</cite> caller:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcftools</span> <span class="o">--</span><span class="n">gzvcf</span> <span class="n">myvcf</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">remove</span><span class="o">-</span><span class="n">filtered</span><span class="o">-</span><span class="nb">all</span> <span class="o">--</span><span class="n">recode</span> <span class="o">--</span><span class="n">out</span> <span class="n">myvcf</span><span class="o">.</span><span class="k">pass</span>
 </pre></div>
 </div>
@@ -155,7 +155,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2018, Sherine Awad.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.0b1.
     </div>
   </body>
 </html>

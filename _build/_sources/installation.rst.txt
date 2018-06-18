@@ -5,7 +5,7 @@
 
 .. _set_rvtests: 
 
-Install rvtests 
+rvtests 
 -----------------
 Install rvtests from `<https://github.com/zhanxw/rvtests>`__ :: 
 
@@ -13,7 +13,7 @@ Install rvtests from `<https://github.com/zhanxw/rvtests>`__ ::
 
 .. _set_lncscore:
 
-Install lncScore
+lncScore
 ------------------
 Install lncScore `<https://www.nature.com/articles/srep34838>`__ ::
 
@@ -24,7 +24,7 @@ Install lncScore `<https://www.nature.com/articles/srep34838>`__ ::
 
 .. _set_trimgalore:
 
-Install Trimgalore 
+Trimgalore 
 ---------------------
 
 Install Trimgalore `<https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/>`__ :: 
@@ -33,7 +33,7 @@ Install Trimgalore `<https://www.bioinformatics.babraham.ac.uk/projects/trim_gal
 
 .. _set_cutadapt: 
 
-Install Cutadapt
+Cutadapt
 --------------------
 
 Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`__ :: 
@@ -43,7 +43,7 @@ Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`_
 
 .. _set_fastqc: 
 
-Install FastQC 
+FastQC 
 -----------------
 
 Install FastQC `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__ :: 
@@ -53,7 +53,7 @@ Install FastQC `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__ 
 
 .. _set_bbmap: 
 
-Install BBMap
+BBMap
 ---------------
 
 Lets downlowd BBMap source :: 
@@ -72,7 +72,7 @@ BBMap scripts are ready to use in bbmap directory ::
 
 .. _set_vcftools: 
 
-Install vcftools
+vcftools
 ------------------
 
 We will use conda :: 
@@ -81,7 +81,7 @@ We will use conda ::
 
 .. _set_plink: 
 
-Install Plink
+Plink
 ---------------
 
 ::
