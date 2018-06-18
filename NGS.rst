@@ -8,7 +8,7 @@
 Reads Trimming
 ########################
 
-We need to install Trimgalore :ref:`set_trimgalore` and its requirements Cutadapt  :ref:`set_cutadapt` and FastQC :ref:`set_fastqc`
+We need to install Trimgalore :ref:`set_trimgalore` and its requirements Cutadapt :ref:`set_cutadapt` and FastQC :ref:`set_fastqc`
  
 Then we remove adaptors and quality trim data as follows:: 
 

@@ -7,7 +7,7 @@
 
 Install rvtests 
 -----------------
-Install rvtests from `<https://github.com/zhanxw/rvtests>`__:: 
+Install rvtests from `<https://github.com/zhanxw/rvtests>`__ :: 
 
   git clone https://github.com/zhanxw/rvtests
 
@@ -36,7 +36,7 @@ Install Trimgalore `<https://www.bioinformatics.babraham.ac.uk/projects/trim_gal
 Install Cutadapt
 --------------------
 
-Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`__:: 
+Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`__ :: 
 
     conda install -c bioconda cutadapt
 
@@ -46,7 +46,7 @@ Install Cutadapt `<http://cutadapt.readthedocs.io/en/stable/installation.html>`_
 Install FastQC 
 -----------------
 
-Install FastQC `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__:: 
+Install FastQC `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__ :: 
 
    conda install -c bioconda fastqc 
 
