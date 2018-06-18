@@ -28,6 +28,7 @@ In progress
    lncRNA.rst
    pathwayanalysis.rst
    CreateTx2gene.rst
+   kinship.rst
    metagenomics.rst 
    installation.rst 
    externalresources.rst
