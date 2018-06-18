@@ -87,4 +87,14 @@ Plink
 ::
 
   conda install -c biobuilds plink 
+
+.. _set_samtools:
+
+
+Samtools
+----------
+
+:: 
+  
+  conda install -c bioconda samtools 
  

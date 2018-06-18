@@ -36,6 +36,8 @@ If you don't have enough memory, you can use bbmerge, however, bbmap estimation 
 Get Unmapped reads from a BAM file 
 ###################################
 
+Lets first install :ref:`set_samtools`. 
+
 Here, we will get unmapped reads in a BAM file:: 
 
   samtools view -f 4 alignments.bam > unmapped.reads.sam 
