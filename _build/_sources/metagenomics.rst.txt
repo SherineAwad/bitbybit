@@ -3,4 +3,4 @@
 ==========================
 
 
-Refer to `<http://khmer-protocols.readthedocs.io/en/latest/metagenomics/index.html>`__ 
+Check out our protocol `<http://khmer-protocols.readthedocs.io/en/latest/metagenomics/index.html>`__ 
