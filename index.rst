@@ -18,6 +18,7 @@ In progress
    :caption: Contents:
   
    rvassocanalysis.rst
+   snparray.rst 
    wholegenomes.rst
    NGS.rst 
    variantcalling.rst
@@ -27,7 +28,6 @@ In progress
    lncRNA.rst
    pathwayanalysis.rst
    CreateTx2gene.rst 
-   snparray.rst 
    installation.rst 
    externalresources.rst
 

@@ -15,6 +15,14 @@ Create a Bed file
   plink --file data --maf 0.05 --make-bed --out data 
 
 
+
+SNP Prunning 
+---------------
+
+:: 
+
+  plink --file SNP --homozyg  --homozyg-snp 100 --homozyg-kb 500 --homozyg-density 50 -homozyg-gap 100 --homozyg-window-snp 50    
+
 Convert ped to VCF 
 ------------------------
 
@@ -39,3 +47,10 @@ Association Analysis
  
    plink --file data --assoc --out data.assoc
 
+
+Linkage Disequilibrium
+------------------------
+
+::
+
+  plink --file SNP --r2 --ld-window-kb 1000 --ld-window-r2 0.0 

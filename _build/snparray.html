@@ -45,9 +45,11 @@
 <li><a class="reference internal" href="#"><strong>SNP Array Toolkit</strong></a><ul>
 <li><a class="reference internal" href="#in-progress">In Progress</a></li>
 <li><a class="reference internal" href="#create-a-bed-file">Create a Bed file</a></li>
+<li><a class="reference internal" href="#snp-prunning">SNP Prunning</a></li>
 <li><a class="reference internal" href="#convert-ped-to-vcf">Convert ped to VCF</a></li>
 <li><a class="reference internal" href="#remove-duplicate-variants">Remove Duplicate Variants</a></li>
 <li><a class="reference internal" href="#association-analysis">Association Analysis</a></li>
+<li><a class="reference internal" href="#linkage-disequilibrium">Linkage Disequilibrium</a></li>
 </ul>
 </li>
 </ul>
@@ -97,6 +99,12 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="snp-prunning">
+<h2>SNP Prunning<a class="headerlink" href="#snp-prunning" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plink</span> <span class="o">--</span><span class="n">file</span> <span class="n">SNP</span> <span class="o">--</span><span class="n">homozyg</span>  <span class="o">--</span><span class="n">homozyg</span><span class="o">-</span><span class="n">snp</span> <span class="mi">100</span> <span class="o">--</span><span class="n">homozyg</span><span class="o">-</span><span class="n">kb</span> <span class="mi">500</span> <span class="o">--</span><span class="n">homozyg</span><span class="o">-</span><span class="n">density</span> <span class="mi">50</span> <span class="o">-</span><span class="n">homozyg</span><span class="o">-</span><span class="n">gap</span> <span class="mi">100</span> <span class="o">--</span><span class="n">homozyg</span><span class="o">-</span><span class="n">window</span><span class="o">-</span><span class="n">snp</span> <span class="mi">50</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="convert-ped-to-vcf">
 <h2>Convert ped to VCF<a class="headerlink" href="#convert-ped-to-vcf" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plink</span> <span class="o">--</span><span class="n">file</span> <span class="n">data</span> <span class="o">--</span><span class="n">recode</span> <span class="n">vcf</span> <span class="o">--</span><span class="n">out</span> <span class="n">data</span>
@@ -113,6 +121,12 @@
 <div class="section" id="association-analysis">
 <h2>Association Analysis<a class="headerlink" href="#association-analysis" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plink</span> <span class="o">--</span><span class="n">file</span> <span class="n">data</span> <span class="o">--</span><span class="n">assoc</span> <span class="o">--</span><span class="n">out</span> <span class="n">data</span><span class="o">.</span><span class="n">assoc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="linkage-disequilibrium">
+<h2>Linkage Disequilibrium<a class="headerlink" href="#linkage-disequilibrium" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plink</span> <span class="o">--</span><span class="n">file</span> <span class="n">SNP</span> <span class="o">--</span><span class="n">r2</span> <span class="o">--</span><span class="n">ld</span><span class="o">-</span><span class="n">window</span><span class="o">-</span><span class="n">kb</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">ld</span><span class="o">-</span><span class="n">window</span><span class="o">-</span><span class="n">r2</span> <span class="mf">0.0</span>
 </pre></div>
 </div>
 </div>
