@@ -5,6 +5,8 @@
 In Progress
 -------------
 
+Lets first install :ref:`set_plink` 
+
 Here, we will assume we start the analysis with a data.ped and data.map files. 
 
 Create a Bed file

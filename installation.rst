@@ -79,4 +79,12 @@ We will use conda ::
 
   conda install vcftools
 
+.. _set_plink: 
+
+Install Plink
+---------------
+
+::
+
+  conda install -c biobuilds plink 
  
