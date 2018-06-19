@@ -21,4 +21,6 @@ The reason is that signals from different cell-types/tissues will sum more linea
 
 
 We will use xCell from `<http://xcell.ucsf.edu/>`__ 
- 
+
+
+And take a look to this notebook `<https://github.com/SherineAwad/mynotebooks/blob/master/deconv.ipynb>`__  

@@ -86,7 +86,7 @@
 <p>See Salmon quantifications section</p>
 <div class="section" id="in-progress">
 <h2>In Progress<a class="headerlink" href="#in-progress" title="Permalink to this headline">¶</a></h2>
-<p>We need to write R script.
+<p>We need to write R script and use EgdeR.
 Lets first declare our libraries</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">tximport</span><span class="p">)</span>
 <span class="n">library</span><span class="p">(</span><span class="n">rjson</span><span class="p">)</span>
@@ -111,7 +111,7 @@ print (files)
 names(files) &lt;- paste0(&quot;sample&quot;, 1:20)
 </pre></div>
 </div>
-<p>Lets convert salmon transcripts to gene names using NCBItx2gene.csv. See <span class="xref std std-ref">txtogene</span> for how to generate this file</p>
+<p>Lets convert salmon transcripts to gene names using NCBItx2gene.csv. See <a class="reference internal" href="CreateTx2gene.html#txtogene"><span class="std std-ref">How to convert from transcripts to Genes ids</span></a> for how to generate this file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tx2gene &lt;- read.csv(file.path(&quot;/home/sherine/work/rnaseq/kaz&quot;, &quot;NCBItx2gene.csv&quot;))
 txi &lt;- tximport(files, type = &quot;salmon&quot;, tx2gene = tx2gene,ignoreTxVersion = TRUE, lengthCol=length)
 cts &lt;- txi$counts
