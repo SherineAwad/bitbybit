@@ -18,8 +18,7 @@ The reason is that signals from different cell-types/tissues will sum more linea
 
 
 
-::
 
 
-  We will use xCell from `<http://xcell.ucsf.edu/>`__ 
+We will use xCell from `<http://xcell.ucsf.edu/>`__ 
  
