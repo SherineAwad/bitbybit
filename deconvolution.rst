@@ -10,7 +10,7 @@ In progress
 In theory, it is possible to infer the immune, tumor and stroma cell content of a  solid tumor from its bulk gene expression profile if reference gene expression profiles can be established for each tumor-associated cell type. 
 
 
-Mathematically, this class of inverse problems is known as deconvolution 
+Mathematically, this class of inverse problems is known as deconvolution. 
 
 Deconvolution methods tend to work better with microarray data, it's one of the few areas where microarrays are still better. 
 

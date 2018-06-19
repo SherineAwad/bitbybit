@@ -25,7 +25,8 @@ In progress
    vcfrandom.rst 
    RNAseqvariants.rst 
    somatics.rst  
-   lncRNA.rst
+   lncRNA.rst 
+   rnaseqexpressions.rst 
    pathwayanalysis.rst
    CreateTx2gene.rst
    deconvolution.rst

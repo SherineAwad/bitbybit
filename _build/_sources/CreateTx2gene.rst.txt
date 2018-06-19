@@ -2,6 +2,8 @@
 **Transcripts to Genes**
 ========================================
 
+.. _tx2gene:
+
 
 1. Download your annotated GFF file, here, we download Refseq annotated GRCh37::
 
