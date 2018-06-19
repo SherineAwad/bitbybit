@@ -40,6 +40,14 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><strong>RNASeq Gene Expressions</strong></a><ul>
+<li><a class="reference internal" href="#in-progress">In Progress</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="lncRNA.html"
                         title="previous chapter"><strong>Long nonCoding RNA Prediction</strong></a></p>
@@ -75,9 +83,9 @@
             
   <div class="section" id="rnaseq-gene-expressions">
 <h1><strong>RNASeq Gene Expressions</strong><a class="headerlink" href="#rnaseq-gene-expressions" title="Permalink to this headline">¶</a></h1>
-<p>See Salmon quantifications section
-In Progress
-—————</p>
+<p>See Salmon quantifications section</p>
+<div class="section" id="in-progress">
+<h2>In Progress<a class="headerlink" href="#in-progress" title="Permalink to this headline">¶</a></h2>
 <p>We need to write R script.
 Lets first declare our libraries</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">tximport</span><span class="p">)</span>
@@ -103,7 +111,7 @@ print (files)
 names(files) &lt;- paste0(&quot;sample&quot;, 1:20)
 </pre></div>
 </div>
-<p>Lets convert salmon transcripts to gene names using NCBItx2gene.csv. See <span class="xref std std-ref">tx2gene</span> for how to generate this file</p>
+<p>Lets convert salmon transcripts to gene names using NCBItx2gene.csv. See <span class="xref std std-ref">txtogene</span> for how to generate this file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tx2gene &lt;- read.csv(file.path(&quot;/home/sherine/work/rnaseq/kaz&quot;, &quot;NCBItx2gene.csv&quot;))
 txi &lt;- tximport(files, type = &quot;salmon&quot;, tx2gene = tx2gene,ignoreTxVersion = TRUE, lengthCol=length)
 cts &lt;- txi$counts
@@ -138,7 +146,7 @@ write.csv(cts, &quot;counts.csv&quot;)
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">etp</span> <span class="o">&lt;-</span> <span class="n">topTags</span><span class="p">(</span><span class="n">et</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span> <span class="mi">100000</span><span class="p">,</span> <span class="n">adjust</span><span class="o">.</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="n">sort</span><span class="o">.</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;PValue&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you plan to use xcells for RNAseq deconvolution, xcell requires RPKM instead of TMM, so use</p>
+<p>If you plan to use xcells for RNAseq deconvolution, xcell requires RPKM instead of CPM, so use</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>length = txi$length
 dge = DGEList(counts=cts, genes= rownames(data), group=group)
 dge &lt;- calcNormFactors(dge, method=&quot;TMM&quot;)
@@ -146,6 +154,7 @@ summary(dge)
 rpkm = rpkm(dge, length)
 write.csv(rpkm, &quot;rpkm.csv&quot;)
 </pre></div>
+</div>
 </div>
 </div>
 

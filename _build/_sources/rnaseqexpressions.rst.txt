@@ -3,6 +3,7 @@
 ==============================
 
 See Salmon quantifications section
+
 In Progress 
 ---------------
 
@@ -31,7 +32,7 @@ Now, lets read salmon quantifications files ::
   print (files)
   names(files) <- paste0("sample", 1:20) 
 
-Lets convert salmon transcripts to gene names using NCBItx2gene.csv. See :ref:`tx2gene` for how to generate this file :: 
+Lets convert salmon transcripts to gene names using NCBItx2gene.csv. See :ref:`txtogene` for how to generate this file :: 
 
   tx2gene <- read.csv(file.path("/home/sherine/work/rnaseq/kaz", "NCBItx2gene.csv"))
   txi <- tximport(files, type = "salmon", tx2gene = tx2gene,ignoreTxVersion = TRUE, lengthCol=length)
@@ -66,7 +67,7 @@ Note that here we can filter using pvalues, but if you plan to use Gage for path
  
   etp <- topTags(et, n= 100000, adjust.method="BH", sort.by="PValue", p.value = 1)
 
-If you plan to use xcells for RNAseq deconvolution, xcell requires RPKM instead of TMM, so use :: 
+If you plan to use xcells for RNAseq deconvolution, xcell requires RPKM instead of CPM, so use :: 
 
   length = txi$length
   dge = DGEList(counts=cts, genes= rownames(data), group=group)

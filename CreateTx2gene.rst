@@ -2,7 +2,10 @@
 **Transcripts to Genes**
 ========================================
 
-.. _tx2gene:
+.. _txtogene:
+
+How to convert from transcripts to Genes ids
+----------------------------------------------
 
 
 1. Download your annotated GFF file, here, we download Refseq annotated GRCh37::
