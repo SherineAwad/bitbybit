@@ -52,6 +52,9 @@ Filtering ::
   keep <- which(rowSums(countCheck) >= 2)
   dge <- dge[keep,]
   summary(cpm(dge))
+
+Calculate expressions, see this interesting post about the CPM, RPKM , and FPKM differences `<https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/>`__ ::
+ 
   dge <- calcNormFactors(dge, method="TMM")
   summary(dge)
   dge <- estimateCommonDisp(dge)
@@ -71,39 +74,3 @@ If you plan to use xcells for RNAseq deconvolution, xcell requires RPKM instead 
   summary(dge)
   rpkm = rpkm(dge, length)
   write.csv(rpkm, "rpkm.csv")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-A
-A
-A
-A
-A
-A
-A
-A
- 

@@ -123,7 +123,10 @@ write.csv(cts, &quot;counts.csv&quot;)
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keep</span> <span class="o">&lt;-</span> <span class="n">which</span><span class="p">(</span><span class="n">rowSums</span><span class="p">(</span><span class="n">countCheck</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">dge</span><span class="p">[</span><span class="n">keep</span><span class="p">,]</span>
 <span class="n">summary</span><span class="p">(</span><span class="n">cpm</span><span class="p">(</span><span class="n">dge</span><span class="p">))</span>
-<span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">calcNormFactors</span><span class="p">(</span><span class="n">dge</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;TMM&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Calculate expressions, see this interesting post about the CPM, RPKM , and FPKM differences <a class="reference external" href="https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/">https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">calcNormFactors</span><span class="p">(</span><span class="n">dge</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;TMM&quot;</span><span class="p">)</span>
 <span class="n">summary</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
 <span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">estimateCommonDisp</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
 <span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">estimateTagwiseDisp</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
@@ -144,14 +147,6 @@ rpkm = rpkm(dge, length)
 write.csv(rpkm, &quot;rpkm.csv&quot;)
 </pre></div>
 </div>
-<p>A
-A
-A
-A
-A
-A
-A
-A</p>
 </div>
 
 
