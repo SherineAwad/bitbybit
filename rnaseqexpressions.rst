@@ -7,7 +7,7 @@ See Salmon quantifications section
 In Progress 
 ---------------
 
-We need to write R script. 
+We need to write R script and use EgdeR. 
 Lets first declare our libraries ::
 
   library(tximport)
