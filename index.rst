@@ -6,7 +6,7 @@
 Welcome to BitByBit Bioinformatics Tutorials
 ===============================================
 
-Lessons in Bioinfromatics
+Lessons in Bioinformatics
 ###########################
 
 
