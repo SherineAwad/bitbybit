@@ -6,8 +6,11 @@
 Welcome to BitByBit Bioinformatics Tutorials
 ===============================================
 
+.. _genindex:
+
 In progress 
 ------------
+
 
 :Author: **Sherine Awad**
 
@@ -35,3 +38,11 @@ In progress
    installation.rst 
    externalresources.rst
    databases.rst 
+
+
+
+Indices 
+-------------
+
+:ref:`genindex`
+

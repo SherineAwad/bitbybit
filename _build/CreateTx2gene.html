@@ -91,7 +91,28 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">Use txdb to create tx2gene:</p>
+<li><p class="first">Install Libraries</p>
+</li>
+</ol>
+<blockquote>
+<div>source(“<a class="reference external" href="https://bioconductor.org/biocLite.R">https://bioconductor.org/biocLite.R</a>”)
+biocLite(“TxDb.Mmusculus.UCSC.mm10.knownGene”)</div></blockquote>
+<dl class="docutils">
+<dt>or</dt>
+<dd>biocLite(“TxDb.Mmusculus.UCSC.mm10.ensGene”)</dd>
+</dl>
+<p>Then we can use this script for conversion</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span><span class="p">)</span>
+<span class="n">txdb</span> <span class="o">&lt;-</span> <span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span>
+<span class="n">k</span> <span class="o">&lt;-</span> <span class="n">keys</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span>  <span class="n">columns</span> <span class="o">=</span> <span class="s2">&quot;TXNAME&quot;</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
+<span class="n">tx2gene</span> <span class="o">&lt;-</span> <span class="n">df</span><span class="p">[,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">head</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">,</span> <span class="s1">&#39;tx2gene.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic" start="4">
+<li><p class="first">Use txdb to create tx2gene for Human Genome</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">txdb</span> <span class="o">&lt;-</span><span class="n">makeTxDbFromGFF</span><span class="p">(</span><span class="s2">&quot;GRCh37_latest_genomic.gff.gz&quot;</span><span class="p">)</span>
 <span class="n">k</span> <span class="o">&lt;-</span> <span class="n">keys</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span>  <span class="n">columns</span> <span class="o">=</span> <span class="s2">&quot;TXNAME&quot;</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>

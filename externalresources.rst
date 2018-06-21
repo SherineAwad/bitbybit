@@ -2,6 +2,23 @@
 **External Resources**
 ===============================
 
+
+Genomes from NCBI
+######################
+
+
+  ftp://ftp.ncbi.nih.gov/genomes/ 
+
+or 
+
+   ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/
+
+
+Genomes from Ensemble
+#########################
+
+  https://www.ensembl.org/info/data/ftp/index.html
+
 Genomes from Illumina 
 #########################
 
@@ -47,4 +64,11 @@ Or merged snp142 ::
 Mouse Trasncripts 
 ######################
 
-`<http://drwin.cremag.org/resources/seq-analysis/reference/mm10/transcriptome/>`__
+`<http://drwin.cremag.org/resources/seq-analysis/reference/mm10/transcriptome/>`__ 
+
+Mouse GFF 
+##############
+
+  wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.26_GRCm38.p6/GCF_000001635.26_GRCm38.p6_genomic.gff.gz
+
+
