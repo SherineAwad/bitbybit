@@ -6,7 +6,6 @@
 Welcome to BitByBit Bioinformatics Tutorials
 ===============================================
 
-.. _genindex:
 
 In progress 
 ------------
@@ -40,9 +39,4 @@ In progress
    databases.rst 
 
 
-
-Indices 
--------------
-
-:ref:`genindex`
 
