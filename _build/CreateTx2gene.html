@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Transcripts to Genes &#8212; BitByBit  documentation</title>
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -43,7 +43,11 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#"><strong>Transcripts to Genes</strong></a><ul>
-<li><a class="reference internal" href="#how-to-convert-from-transcripts-to-genes-ids">How to convert from transcripts to Genes ids</a></li>
+<li><a class="reference internal" href="#how-to-convert-from-transcripts-to-genes-ids">How to convert from transcripts to Genes ids</a><ul>
+<li><a class="reference internal" href="#mouse-genome-example-using-txdb-mmusculus-ucsc">Mouse Genome Example using TxDb.Mmusculus.UCSC</a></li>
+<li><a class="reference internal" href="#a-human-genome-example-using-maketxdbfromgff">A Human Genome Example using makeTxDbFromGFF</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -85,22 +89,18 @@
 <h1><strong>Transcripts to Genes</strong><a class="headerlink" href="#transcripts-to-genes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="how-to-convert-from-transcripts-to-genes-ids">
 <span id="txtogene"></span><h2>How to convert from transcripts to Genes ids<a class="headerlink" href="#how-to-convert-from-transcripts-to-genes-ids" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Download your annotated GFF file, here, we download Refseq annotated GRCh37:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ncbi</span><span class="o">.</span><span class="n">nlm</span><span class="o">.</span><span class="n">nih</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">refseq</span><span class="o">/</span><span class="n">H_sapiens</span><span class="o">/</span><span class="n">annotation</span><span class="o">/</span><span class="n">GRCh37_latest</span><span class="o">/</span><span class="n">refseq_identifiers</span><span class="o">/</span><span class="n">GRCh37_latest_genomic</span><span class="o">.</span><span class="n">gff</span><span class="o">.</span><span class="n">gz</span>
+<div class="section" id="mouse-genome-example-using-txdb-mmusculus-ucsc">
+<h3>Mouse Genome Example using TxDb.Mmusculus.UCSC<a class="headerlink" href="#mouse-genome-example-using-txdb-mmusculus-ucsc" title="Permalink to this headline">¶</a></h3>
+<p>Let install TxDb.Mmusculus.UCSC.mm10.knownGene, to use knowngene conventions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;https://bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>
+<span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;TxDb.Mmusculus.UCSC.mm10.knownGene&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-<li><p class="first">Install Libraries</p>
-</li>
-</ol>
-<blockquote>
-<div>source(“<a class="reference external" href="https://bioconductor.org/biocLite.R">https://bioconductor.org/biocLite.R</a>”)
-biocLite(“TxDb.Mmusculus.UCSC.mm10.knownGene”)</div></blockquote>
-<dl class="docutils">
-<dt>or</dt>
-<dd>biocLite(“TxDb.Mmusculus.UCSC.mm10.ensGene”)</dd>
-</dl>
+<p>or to use ensemble conventions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;https://bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>
+<span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;TxDb.Mmusculus.UCSC.mm10.ensGene&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Then we can use this script for conversion</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span><span class="p">)</span>
 <span class="n">txdb</span> <span class="o">&lt;-</span> <span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span>
@@ -111,8 +111,14 @@ biocLite(“TxDb.Mmusculus.UCSC.mm10.knownGene”)</div></blockquote>
 <span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">,</span> <span class="s1">&#39;tx2gene.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol class="arabic" start="4">
-<li><p class="first">Use txdb to create tx2gene for Human Genome</p>
+</div>
+<div class="section" id="a-human-genome-example-using-maketxdbfromgff">
+<h3>A Human Genome Example using makeTxDbFromGFF<a class="headerlink" href="#a-human-genome-example-using-maketxdbfromgff" title="Permalink to this headline">¶</a></h3>
+<p>Let download your annotated GFF file, here, we download Refseq annotated GRCh37:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ncbi</span><span class="o">.</span><span class="n">nlm</span><span class="o">.</span><span class="n">nih</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">refseq</span><span class="o">/</span><span class="n">H_sapiens</span><span class="o">/</span><span class="n">annotation</span><span class="o">/</span><span class="n">GRCh37_latest</span><span class="o">/</span><span class="n">refseq_identifiers</span><span class="o">/</span><span class="n">GRCh37_latest_genomic</span><span class="o">.</span><span class="n">gff</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>Then use txdb to create tx2gene for Human Genome</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">txdb</span> <span class="o">&lt;-</span><span class="n">makeTxDbFromGFF</span><span class="p">(</span><span class="s2">&quot;GRCh37_latest_genomic.gff.gz&quot;</span><span class="p">)</span>
 <span class="n">k</span> <span class="o">&lt;-</span> <span class="n">keys</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span>  <span class="n">columns</span> <span class="o">=</span> <span class="s2">&quot;TXNAME&quot;</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
@@ -121,8 +127,7 @@ biocLite(“TxDb.Mmusculus.UCSC.mm10.knownGene”)</div></blockquote>
 <span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">,</span> <span class="s1">&#39;tx2gene.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-</ol>
+</div>
 </div>
 </div>
 
@@ -149,7 +154,7 @@ biocLite(“TxDb.Mmusculus.UCSC.mm10.knownGene”)</div></blockquote>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2018, Sherine Awad.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.0b1.
     </div>
   </body>
 </html>
