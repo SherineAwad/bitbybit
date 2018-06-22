@@ -74,3 +74,10 @@ Mouse GFF
   wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.26_GRCm38.p6/GCF_000001635.26_GRCm38.p6_genomic.gff.gz
 
 
+
+NCBI Mouse 
+##################
+
+
+   http://hgdownload.soe.ucsc.edu/downloads.html#mouse
+   ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/635/GCA_000001635.8_GRCm38.p7
