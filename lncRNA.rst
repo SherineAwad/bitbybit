@@ -12,7 +12,7 @@ Short putative ORFs can be expected to occur by chance within lncRNA
 A protein-coding mRNA can be defined by open reading frame (ORF) greater than 100 amino acids (aa) or 300 nucleotides (nt)
 Cutoffs are used to discriminate between ncRNA and mRNA: (300 nt /100 codons)
 
-However, lncRNA sometimes contain ORF that are long, hence protein with <100 are misclassified as ncRNA. Also, teducing the cutoff leads to underestimating ncRNA.  
+However, lncRNA sometimes contain ORF that are long, hence protein with <100 are misclassified as ncRNA. Also, reducing the cutoff leads to underestimating ncRNA.  
 
 2. Open reading frame conservation
 ######################################
