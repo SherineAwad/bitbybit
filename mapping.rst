@@ -34,7 +34,8 @@ Using gcBias improves results, and IU is for an unstranded paired-end library wh
  
 Alignment using Tophat (Not preferred anymore) 
 ==============================================
-  
+
+Lest install :ref:`set_tophat`  
 :: 
  
    tophat -p 4 --no-mixed -G genes.gtf --library-type fr-firststrand -o output BowtieIndex \

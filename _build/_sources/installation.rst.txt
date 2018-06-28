@@ -106,4 +106,15 @@ Salmon
 
 ::
 
-  conda install salmon
+  conda install salmon 
+
+
+.. _set_tophat: 
+
+Tophat 
+------------
+
+:: 
+  
+  conda install -c bioconda tophat 
+
