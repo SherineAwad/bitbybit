@@ -25,7 +25,8 @@ In progress
    rvassocanalysis.rst
    snparray.rst 
    wholegenomes.rst
-   NGS.rst 
+   NGS.rst
+   mapping.rst 
    variantcalling.rst
    vcfrandom.rst 
    RNAseqvariants.rst 

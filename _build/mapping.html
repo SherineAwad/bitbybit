@@ -1,0 +1,145 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Alignments and Mapping &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variant Calling" href="variantcalling.html" />
+    <link rel="prev" title="Next Generation Sequencing Toolkit" href="NGS.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="variantcalling.html" title="Variant Calling"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NGS.html" title="Next Generation Sequencing Toolkit"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><strong>Alignments and Mapping</strong></a><ul>
+<li><a class="reference internal" href="#mapping-using-salmon">Mapping Using Salmon</a><ul>
+<li><a class="reference internal" href="#building-index-first">Building Index  first</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#alignment-using-tophat-not-preferred-anymore">Alignment using Tophat (Not preferred anymore)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="NGS.html"
+                        title="previous chapter"><strong>Next Generation Sequencing Toolkit</strong></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="variantcalling.html"
+                        title="next chapter"><strong>Variant Calling</strong></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mapping.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="alignments-and-mapping">
+<h1><strong>Alignments and Mapping</strong><a class="headerlink" href="#alignments-and-mapping" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mapping-using-salmon">
+<h2>Mapping Using Salmon<a class="headerlink" href="#mapping-using-salmon" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="building-index-first">
+<h3>Building Index  first<a class="headerlink" href="#building-index-first" title="Permalink to this headline">¶</a></h3>
+<p>Using Quasi Mode for index:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">salmon</span> <span class="n">index</span> <span class="o">-</span><span class="n">t</span> <span class="n">transcripts</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">i</span> <span class="n">quasi_index</span> <span class="o">--</span><span class="nb">type</span> <span class="n">quasi</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span>
+</pre></div>
+</div>
+<p>Using FMD mode for index</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">salmon</span> <span class="n">index</span> <span class="o">-</span><span class="n">t</span> <span class="n">transcripts</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">i</span> <span class="n">fmd_index</span> <span class="o">--</span><span class="nb">type</span> <span class="n">fmd</span>
+</pre></div>
+</div>
+<p>Mapping</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">salmon</span> <span class="n">quant</span> <span class="o">-</span><span class="n">i</span> <span class="n">quasi</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">libType</span> <span class="n">IU</span> <span class="o">-</span><span class="mi">1</span> <span class="n">readespair_1</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="mi">2</span> <span class="n">readspair_2</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> \
+      <span class="o">-</span><span class="n">o</span> <span class="n">mappingout</span> <span class="o">--</span><span class="n">seqBias</span> <span class="o">--</span><span class="n">gcBias</span> <span class="o">--</span><span class="n">posBias</span> <span class="o">-</span><span class="n">p</span> <span class="mi">3</span> <span class="o">--</span><span class="n">writeUnmappedNames</span>
+</pre></div>
+</div>
+<p>Using gcBias improves results, and IU is for an unstranded paired-end library where the reads face each other.</p>
+</div>
+</div>
+<div class="section" id="alignment-using-tophat-not-preferred-anymore">
+<h2>Alignment using Tophat (Not preferred anymore)<a class="headerlink" href="#alignment-using-tophat-not-preferred-anymore" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tophat</span> <span class="o">-</span><span class="n">p</span> <span class="mi">4</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">mixed</span> <span class="o">-</span><span class="n">G</span> <span class="n">genes</span><span class="o">.</span><span class="n">gtf</span> <span class="o">--</span><span class="n">library</span><span class="o">-</span><span class="nb">type</span> <span class="n">fr</span><span class="o">-</span><span class="n">firststrand</span> <span class="o">-</span><span class="n">o</span> <span class="n">output</span> <span class="n">BowtieIndex</span> \
+   <span class="n">readspair_1</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="n">readspair_2</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="variantcalling.html" title="Variant Calling"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NGS.html" title="Next Generation Sequencing Toolkit"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">BitByBit  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Sherine Awad.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+  </body>
+</html>
