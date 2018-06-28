@@ -16,7 +16,7 @@ Multiple Sequence Alignment
 
    https://www.ebi.ac.uk/Tools/msa/clustalo/ 
 
-   Can be used to check conservation. Use sequences form uniprot and multiple align to check conservation . 
+   Can be used to check conservation. Use sequences from uniprot and multiple align to check conservation . 
 
 
 Tumor Portal 

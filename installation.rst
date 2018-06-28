@@ -97,4 +97,13 @@ Samtools
 :: 
   
   conda install -c bioconda samtools 
- 
+
+
+.. _set_salmon: 
+
+Salmon 
+-------------
+
+::
+
+  conda install salmon

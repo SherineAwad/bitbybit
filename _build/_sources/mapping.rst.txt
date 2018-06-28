@@ -8,6 +8,7 @@
 Mapping Using Salmon
 =========================
 
+First, install :ref:`set_salmon`
 
 Building Index  first  
 -----------------------
