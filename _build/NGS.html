@@ -16,7 +16,7 @@
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Variant Calling" href="variantcalling.html" />
+    <link rel="next" title="Alignments and Mapping" href="mapping.html" />
     <link rel="prev" title="Whole Genomes Toolkit" href="wholegenomes.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="variantcalling.html" title="Variant Calling"
+          <a href="mapping.html" title="Alignments and Mapping"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="wholegenomes.html" title="Whole Genomes Toolkit"
@@ -44,6 +44,8 @@
   <ul>
 <li><a class="reference internal" href="#"><strong>Next Generation Sequencing Toolkit</strong></a><ul>
 <li><a class="reference internal" href="#reads-trimming">Reads Trimming</a></li>
+<li><a class="reference internal" href="#using-trimgalore">Using Trimgalore</a></li>
+<li><a class="reference internal" href="#using-bbduk">Using BBDuk</a></li>
 <li><a class="reference internal" href="#estimating-insert-size">Estimating Insert Size</a></li>
 <li><a class="reference internal" href="#get-unmapped-reads-from-a-bam-file">Get Unmapped reads from a BAM file</a></li>
 <li><a class="reference internal" href="#get-mapped-reads-from-a-bam-file">Get Mapped reads from a BAM file</a></li>
@@ -55,8 +57,8 @@
   <p class="topless"><a href="wholegenomes.html"
                         title="previous chapter"><strong>Whole Genomes Toolkit</strong></a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="variantcalling.html"
-                        title="next chapter"><strong>Variant Calling</strong></a></p>
+  <p class="topless"><a href="mapping.html"
+                        title="next chapter"><strong>Alignments and Mapping</strong></a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -88,9 +90,19 @@
 <h1><strong>Next Generation Sequencing Toolkit</strong><a class="headerlink" href="#next-generation-sequencing-toolkit" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="reads-trimming">
 <span id="trimming"></span><h2>Reads Trimming<a class="headerlink" href="#reads-trimming" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="using-trimgalore">
+<h2>Using Trimgalore<a class="headerlink" href="#using-trimgalore" title="Permalink to this headline">¶</a></h2>
 <p>We need to install <a class="reference internal" href="installation.html#set-trimgalore"><span class="std std-ref">Trimgalore</span></a> and its requirements <a class="reference internal" href="installation.html#set-cutadapt"><span class="std std-ref">Cutadapt</span></a> and <a class="reference internal" href="installation.html#set-fastqc"><span class="std std-ref">FastQC</span></a></p>
 <p>Then we remove adaptors and quality trim data as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trim_galore</span> <span class="o">--</span><span class="n">paired</span> <span class="o">--</span><span class="n">gzip</span> <span class="o">--</span><span class="n">retain_unpaired</span> <span class="o">--</span><span class="n">trim1</span> <span class="o">--</span><span class="n">fastqc</span> <span class="o">--</span><span class="n">fastqc_args</span> <span class="s2">&quot;--outdir fastqc&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">galore</span> <span class="o">--</span><span class="n">path_to_cutadapt</span> <span class="n">cutadapt_path</span>  <span class="n">pair_1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">pair_2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-bbduk">
+<h2>Using BBDuk<a class="headerlink" href="#using-bbduk" title="Permalink to this headline">¶</a></h2>
+<p>A more sensitive trimmer is BBDuk from <a class="reference internal" href="installation.html#set-bbmap"><span class="std std-ref">BBMap</span></a>, but beware trimming is losing data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">bbduk</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">Xmx1g</span> <span class="n">in1</span><span class="o">=</span><span class="n">R1_001</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">in2</span><span class="o">=</span><span class="n">R2_001</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">out</span><span class="o">=</span><span class="n">trimmed_reads</span><span class="o">.</span><span class="n">fq</span> <span class="n">ref</span><span class="o">=</span><span class="n">resources</span><span class="o">/</span><span class="n">adapters</span><span class="o">.</span><span class="n">fa</span> <span class="n">ktrim</span><span class="o">=</span><span class="n">r</span> <span class="n">k</span><span class="o">=</span><span class="mi">23</span> <span class="n">mink</span><span class="o">=</span><span class="mi">11</span> <span class="n">hdist</span><span class="o">=</span><span class="mi">1</span> <span class="n">stats</span><span class="o">=</span><span class="n">stat</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
@@ -152,7 +164,7 @@ The output histogram will be written to histmap4m.txt:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="variantcalling.html" title="Variant Calling"
+          <a href="mapping.html" title="Alignments and Mapping"
              >next</a> |</li>
         <li class="right" >
           <a href="wholegenomes.html" title="Whole Genomes Toolkit"

@@ -8,13 +8,23 @@
 Reads Trimming
 ########################
 
+Using Trimgalore
+####################
+
 We need to install :ref:`set_trimgalore` and its requirements :ref:`set_cutadapt` and :ref:`set_fastqc`
  
 Then we remove adaptors and quality trim data as follows:: 
 
   trim_galore --paired --gzip --retain_unpaired --trim1 --fastqc --fastqc_args "--outdir fastqc" -o galore --path_to_cutadapt cutadapt_path  pair_1.fastq.gz pair_2.fastq.gz 
 
+Using BBDuk 
+############
 
+
+A more sensitive trimmer is BBDuk from :ref:`set_bbmap`, but beware trimming is losing data::
+
+  bash bbduk.sh -Xmx1g in1=R1_001.fastq.gz in2=R2_001.fastq.gz out=trimmed_reads.fq ref=resources/adapters.fa ktrim=r k=23 mink=11 hdist=1 stats=stat.txt
+ 
 
 Estimating Insert Size 
 ###########################
