@@ -41,6 +41,6 @@ In progress
    installation.rst 
    externalresources.rst
    databases.rst 
-
+   genomesresources.rst 
 
 
