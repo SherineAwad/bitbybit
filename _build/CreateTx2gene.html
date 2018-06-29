@@ -101,6 +101,10 @@
 <span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;TxDb.Mmusculus.UCSC.mm10.ensGene&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Then in our R script we need to include tximport library</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">tximport</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Then we can use this script for conversion</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span><span class="p">)</span>
 <span class="n">txdb</span> <span class="o">&lt;-</span> <span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span>

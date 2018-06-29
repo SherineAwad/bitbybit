@@ -22,6 +22,11 @@ or to use ensemble conventions ::
   source("https://bioconductor.org/biocLite.R") 
   biocLite("TxDb.Mmusculus.UCSC.mm10.ensGene")
 
+Then in our R script we need to include tximport library :: 
+
+  library(tximport)
+
+
 Then we can use this script for conversion :: 
 
   library(TxDb.Mmusculus.UCSC.mm10.ensGene)
