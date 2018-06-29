@@ -39,8 +39,6 @@ In progress
    kinship.rst
    metagenomics.rst 
    installation.rst 
-   externalresources.rst
-   databases.rst 
-   genomesresources.rst 
+   resources.rst
 
 
