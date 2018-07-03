@@ -54,4 +54,8 @@ Then use txdb to create tx2gene for Human Genome ::
 	df <- select(txdb, keys = k,  columns = "TXNAME", keytype = "GENEID")
 	tx2gene <- df[, 2:1]
 	head(tx2gene)
-	write.csv(tx2gene, 'tx2gene.csv')
+	write.csv(tx2gene, 'tx2gene.csv') 
+
+Dowload conversions data :: 
+
+   wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M17/gencode.vM17.metadata.MGI.gz 

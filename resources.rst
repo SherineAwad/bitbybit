@@ -178,3 +178,7 @@ NCBI Mouse
    ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/635/GCA_000001635.8_GRCm38.p7
 
 
+Transcription Factors Target Genes in Human Database
+-------------------------------------------------------
+
+  http://www.grnpedia.org/trrust/Network_search_form.php
