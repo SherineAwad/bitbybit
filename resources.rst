@@ -7,17 +7,13 @@ Public Databases Resources
 
 Please check out the bioresources page
 
-
-`<https://bioresources.readthedocs.io/en/latest/variants.html>`__ 
-
-
+`<https://bioresources.readthedocs.io/en/latest/index.html>`__ 
 
 Genome Resources
-#########################
-
+---------------------
 
 Genomes from NCBI
-----------------------
+####################
 
 ftp://ftp.ncbi.nih.gov/genomes/ 
 
@@ -27,19 +23,19 @@ ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/
 
 
 Genomes from Ensemble
-----------------------------
+#########################
 
 https://www.ensembl.org/info/data/ftp/index.html
 
 Genomes from Illumina 
----------------------------
+#########################
+
 
 `<http://emea.support.illumina.com/sequencing/sequencing_software/igenome.html#>`__ 
 
 
 Human Genome from GATK Resource Bundle 
----------------------------------------------
-
+############################################
 
 `<https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0?pli=1>`__ 
 
@@ -47,7 +43,7 @@ Human Genome from GATK Resource Bundle
 .. _mouse: 
 
 Mouse Genome
------------------
+#################
 
 To Download Mouse Genome :: 
 
@@ -61,7 +57,8 @@ And download dict and indeces ::
 .. _mouse_indesl_snps: 
 
 Mouse Indels and SNPs 
----------------------------
+##########################
+
 
 To download mouse indels and snps used for variant calling :: 
 
@@ -73,12 +70,12 @@ Or merged snp142 ::
   wget ftp://ftp-mouse.sanger.ac.uk/current_indels/mgp.v5.merged.indels.dbSNP142.normed.vcf.gz
 
 Mouse Trasncripts 
----------------------
+######################
 
 `<http://drwin.cremag.org/resources/seq-analysis/reference/mm10/transcriptome/>`__ 
 
 Mouse GFF 
-----------------
+############
 
 ::
 
@@ -87,7 +84,7 @@ Mouse GFF
 
 
 NCBI Mouse 
----------------
+##############
 
    http://hgdownload.soe.ucsc.edu/downloads.html#mouse
    ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/635/GCA_000001635.8_GRCm38.p7
