@@ -2,9 +2,12 @@
 **External Resources**
 =========================
 
+Public Databases Resources 
+-----------------------------
+
+Please check out the bioresources page
 
 
-Please check out the bioresources page 
 `<https://bioresources.readthedocs.io/en/latest/variants.html>`__ 
 
 
