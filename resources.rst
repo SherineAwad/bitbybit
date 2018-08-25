@@ -4,96 +4,8 @@
 
 
 
-ID conversions tools 
-#######################
-
- https://www.biotools.fr/mouse/ensembl_symbol_converter
-
-Gene Expression Profiles 
-#############################
-
-
-   https://www.gtexportal.org/home/
-
-
-Multiple Sequence Alignment  
-##############################
-
-   https://www.ebi.ac.uk/Tools/msa/clustalo/ 
-
-   Can be used to check conservation. Use sequences from uniprot and multiple align to check conservation . 
-
-
-Tumor Portal 
--------------------
-
-  
-   http://www.tumorportal.org/
-  
-
-Somatic Mutation Resources
-#############################
-
-
-COSMIC
-------- 
-   
-   https://cancer.sanger.ac.uk/cosmic
-
-ICGC
-------
-
-   https://dcc.icgc.org/
-
-GDC Data Portal (Former TCGA) 
---------------------------------
-
-  https://portal.gdc.cancer.gov
-
- 
- 
-Essential Databases
-########################
-
-
-GnomAD 
------------
-
-  `<http://gnomad.broadinstitute.org/>`__ 
-
-Exac
--------
-
-  `<http://exac.broadinstitute.org/>`__ 
-
-Canvar 
--------------
-
-Germline variants in cancer 
-
-  `<https://canvar.icr.ac.uk/>`__
-
-
-Nectar Database 
-----------------------
- 
- `<http://nectarmutation.org/main>`__
-
-Gene Expressions Gtex 
--------------------------
-
-  `<https://www.gtexportal.org/home/>`__
-
-Human Phenotype Ontology 
------------------------------
-
-  `<http://human-phenotype-ontology.github.io/>`__ 
-
-Biogrid
------------ 
-  
-  `<https://thebiogrid.org/>`__ 
-
+Please check out the bioresources page 
+`<https://bioresources.readthedocs.io/en/latest/variants.html>`__ 
 
 
 
@@ -178,7 +90,3 @@ NCBI Mouse
    ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/635/GCA_000001635.8_GRCm38.p7
 
 
-Transcription Factors Target Genes in Human Database
--------------------------------------------------------
-
-  http://www.grnpedia.org/trrust/Network_search_form.php
