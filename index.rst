@@ -29,6 +29,7 @@ In progress
    mapping.rst 
    variantcalling.rst
    vcfrandom.rst 
+   SV.rst 
    RNAseqvariants.rst 
    somatics.rst  
    lncRNA.rst 
