@@ -68,7 +68,7 @@ To install edgeR package, start R and enter::
         source("http://bioconductor.org/biocLite.R")
         biocLite("edgeR")
 
-The full script can be found here, `gexp <gexpr.R>`_ .Let's walk through it now::
+The full script can be found here, `gexpr <gexpr.R>`_ .Let's walk through it now::
 
 first lets download some ready counts for you:: 
 
