@@ -3,18 +3,26 @@
 ====================================
 
 
+
 Here we will follow do a simple variant calling. 
+
+Lets first create two folders for organizing our data::
+
+    mkdir galore 
+    mkdir fastqc 
 
 Lets trim and quality filter our data :: 
 
     trim_galore --paired --gzip --retain_unpaired --trim1 --fastqc --fastqc_args "--outdir fastqc" -o galore --path_to_cutadapt cutadapt/ \ 
     reads_mate1.fastq.gz read_mate2.fastq.gz
 
+We have to check the quality of the reads in fastqc folder. 
+
 
 Then, lets use bwa aln to align our reads :: 
 
-   bwa aln genome.fa  read_mate1_val_1.fq.gz  > read_mate1.sai
-   bwa aln genome.fa  read_mate2_val_2.fq.gz  > read_mate2.sai 
+   bwa aln genome.fa  galore/read_mate1_val_1.fq.gz  > read_mate1.sai
+   bwa aln genome.fa  galore/read_mate2_val_2.fq.gz  > read_mate2.sai 
 
 Convert to sam:: 
 

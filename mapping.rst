@@ -1,5 +1,5 @@
 ===============================
-**Alignments and Mapping** 
+**Mapping using Salmon** 
 ===============================
 
 
@@ -30,14 +30,4 @@ Mapping ::
 Using gcBias improves results, and IU is for an unstranded paired-end library where the reads face each other.
 
  
-
- 
-Alignment using Tophat (Not preferred anymore) 
-==============================================
-
-Lest install :ref:`set_tophat`  
-:: 
- 
-   tophat -p 4 --no-mixed -G genes.gtf --library-type fr-firststrand -o output BowtieIndex \
-      readspair_1.fq.gz readspair_2.fq.gz 
 
