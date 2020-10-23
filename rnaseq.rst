@@ -55,9 +55,6 @@ Here we use featureCounts to get the counts::
         featureCounts -t exon -g gene_id -a  Saccharomyces_cerevisiae_Ensembl_R64-1-1/genes.gtf -o sample.tmp.txt sample.bbmap.bam -s 2;)
         tail -n +3 sample.tmp.txt |cut -f1,7- >sample.counts.txt
 
-You can then use this script for gene expression `gexp <gexpr.R>`_
-
-
 
 Gene Expression using EdgeR 
 ###############################
@@ -73,7 +70,10 @@ The full script can be found here, `gexpr <gexpr.R>`_ .Let's walk through it now
 first lets download some ready counts for you:: 
 
 
-        `a1 <a1.counts.txt>`_ , `a2 <a2.counts.txt>` `b1 <b1.counts.txt>` and `b2 <b2.counts.txt>`
+        `a1 <a1.counts.txt>`_ 
+        `a2 <a2.counts.txt>`_ 
+        `b1 <b1.counts.txt>`_
+        `b2 <b2.counts.txt>`_ 
 
         
 Now, lets read the counts::
