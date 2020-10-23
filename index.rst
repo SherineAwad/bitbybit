@@ -23,7 +23,7 @@ In progress
    :caption: Contents:
   
    rvassocanalysis.rst
-   snparray.rst 
+   #snparray.rst 
    wholegenomes.rst
    NGS.rst
    mapping.rst 
@@ -31,12 +31,12 @@ In progress
    vcfrandom.rst 
    SV.rst 
    RNAseqvariants.rst 
-   somatics.rst  
+   #somatics.rst  
    lncRNA.rst 
    rnaseqexpressions.rst 
-   pathwayanalysis.rst
+   #pathwayanalysis.rst
    CreateTx2gene.rst
-   deconvolution.rst
+   #deconvolution.rst
    kinship.rst
    metagenomics.rst 
    installation.rst 
