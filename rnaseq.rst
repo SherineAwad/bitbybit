@@ -59,17 +59,26 @@ Here we use featureCounts to get the counts::
 Gene Expression using EdgeR 
 ###############################
 
+Lets download some counts ready for you::
+
+        curl -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/a1.counts.txt
+        curl -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/a2.counts.txt
+        curl -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/b1.counts.txt
+        curl -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/b2.counts.txt
+
 
 To install edgeR package, start R and enter::
 
         source("http://bioconductor.org/biocLite.R")
         biocLite("edgeR")
 
-
 The full script can be found `here <https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R>`__ :: 
         
 
         curl -L -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R
+
+You can run the script::
+
         Rscript --no-save gexpr.R
 
         
