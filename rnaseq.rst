@@ -69,6 +69,10 @@ To install edgeR package, start R and enter::
 ## The full script can be found here [this script](https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R) 
 first lets download some ready counts for you:: 
 
+```
+curl -L -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R
+Rscript --no-save gexpr.R
+```
 
         `a1 <a1.counts.txt>`_ 
         `a2 <a2.counts.txt>`_ 
