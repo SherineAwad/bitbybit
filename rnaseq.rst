@@ -66,12 +66,10 @@ To install edgeR package, start R and enter::
         biocLite("edgeR")
 
 
-## The full script can be found here [this script](https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R) 
-first lets download some ready counts for you:: 
-
+## The full script can be found here [this script](https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R):
 ```
-curl -L -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R
-Rscript --no-save gexpr.R
+        curl -L -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R
+        Rscript --no-save gexpr.R
 ```
 
         `a1 <a1.counts.txt>`_ 
