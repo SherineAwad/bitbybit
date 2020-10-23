@@ -66,7 +66,8 @@ To install edgeR package, start R and enter::
         biocLite("edgeR")
 
 
-The full script can be found here [this script] (https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R):: 
+The full script can be found [here] `<https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R>``__ :: 
+        
 
         curl -L -O https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R
         Rscript --no-save gexpr.R
