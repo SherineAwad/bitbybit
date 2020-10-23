@@ -26,6 +26,7 @@ In progress
    #snparray.rst 
    wholegenomes.rst
    NGS.rst
+   rnaseq.rst
    mapping.rst 
    variantcalling.rst
    vcfrandom.rst 
@@ -33,11 +34,11 @@ In progress
    RNAseqvariants.rst 
    #somatics.rst  
    lncRNA.rst 
-   rnaseqexpressions.rst 
+   #rnaseqexpressions.rst 
    #pathwayanalysis.rst
    CreateTx2gene.rst
    #deconvolution.rst
-   kinship.rst
+   #kinship.rst
    metagenomics.rst 
    installation.rst 
    resources.rst
