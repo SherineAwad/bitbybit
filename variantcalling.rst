@@ -19,6 +19,19 @@ Lets trim and quality filter our data, here our sample is paired-end ::
 We have to check the quality of the reads in fastqc folder. 
 
 
+Now, lets download the reference genome. Assuming out samples are human samples, we can download the human genome and unzip it as follows:: 
+
+        wget http://igenomes.illumina.com.s3-website-us-east-1.amazonaws.com/Homo_sapiens/NCBI/GRCh38/Homo_sapiens_NCBI_GRCh38.tar.gz
+        tar -xzvf Homo_sapiens_NCBI_GRCh38.tar.gz
+       
+You will find the genome.fa under Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa. 
+
+You can link it to your current directory:: 
+
+        ln -fs Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa . 
+
+Similarly, if can download any other reference genome that match your sample. 
+
 Then, lets use bwa aln to align our reads :: 
 
    bwa aln genome.fa  galore/sampleA_r1_val_1.fq.gz  > sampleA_r1.sai
