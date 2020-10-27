@@ -3,7 +3,6 @@
 ====================================
 
 
-
 Here we will follow do a simple variant calling. 
 
 Lets first create two folders for organizing our data::
@@ -13,7 +12,7 @@ Lets first create two folders for organizing our data::
 
 Lets trim and quality filter our data, here our sample is paired-end :: 
 
-    trim_galore --paired --gzip --retain_unpaired --trim1 --fastqc --fastqc_args "--outdir fastqc" -o galore --path_to_cutadapt cutadapt/ \ 
+    trim_galore --paired --gzip --retain_unpaired --trim1 --fastqc --fastqc_args "--outdir fastqc" -o galore \ 
     sampleA_r1.fastq.gz sampleA_r2.fastq.gz
 
 We have to check the quality of the reads in fastqc folder. 
