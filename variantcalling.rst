@@ -45,7 +45,7 @@ Convert to sam::
 And convert our sam to bam using a sorted reference genome genome.fa.fai, your sorted genome can be found here: Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa.fai 
 and you can also link it to your current directory as follows:: 
         
-        ln -f Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa.fai . 
+        ln -fs Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa.fai . 
 
 Now, convert sam to bam:: 
 
