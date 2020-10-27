@@ -42,7 +42,12 @@ Convert to sam::
    bwa sampe genome.fa sampleA_r1.sai sampleA_r2.sai galore/sampleA_r1_val_1.fq.gz galore/sampleA_r2_val_2.fq.gz > sampleA.sam
 
 
-And convert our sam to bam using a sorted reference genome genome.fa.fai :: 
+And convert our sam to bam using a sorted reference genome genome.fa.fai, your sorted genome can be found here: Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa.fai 
+and you can also link it to your current directory as follows:: 
+        
+        ln -f Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa.fai . 
+
+Now, convert sam to bam:: 
 
   samtools import genome.fa.fai sampleA.sam sampleA.bam
 
