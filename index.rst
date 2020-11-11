@@ -22,25 +22,25 @@ In progress
    :maxdepth: 1 
    :caption: Contents:
   
-   rvassocanalysis.rst
+   #rvassocanalysis.rst
    #snparray.rst 
-   wholegenomes.rst
-   NGS.rst
-   rnaseq.rst
-   mapping.rst 
+   #wholegenomes.rst
+   #NGS.rst
+   #rnaseq.rst
+   #mapping.rst 
    variantcalling.rst
-   vcfrandom.rst 
-   SV.rst 
-   RNAseqvariants.rst 
+   #vcfrandom.rst 
+   #SV.rst 
+   #RNAseqvariants.rst 
    #somatics.rst  
-   lncRNA.rst 
+   #lncRNA.rst 
    #rnaseqexpressions.rst 
    #pathwayanalysis.rst
-   CreateTx2gene.rst
+   #CreateTx2gene.rst
    #deconvolution.rst
    #kinship.rst
-   metagenomics.rst 
-   installation.rst 
-   resources.rst
+   #metagenomics.rst 
+   #installation.rst 
+   #resources.rst
 
 
