@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapping using Salmon &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="Samtools Variant Calling" href="variantcalling1.html" />
+    <link rel="prev" title="RNASeq Tutorial" href="rnaseq.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>Mapping using Salmon</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="variantcalling1.html" title="Samtools Variant Calling" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="rnaseq.html" title="RNASeq Tutorial" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseq.html"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling1.html"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling2.html"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="RNAseqvariants.html"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lncRNA.html"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseqexpressions.html"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateTx2gene.html"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/mapping.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="mapping-using-salmon">
+<h1><strong>Mapping using Salmon</strong><a class="headerlink" href="#mapping-using-salmon" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Mapping Using Salmon<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>First, install <a class="reference internal" href="installation.html#set-salmon"><span class="std std-ref">Salmon</span></a></p>
+<div class="section" id="building-index-first">
+<h3>Building Index  first<a class="headerlink" href="#building-index-first" title="Permalink to this headline">¶</a></h3>
+<p>Using Quasi Mode for index:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">salmon</span> <span class="n">index</span> <span class="o">-</span><span class="n">t</span> <span class="n">transcripts</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">i</span> <span class="n">quasi_index</span> <span class="o">--</span><span class="nb">type</span> <span class="n">quasi</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span>
+</pre></div>
+</div>
+<p>Using FMD mode for index</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">salmon</span> <span class="n">index</span> <span class="o">-</span><span class="n">t</span> <span class="n">transcripts</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">i</span> <span class="n">fmd_index</span> <span class="o">--</span><span class="nb">type</span> <span class="n">fmd</span>
+</pre></div>
+</div>
+<p>Mapping</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">salmon</span> <span class="n">quant</span> <span class="o">-</span><span class="n">i</span> <span class="n">quasi</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">libType</span> <span class="n">IU</span> <span class="o">-</span><span class="mi">1</span> <span class="n">readespair_1</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="mi">2</span> <span class="n">readspair_2</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> \
+      <span class="o">-</span><span class="n">o</span> <span class="n">mappingout</span> <span class="o">--</span><span class="n">seqBias</span> <span class="o">--</span><span class="n">gcBias</span> <span class="o">--</span><span class="n">posBias</span> <span class="o">-</span><span class="n">p</span> <span class="mi">3</span> <span class="o">--</span><span class="n">writeUnmappedNames</span>
+</pre></div>
+</div>
+<p>Using gcBias improves results, and IU is for an unstranded paired-end library where the reads face each other.</p>
+</div>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>Mapping using Salmon</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>

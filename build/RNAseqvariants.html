@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variant Calling for RNASeq Data &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="Somatic Mutations from RNAseq" href="somatics.html" />
+    <link rel="prev" title="Structural Variation" href="SV.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>Variant Calling for RNASeq Data</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="somatics.html" title="Somatic Mutations from RNAseq" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="SV.html" title="Structural Variation" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseq.html"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling1.html"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling2.html"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lncRNA.html"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseqexpressions.html"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateTx2gene.html"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/RNAseqvariants.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="variant-calling-for-rnaseq-data">
+<h1><strong>Variant Calling for RNASeq Data</strong><a class="headerlink" href="#variant-calling-for-rnaseq-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-progress">
+<h2>In Progress<a class="headerlink" href="#in-progress" title="Permalink to this headline">¶</a></h2>
+<p>Here we will follow GATK pipeline for variant calling from RNAseq data.</p>
+<p>Lets first create an index:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">runMode</span> <span class="n">genomeGenerate</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">genomeFastaFiles</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>Using our reference fasta files hg38.fasta, we created the index hg38Index, which will be used in further steps.</p>
+<p>Now, we will use Star to align our fastq files in 2 passes as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STAR</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">hg38Index</span> <span class="o">--</span><span class="n">readFilesIn</span> <span class="n">pair1</span><span class="o">.</span><span class="n">fq</span> <span class="n">pair2</span><span class="o">.</span><span class="n">fq</span> <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">2</span>
+<span class="n">STAR</span> <span class="o">--</span><span class="n">runMode</span> <span class="n">genomeGenerate</span> <span class="o">--</span><span class="n">genomeDir</span> <span class="n">current</span><span class="o">/</span> <span class="o">--</span><span class="n">genomeFastaFiles</span>  <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
+<span class="o">--</span><span class="n">sjdbFileChrStartEnd</span> <span class="n">SJ</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">tab</span> <span class="o">--</span><span class="n">sjdbOverhang</span> <span class="mi">75</span> <span class="o">--</span><span class="n">runThreadN</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Here we used 2 threads, and assumed the genomeDir is current/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>STAR --genomeDir ${WHERE} --readFilesIn ${WHERE}/${s1_1}.fq ${WHERE}/${s1_2}.fq --runThreadN 2
+</pre></div>
+</div>
+<p>And by this step, we will have our alignments in Aligned.out.sam
+Now, we use picard to mark duplicates as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar AddOrReplaceReadGroups I=Aligned.out.sam O=rg_added_sorted.bam \
+SO=coordinate RGID=&quot;@E00461_116.Sp1483_S13&quot; RGLB=Sp1483_S13 RGPL=ILLUMINA RGPU=&quot;@E00461_116_GW170602261_1.Sp1483_S13&quot; RGSM=Sp1483
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>java -Dlog4j.configurationFile=&quot;log4j2.xml&quot; -jar ${PICARD}/picard.jar MarkDuplicates I=rg_added_sorted.bam O=sample.dedupped.bam  CREATE_INDEX=true \
+VALIDATION_STRINGENCY=SILENT M=output.metrics
+</pre></div>
+</div>
+<p>Then, we need to split N in caring in Cigar reads</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">SplitNCigarReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">dedupped</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">rf</span> <span class="n">ReassignOneMappingQuality</span> <span class="o">-</span><span class="n">RMQF</span> <span class="mi">255</span> <span class="o">-</span><span class="n">RMQT</span> <span class="mi">60</span> <span class="o">-</span><span class="n">U</span> <span class="n">ALLOW_N_CIGAR_READS</span>
+</pre></div>
+</div>
+<p>This step is not necessary if you will use haplotype caller or Mutect2, here we do realign around indels</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">RealignerTargetCreator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> \
+<span class="o">-</span><span class="n">known</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">realignertargetcreator</span><span class="o">.</span><span class="n">intervals</span> \
+<span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">knownSites</span> <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
+<p>and now do recabliration</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span>  <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">knownSites</span>  <span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> \
+<span class="o">-</span><span class="n">knownSites</span> <span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span>  <span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>
+</pre></div>
+</div>
+<p>Then lets generate some plots to check whether post recabliration is better than pre recabliration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">AnalyzeCovariates</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">before</span> <span class="n">sample</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>  <span class="o">-</span><span class="n">after</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span>  \
+<span class="o">-</span><span class="n">plots</span> <span class="n">sample</span><span class="o">.</span><span class="n">recalibration_plots</span><span class="o">.</span><span class="n">pdf</span>
+</pre></div>
+</div>
+<p>Assuming post recabliration is better than before recabliration, we create our bam file as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span>  <span class="o">-</span><span class="n">T</span> <span class="n">PrintReads</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span>  <span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">BQSR</span> <span class="n">sample</span><span class="o">.</span><span class="n">post_recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<p>if you are interested in variant calling, then let use haplotype caller:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">GenomeAnalysisTK</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">T</span> <span class="n">HaplotypeCaller</span> <span class="o">-</span><span class="n">R</span> <span class="n">hg38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sample</span><span class="o">.</span><span class="n">bam</span> \
+<span class="o">-</span><span class="n">dontUseSoftClippedBases</span> <span class="o">-</span><span class="n">stand_call_conf</span> <span class="mf">20.0</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
+<p>Or check how to use these recablirated bam file to further analyze and detect somatic mutations  <a class="reference internal" href="somatics.html"><span class="doc">Somatic Mutations from RNAseq</span></a>.</p>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>Variant Calling for RNASeq Data</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>

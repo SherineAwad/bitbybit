@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samtools Variant Calling &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="GATK Variant Calling" href="variantcalling2.html" />
+    <link rel="prev" title="Mapping using Salmon" href="mapping.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>Samtools Variant Calling</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="variantcalling2.html" title="GATK Variant Calling" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="mapping.html" title="Mapping using Salmon" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseq.html"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling2.html"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="RNAseqvariants.html"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lncRNA.html"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseqexpressions.html"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateTx2gene.html"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/variantcalling1.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="samtools-variant-calling">
+<h1><strong>Samtools Variant Calling</strong><a class="headerlink" href="#samtools-variant-calling" title="Permalink to this headline">¶</a></h1>
+<p>Here we will follow do a simple variant calling.</p>
+<p>Lets first create two folders for organizing our data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">galore</span>
+<span class="n">mkdir</span> <span class="n">fastqc</span>
+</pre></div>
+</div>
+<p>Lets trim and quality filter our data, here our sample is paired-end</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trim_galore</span> <span class="o">--</span><span class="n">paired</span> <span class="o">--</span><span class="n">gzip</span> <span class="o">--</span><span class="n">retain_unpaired</span> <span class="o">--</span><span class="n">trim1</span> <span class="o">--</span><span class="n">fastqc</span> <span class="o">--</span><span class="n">fastqc_args</span> <span class="s2">&quot;--outdir fastqc&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">galore</span> \
+<span class="n">sampleA_r1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">sampleA_r2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>We have to check the quality of the reads in fastqc folder.</p>
+<p>Now, lets download the reference genome. Assuming out samples are human samples, we can download the human genome and unzip it as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">igenomes</span><span class="o">.</span><span class="n">illumina</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">s3</span><span class="o">-</span><span class="n">website</span><span class="o">-</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mf">1.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homo_sapiens</span><span class="o">/</span><span class="n">NCBI</span><span class="o">/</span><span class="n">GRCh38</span><span class="o">/</span><span class="n">Homo_sapiens_NCBI_GRCh38</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">Homo_sapiens_NCBI_GRCh38</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>You will find the genome.fa under Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa.</p>
+<p>You can link it to your current directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">fs</span> <span class="n">Homo_sapiens</span><span class="o">/</span><span class="n">NCBI</span><span class="o">/</span><span class="n">GRCh38</span><span class="o">/</span><span class="n">Sequence</span><span class="o">/</span><span class="n">WholeGenomeFasta</span><span class="o">/</span><span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>Similarly, if can download any other reference genome that match your sample.</p>
+<p>Then, lets use bwa aln to align our reads</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bwa</span> <span class="n">aln</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span>  <span class="n">galore</span><span class="o">/</span><span class="n">sampleA_r1_val_1</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span>  <span class="o">&gt;</span> <span class="n">sampleA_r1</span><span class="o">.</span><span class="n">sai</span>
+<span class="n">bwa</span> <span class="n">aln</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span>  <span class="n">galore</span><span class="o">/</span><span class="n">sampleA_r2_val_2</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span>  <span class="o">&gt;</span> <span class="n">sampleA_r2</span><span class="o">.</span><span class="n">sai</span>
+</pre></div>
+</div>
+<p>Convert to sam:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bwa</span> <span class="n">sampe</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="n">sampleA_r1</span><span class="o">.</span><span class="n">sai</span> <span class="n">sampleA_r2</span><span class="o">.</span><span class="n">sai</span> <span class="n">galore</span><span class="o">/</span><span class="n">sampleA_r1_val_1</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="n">galore</span><span class="o">/</span><span class="n">sampleA_r2_val_2</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="o">&gt;</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+<p>And convert our sam to bam using a sorted reference genome genome.fa.fai, your sorted genome can be found here: Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa.fai
+and you can also link it to your current directory as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">fs</span> <span class="n">Homo_sapiens</span><span class="o">/</span><span class="n">NCBI</span><span class="o">/</span><span class="n">GRCh38</span><span class="o">/</span><span class="n">Sequence</span><span class="o">/</span><span class="n">WholeGenomeFasta</span><span class="o">/</span><span class="n">genome</span><span class="o">.</span><span class="n">fa</span><span class="o">.</span><span class="n">fai</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>Now, convert sam to bam:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="kn">import</span> <span class="nn">genome.fa.fai</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">sam</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<p>Finally sort the bam files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">sort</span> <span class="o">-</span><span class="n">T</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">sorted</span> <span class="o">-</span><span class="n">o</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">samtools</span> <span class="n">index</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<div class="section" id="calling-variants-using-samtools">
+<span id="calling-samtools"></span><h2>Calling variants using Samtools<a class="headerlink" href="#calling-variants-using-samtools" title="Permalink to this headline">¶</a></h2>
+<p>Here, we will call variants using samtools</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samtools</span> <span class="n">mpileup</span> <span class="o">-</span><span class="n">uf</span> <span class="n">genome</span><span class="o">.</span><span class="n">fa</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span> <span class="o">|</span> <span class="n">bcftools</span> <span class="n">call</span> <span class="o">-</span><span class="n">vmO</span> <span class="n">v</span> <span class="o">-</span><span class="n">o</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">vcf</span> <span class="o">--</span><span class="n">threads</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>Samtools Variant Calling</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>

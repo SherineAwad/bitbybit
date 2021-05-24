@@ -1,0 +1,56 @@
+====================================
+**VCF Toolkit** 
+====================================
+
+Here is a bunch of different operation we need regulary to do with vcf files. 
+
+Megre VCF Files 
+----------------
+We will use vcf-merge from vcftools :ref:`set_vcftools`
+
+::
+
+
+    bgzip -c file1.vcf.vcf > file1.vcf.gz
+    bgzip -c file1.vcf.vcf > file1.vcf.gz
+    bgzip -c file1.vcf.vcf > file1.vcf.gz
+    tabix -p vcf file1.vcf.gz
+    tabix -p vcf file2.vcf.gz
+    tabix -p vcf file3.vcf.gz 
+    vcf-merge file1.vcf.gz file2.vcf.gz file3.vcf.gz > merged.vcf
+
+
+Split VCF 
+-----------
+
+Split vcf grouped samples into one sample per vcf::
+
+    for sample in `bcftools query -l grouped.vcf`
+        do
+        vcf-subset --exclude-ref -c $sample grouped.vcf > "${sample}.vcf"
+        done
+
+
+
+Split vcf grouped samples per chromosome:: 
+
+    bgzip -c allsamples.vcf > allsamples.vcf.gz
+    tabix -p vcf allsamples.vcf.gz
+    tabix -h allsamples.vcf.gz chr1 > allsamples_chr1.vcf
+
+
+Sort VCF 
+-----------
+
+From vcftools :ref:`set_vcftools` , we use vcf-sort sort:: 
+   
+    vcf-sort myvcf.vcf > new.vcf
+
+
+Filter a VCF 
+---------------
+
+
+From vcftools :ref:`set_vcftools`, we filter a vcf for variants that `PASS` caller:: 
+
+   vcftools --gzvcf myvcf.vcf.gz --remove-filtered-all --recode --out myvcf.pass 

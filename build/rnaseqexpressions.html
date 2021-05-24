@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RNASeq Gene Expressions &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="Pathway Analysis for RNASeq and Microarrays" href="pathwayanalysis.html" />
+    <link rel="prev" title="Long nonCoding RNA Prediction" href="lncRNA.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>RNASeq Gene Expressions</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="pathwayanalysis.html" title="Pathway Analysis for RNASeq and Microarrays" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="lncRNA.html" title="Long nonCoding RNA Prediction" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseq.html"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling1.html"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling2.html"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="RNAseqvariants.html"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lncRNA.html"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateTx2gene.html"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/rnaseqexpressions.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="rnaseq-gene-expressions">
+<h1><strong>RNASeq Gene Expressions</strong><a class="headerlink" href="#rnaseq-gene-expressions" title="Permalink to this headline">¶</a></h1>
+<p>See Salmon quantifications section</p>
+<div class="section" id="in-progress">
+<h2>In Progress<a class="headerlink" href="#in-progress" title="Permalink to this headline">¶</a></h2>
+<p>We need to write R script and use EgdeR.
+Lets first declare our libraries</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">tximport</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">rjson</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="s2">&quot;edgeR&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">biomaRt</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="s2">&quot;AnnotationDbi&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="s2">&quot;org.Hs.eg.db&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">magrittr</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">pathview</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">gage</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">gageData</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, lets read salmon quantifications files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>samples &lt;- read.table(file.path(&quot;/home/sherine/work/rnaseq/kaz&quot;, &quot;samples.txt&quot;), header = FALSE)
+files &lt;- file.path(&quot;/home/sherine/work/rnaseq&quot;, &quot;kaz&quot;, samples$V1, &quot;quant.sf&quot;)
+print (&#39;Files are :&#39;)
+print (files)
+names(files) &lt;- paste0(&quot;sample&quot;, 1:20)
+</pre></div>
+</div>
+<p>Lets convert salmon transcripts to gene names using NCBItx2gene.csv. See <a class="reference internal" href="CreateTx2gene.html#txtogene"><span class="std std-ref">How to convert from transcripts to Genes ids</span></a> for how to generate this file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tx2gene &lt;- read.csv(file.path(&quot;/home/sherine/work/rnaseq/kaz&quot;, &quot;NCBItx2gene.csv&quot;))
+txi &lt;- tximport(files, type = &quot;salmon&quot;, tx2gene = tx2gene,ignoreTxVersion = TRUE, lengthCol=length)
+cts &lt;- txi$counts
+write.csv(cts, &quot;counts.csv&quot;)
+</pre></div>
+</div>
+<p>We define our groups and create our DGEList</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">group</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">rep</span><span class="p">(</span><span class="s2">&quot;Control&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">rep</span><span class="p">(</span><span class="s2">&quot;Tumor&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="p">)</span>
+<span class="n">dge</span> <span class="o">=</span> <span class="n">DGEList</span><span class="p">(</span><span class="n">counts</span><span class="o">=</span><span class="n">cts</span><span class="p">,</span> <span class="n">genes</span><span class="o">=</span> <span class="n">rownames</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">)</span>
+<span class="n">countsPerMillion</span> <span class="o">&lt;-</span> <span class="n">cpm</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
+<span class="n">summary</span><span class="p">(</span><span class="n">countsPerMillion</span><span class="p">)</span>
+<span class="n">countCheck</span> <span class="o">&lt;-</span> <span class="n">countsPerMillion</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="n">summary</span><span class="p">(</span><span class="n">countCheck</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Filtering</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keep</span> <span class="o">&lt;-</span> <span class="n">which</span><span class="p">(</span><span class="n">rowSums</span><span class="p">(</span><span class="n">countCheck</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">dge</span><span class="p">[</span><span class="n">keep</span><span class="p">,]</span>
+<span class="n">summary</span><span class="p">(</span><span class="n">cpm</span><span class="p">(</span><span class="n">dge</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Calculate expressions, see this interesting post about the CPM, RPKM , and FPKM differences <a class="reference external" href="https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/">https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">calcNormFactors</span><span class="p">(</span><span class="n">dge</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;TMM&quot;</span><span class="p">)</span>
+<span class="n">summary</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
+<span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">estimateCommonDisp</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
+<span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">estimateTagwiseDisp</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
+<span class="n">dge</span> <span class="o">&lt;-</span> <span class="n">estimateTrendedDisp</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
+<span class="n">et</span> <span class="o">&lt;-</span> <span class="n">exactTest</span><span class="p">(</span><span class="n">dge</span><span class="p">,</span> <span class="n">pair</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;Control&quot;</span><span class="p">,</span> <span class="s2">&quot;Tumor&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Note that here we can filter using pvalues, but if you plan to use Gage for pathways, Gage takes all the data with no filter as a background otherwise you will get lots of nulls:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">etp</span> <span class="o">&lt;-</span> <span class="n">topTags</span><span class="p">(</span><span class="n">et</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span> <span class="mi">100000</span><span class="p">,</span> <span class="n">adjust</span><span class="o">.</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="n">sort</span><span class="o">.</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;PValue&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you plan to use xcells for RNAseq deconvolution, xcell requires RPKM instead of CPM, so use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>length = txi$length
+dge = DGEList(counts=cts, genes= rownames(data), group=group)
+dge &lt;- calcNormFactors(dge, method=&quot;TMM&quot;)
+summary(dge)
+rpkm = rpkm(dge, length)
+write.csv(rpkm, &quot;rpkm.csv&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>RNASeq Gene Expressions</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>

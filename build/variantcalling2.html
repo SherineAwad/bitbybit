@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GATK Variant Calling &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="VCF Toolkit" href="vcfrandom.html" />
+    <link rel="prev" title="Samtools Variant Calling" href="variantcalling1.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>GATK Variant Calling</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="vcfrandom.html" title="VCF Toolkit" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="variantcalling1.html" title="Samtools Variant Calling" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseq.html"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling1.html"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="RNAseqvariants.html"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lncRNA.html"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseqexpressions.html"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateTx2gene.html"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/variantcalling2.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gatk-variant-calling">
+<h1><strong>GATK Variant Calling</strong><a class="headerlink" href="#gatk-variant-calling" title="Permalink to this headline">¶</a></h1>
+<p>Here, we will do a simplified GATK variant calling. This tutorial will not dig into GVCF mode nor variant recalibration and other advnced stuff in GATK.</p>
+<p>Lets first create two folders for organizing our data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">galore</span>
+<span class="n">mkdir</span> <span class="n">fastqc</span>
+</pre></div>
+</div>
+<p>Lets trim and quality filter our data, here our sample is paired-end</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trim_galore</span> <span class="o">--</span><span class="n">paired</span> <span class="o">--</span><span class="n">gzip</span> <span class="o">--</span><span class="n">retain_unpaired</span> <span class="o">--</span><span class="n">trim1</span> <span class="o">--</span><span class="n">fastqc</span> <span class="o">--</span><span class="n">fastqc_args</span> <span class="s2">&quot;--outdir fastqc&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">galore</span> \
+<span class="n">sampleA_r1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">sampleA_r2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>We have to check the quality of the reads in fastqc folder.</p>
+<p>Now, lets download the reference genome and some supportive resources needed from GATK resource bundle. Assuming out samples are human samples, we can download the human genome and unzip it as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">reference</span>
+<span class="n">cd</span> <span class="n">reference</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">fasta</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">fai</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">idx</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">tbi</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">tbi</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Axiom_Exome_Plus</span><span class="o">.</span><span class="n">genotypes</span><span class="o">.</span><span class="n">all_populations</span><span class="o">.</span><span class="n">poly</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Axiom_Exome_Plus</span><span class="o">.</span><span class="n">genotypes</span><span class="o">.</span><span class="n">all_populations</span><span class="o">.</span><span class="n">poly</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">tbi</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="mi">1000</span><span class="n">G_phase1</span><span class="o">.</span><span class="n">snps</span><span class="o">.</span><span class="n">high_confidence</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="mi">1000</span><span class="n">G_phase1</span><span class="o">.</span><span class="n">snps</span><span class="o">.</span><span class="n">high_confidence</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">tbi</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="mi">1000</span><span class="n">G_omni2</span><span class="o">.</span><span class="mf">5.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="mi">1000</span><span class="n">G_omni2</span><span class="o">.</span><span class="mf">5.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">tbi</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">hapmap_3</span><span class="o">.</span><span class="mf">3.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">broad</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">hapmap_3</span><span class="o">.</span><span class="mf">3.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">tbi</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">storage</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">genomics</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">references</span><span class="o">/</span><span class="n">hg38</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">dict</span>
+<span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">igenomes</span><span class="o">.</span><span class="n">illumina</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">s3</span><span class="o">-</span><span class="n">website</span><span class="o">-</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mf">1.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homo_sapiens</span><span class="o">/</span><span class="n">NCBI</span><span class="o">/</span><span class="n">GRCh38</span><span class="o">/</span><span class="n">Homo_sapiens_NCBI_GRCh38</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">cd</span> <span class="o">../</span>
+</pre></div>
+</div>
+<p>We will need to index our reference or (you can download the index as well)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bowtie2</span><span class="o">-</span><span class="n">build</span>  <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">fasta</span> <span class="n">Homo_sapiens_assembly38</span>
+<span class="n">samtools</span> <span class="n">faidx</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">fasta</span>
+</pre></div>
+</div>
+<p>Now, we can use bowtie2 to align our reads</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bowtie2</span> <span class="o">-</span><span class="n">x</span> <span class="n">reference</span><span class="o">/</span><span class="n">Homo_sapiens_assembly38</span> <span class="o">-</span><span class="mi">1</span> <span class="n">galore</span><span class="o">/</span><span class="n">sampleA_r1_val_1</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="mi">2</span> <span class="n">galore</span><span class="o">/</span><span class="n">sampleA_r2_val_2</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span>  <span class="o">-</span><span class="n">S</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+<p>Then we will need to add read groups, we can use picard for that:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">picard</span> <span class="n">AddOrReplaceReadGroups</span> <span class="n">I</span><span class="o">=</span><span class="n">sampleA</span><span class="o">.</span><span class="n">sam</span> <span class="n">O</span><span class="o">=</span><span class="n">sampleA</span><span class="o">.</span><span class="n">RG</span><span class="o">.</span><span class="n">sam</span> <span class="n">SO</span><span class="o">=</span><span class="n">coordinate</span> <span class="n">RGID</span><span class="o">=</span><span class="nd">@A00489_467</span><span class="o">.</span><span class="n">HT3G5DMXX</span><span class="o">.</span><span class="n">s_2</span> <span class="n">RGSM</span><span class="o">=</span><span class="n">sampleA</span> <span class="n">RGPL</span><span class="o">=</span><span class="n">Illumina</span> <span class="n">RGLB</span><span class="o">=</span><span class="n">sampleA</span> <span class="n">RGPU</span><span class="o">=</span><span class="n">A00489_467</span><span class="o">.</span><span class="n">HT3G5DMXX</span><span class="o">.</span><span class="n">s_2_sampleA</span> <span class="n">VALIDATION_STRINGENCY</span><span class="o">=</span><span class="n">SILENT</span>
+</pre></div>
+</div>
+<p>We need now to mark duplicates:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">picard</span> <span class="n">MarkDuplicates</span> <span class="n">I</span><span class="o">=</span><span class="n">sampleA</span><span class="o">.</span><span class="n">RG</span><span class="o">.</span><span class="n">sam</span> <span class="n">O</span><span class="o">=</span><span class="n">sampleA</span><span class="o">.</span><span class="n">dedupped</span><span class="o">.</span><span class="n">bam</span> <span class="n">CREATE_INDEX</span><span class="o">=</span><span class="n">true</span> <span class="n">M</span><span class="o">=</span><span class="n">sampleA</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">metrics</span>
+</pre></div>
+</div>
+<p>Once we added read groups and marked duplicates, we can now do base recalibration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gatk</span> <span class="o">--</span><span class="n">java</span><span class="o">-</span><span class="n">options</span> <span class="o">-</span><span class="n">Xmx100g</span> <span class="n">BaseRecalibrator</span> <span class="o">-</span><span class="n">I</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">dedupped</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">R</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">--</span><span class="n">known</span><span class="o">-</span><span class="n">sites</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">dbsnp138</span><span class="o">.</span><span class="n">vcf</span> <span class="o">--</span><span class="n">known</span><span class="o">-</span><span class="n">sites</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">known_indels</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">known</span><span class="o">-</span><span class="n">sites</span> <span class="n">Mills_and_1000G_gold_standard</span><span class="o">.</span><span class="n">indels</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="n">O</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span>
+<span class="n">gatk</span> <span class="o">--</span><span class="n">java</span><span class="o">-</span><span class="n">options</span> <span class="o">-</span><span class="n">Xmx100g</span> <span class="n">ApplyBQSR</span>  <span class="o">-</span><span class="n">I</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">dedupped</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">R</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">--</span><span class="n">bqsr</span><span class="o">-</span><span class="n">recal</span><span class="o">-</span><span class="n">file</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">recal_data</span><span class="o">.</span><span class="n">table</span> <span class="o">-</span><span class="n">O</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">recalibrated</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<p>Then, we can finally call haplotypecaller:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gatk</span> <span class="o">--</span><span class="n">java</span><span class="o">-</span><span class="n">options</span> <span class="s2">&quot;-Xmx500g -XX:ParallelGCThreads=4&quot;</span> <span class="n">HaplotypeCaller</span> <span class="o">-</span><span class="n">R</span> <span class="n">Homo_sapiens_assembly38</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">I</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">recalibrated</span><span class="o">.</span><span class="n">bam</span>   <span class="o">-</span><span class="n">O</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">vcf</span>
+</pre></div>
+</div>
+<div class="section" id="annovar-annotation-and-hard-filtering">
+<h2>Annovar annotation and hard filtering<a class="headerlink" href="#annovar-annotation-and-hard-filtering" title="Permalink to this headline">¶</a></h2>
+<p>We can annotate our vcf using annovar as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">annovar</span><span class="o">/</span><span class="n">table_annovar</span><span class="o">.</span><span class="n">pl</span> <span class="n">sample</span><span class="o">.</span><span class="n">vcf</span> <span class="o">~/</span><span class="n">annovar</span><span class="o">/</span><span class="n">humandb</span> <span class="o">-</span><span class="n">buildver</span> <span class="n">hg38</span> <span class="o">-</span><span class="n">out</span> <span class="n">sampleA</span> <span class="o">-</span><span class="n">remove</span> <span class="o">-</span><span class="n">protocol</span> <span class="n">refGene</span><span class="p">,</span><span class="n">ensGene</span><span class="p">,</span><span class="n">cytoBand</span><span class="p">,</span><span class="n">exac03</span><span class="p">,</span><span class="n">gnomad_exome</span><span class="p">,</span><span class="n">avsnp147</span><span class="p">,</span><span class="n">dbnsfp33a</span><span class="p">,</span><span class="n">clinvar_20170130</span><span class="p">,</span><span class="n">revel</span> <span class="o">-</span><span class="n">operation</span> <span class="n">g</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">f</span>  <span class="o">-</span><span class="n">nastring</span> <span class="o">.</span> <span class="o">-</span><span class="n">vcfinput</span>
+</pre></div>
+</div>
+<p>We can also hard filter our vcf, note that this tutorial doesn’t cover variant recalibration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gatk</span> <span class="n">VariantFiltration</span> <span class="o">-</span><span class="n">V</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">hg38_multianno</span><span class="o">.</span><span class="n">vcf</span> <span class="o">-</span><span class="nb">filter</span> <span class="s2">&quot;QD &lt; 2.0&quot;</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;QD2&quot;</span> <span class="o">-</span><span class="nb">filter</span> <span class="s2">&quot;QUAL &lt; 30.0&quot;</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;QUAL30&quot;</span>  <span class="o">-</span><span class="nb">filter</span> <span class="s2">&quot;SOR &gt; 3.0&quot;</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;SOR3&quot;</span>    <span class="o">-</span><span class="nb">filter</span> <span class="s2">&quot;FS &gt; 60.0&quot;</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;FS60&quot;</span>  <span class="o">-</span><span class="nb">filter</span> <span class="s2">&quot;MQ &lt; 40.0&quot;</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;MQ40&quot;</span> <span class="o">-</span><span class="nb">filter</span> <span class="s2">&quot;MQRankSum &lt; -12.5&quot;</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;MQRankSum-12.5&quot;</span>  <span class="o">-</span><span class="nb">filter</span> <span class="s2">&quot;ReadPosRankSum &lt; -8.0&quot;</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;ReadPosRankSum-8&quot;</span>  <span class="o">-</span><span class="n">O</span> <span class="n">sampleA</span><span class="o">.</span><span class="n">hg38_multianno</span><span class="o">.</span><span class="n">filtered</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>GATK Variant Calling</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>

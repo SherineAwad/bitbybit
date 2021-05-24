@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Long nonCoding RNA Prediction &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="RNASeq Gene Expressions" href="rnaseqexpressions.html" />
+    <link rel="prev" title="Somatic Mutations from RNAseq" href="somatics.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>Long nonCoding RNA Prediction</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="rnaseqexpressions.html" title="RNASeq Gene Expressions" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="somatics.html" title="Somatic Mutations from RNAseq" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseq.html"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling1.html"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling2.html"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="RNAseqvariants.html"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseqexpressions.html"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateTx2gene.html"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/lncRNA.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="long-noncoding-rna-prediction">
+<h1><strong>Long nonCoding RNA Prediction</strong><a class="headerlink" href="#long-noncoding-rna-prediction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="some-strategies-to-discriminate-between-ncrna-and-mrna">
+<h2>Some Strategies to discriminate between ncRNA and mRNA<a class="headerlink" href="#some-strategies-to-discriminate-between-ncrna-and-mrna" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="short-putativs-orfs">
+<h3>1. Short Putativs ORFs<a class="headerlink" href="#short-putativs-orfs" title="Permalink to this headline">¶</a></h3>
+<p>Short putative ORFs can be expected to occur by chance within lncRNA
+A protein-coding mRNA can be defined by open reading frame (ORF) greater than 100 amino acids (aa) or 300 nucleotides (nt)
+Cutoffs are used to discriminate between ncRNA and mRNA: (300 nt /100 codons)</p>
+<p>However, lncRNA sometimes contain ORF that are long, hence protein with &lt;100 are misclassified as ncRNA. Also, reducing the cutoff leads to underestimating ncRNA.</p>
+</div>
+<div class="section" id="open-reading-frame-conservation">
+<h3>2. Open reading frame conservation<a class="headerlink" href="#open-reading-frame-conservation" title="Permalink to this headline">¶</a></h3>
+<p>Assessing putative ORF for similarity to known proteins or protein domain, such homology provides indirect evidence of function as mRNA. Many studies cite lack of ORF conservation to argue against function as mRNA
+However, the vast majority of putative human ORFs without cross-species counterparts is likely to be random  occurrence
+Detecting conservation relies a lot on the accuracy of current protein annotation.
+For example:
+Xist was annotated for 15 years in all public database as a protein  coding, discovered lately as ncRNA
+In addition,  some ncRNA have evolved from protein-coding genes, and will retain some remnant  signatures of homologies to mRNA.</p>
+</div>
+<div class="section" id="structural-approaches">
+<h3>3. Structural Approaches<a class="headerlink" href="#structural-approaches" title="Permalink to this headline">¶</a></h3>
+<p>Indirectly detect lncRNA from the absence of mRNA-like charaterstics
+and identify lncRNA from the presence of conserved predicted RNA secondary structures
+However, this leads to high false postives since many conserved secondary structures existed also in mRNA</p>
+<p><a class="reference internal" href="installation.html#set-lncscore"><span class="std std-ref">lncScore</span></a> and other tools use combination of methods to predict lncRNA.</p>
+</div>
+</div>
+<div class="section" id="using-lncscore-to-predict-novel-lncrna">
+<h2>Using lncScore to predict novel lncRNA<a class="headerlink" href="#using-lncscore-to-predict-novel-lncrna" title="Permalink to this headline">¶</a></h2>
+<p>Here we will use lncScore, check <a class="reference internal" href="installation.html#set-lncscore"><span class="std std-ref">lncScore</span></a> for installation tips.</p>
+<p>We use MyTranscripts.fa which contains our transcript in fasta format</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>python lncScore.py -f MyTranscripts.fa -g ${GTF}/genes.gtf \
+-o ourlncRNA.results -p 1 -x dat/Human_Hexamer.tsv \
+-t dat/Human_training.dat
+</pre></div>
+</div>
+<p>To convert your alignments to fasta format, one options is to use Cufflinks</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cufflinks</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="n">G</span> <span class="n">genes</span><span class="o">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">MyTranscripts</span>  <span class="n">hits</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>Long nonCoding RNA Prediction</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>

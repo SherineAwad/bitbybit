@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RNASeq Tutorial &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="Mapping using Salmon" href="mapping.html" />
+    <link rel="prev" title="Next Generation Sequencing Toolkit" href="NGS.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>RNASeq Tutorial</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="mapping.html" title="Mapping using Salmon" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="NGS.html" title="Next Generation Sequencing Toolkit" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling1.html"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling2.html"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="RNAseqvariants.html"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lncRNA.html"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseqexpressions.html"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateTx2gene.html"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/rnaseq.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="rnaseq-tutorial">
+<h1><strong>RNASeq Tutorial</strong><a class="headerlink" href="#rnaseq-tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="download-data">
+<h2>Download Data<a class="headerlink" href="#download-data" title="Permalink to this headline">¶</a></h2>
+<p>Prepare a directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">rnaseq</span>
+<span class="n">cd</span> <span class="n">rnaseq</span>
+</pre></div>
+</div>
+<p>A yeast RNASeq sample can be fully downloaded here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">sra</span><span class="o">.</span><span class="n">ebi</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span><span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">fastq</span><span class="o">/</span><span class="n">SRR594</span><span class="o">/</span><span class="mi">008</span><span class="o">/</span><span class="n">SRR5945808</span><span class="o">/</span><span class="n">SRR5945808</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>As a short cut, we can use a sample of this data for a quick download/running time which is a 40000 subset of the SRR5945808.fastq.gz (Recommended):</p>
+<p>And let’s download the yeast reference genome:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">igenomes</span><span class="o">.</span><span class="n">illumina</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">s3</span><span class="o">-</span><span class="n">website</span><span class="o">-</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mf">1.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Saccharomyces_cerevisiae</span><span class="o">/</span><span class="n">Ensembl</span><span class="o">/</span><span class="n">R64</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">Saccharomyces_cerevisiae_Ensembl_R64</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">gunzip</span> <span class="n">Saccharomyces_cerevisiae_Ensembl_R64</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="trimming-adapters-and-quality-filtering">
+<h2>Trimming Adapters and Quality Filtering<a class="headerlink" href="#trimming-adapters-and-quality-filtering" title="Permalink to this headline">¶</a></h2>
+<p>We can use trim_glore to trim adapters and quality filter reads. First for simplicity, lets create two folders for galore and fastq:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">galore</span>
+<span class="n">mkdir</span> <span class="n">fastqc</span>
+</pre></div>
+</div>
+<p>Then, we can use trim_galore from trimming adapters and quality filtering:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trim_galore</span> <span class="o">--</span><span class="n">gzip</span> <span class="o">--</span><span class="n">retain_unpaired</span> <span class="o">--</span><span class="n">trim1</span>  <span class="o">--</span><span class="n">fastqc</span> <span class="o">--</span><span class="n">fastqc_args</span> <span class="s2">&quot;--outdir fastqc&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">galore</span>  <span class="n">sample</span><span class="o">.</span><span class="n">fastq</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="alignment-to-reference">
+<h2>Alignment to Reference<a class="headerlink" href="#alignment-to-reference" title="Permalink to this headline">¶</a></h2>
+<p>We will need to use a splice aware aligner like STAR, or BBMap. Lets use BBMap:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bbmap</span><span class="o">.</span><span class="n">sh</span> <span class="ow">in</span><span class="o">=</span><span class="n">galore</span><span class="o">/</span><span class="n">rna_trimmed</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span>   <span class="n">ref</span><span class="o">=</span><span class="n">yeast</span><span class="o">.</span><span class="n">fa</span>  <span class="n">path</span><span class="o">=</span> <span class="n">yeastBBMapIndex</span> <span class="n">out</span><span class="o">=</span><span class="n">sample</span><span class="o">.</span><span class="n">bbmap</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feature-counts">
+<h2>Feature Counts<a class="headerlink" href="#feature-counts" title="Permalink to this headline">¶</a></h2>
+<p>Here we use featureCounts to get the counts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">featureCounts</span> <span class="o">-</span><span class="n">t</span> <span class="n">exon</span> <span class="o">-</span><span class="n">g</span> <span class="n">gene_id</span> <span class="o">-</span><span class="n">a</span>  <span class="n">Saccharomyces_cerevisiae_Ensembl_R64</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">genes</span><span class="o">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">sample</span><span class="o">.</span><span class="n">tmp</span><span class="o">.</span><span class="n">txt</span> <span class="n">sample</span><span class="o">.</span><span class="n">bbmap</span><span class="o">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">s</span> <span class="mi">2</span><span class="p">;)</span>
+<span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="o">+</span><span class="mi">3</span> <span class="n">sample</span><span class="o">.</span><span class="n">tmp</span><span class="o">.</span><span class="n">txt</span> <span class="o">|</span><span class="n">cut</span> <span class="o">-</span><span class="n">f1</span><span class="p">,</span><span class="mi">7</span><span class="o">-</span> <span class="o">&gt;</span><span class="n">sample</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gene-expression-using-edger">
+<h2>Gene Expression using EdgeR<a class="headerlink" href="#gene-expression-using-edger" title="Permalink to this headline">¶</a></h2>
+<p>Lets download some counts ready for you:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">SherineAwad</span><span class="o">/</span><span class="n">BitByBit</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">a1</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">SherineAwad</span><span class="o">/</span><span class="n">BitByBit</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">a2</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">SherineAwad</span><span class="o">/</span><span class="n">BitByBit</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">b1</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">SherineAwad</span><span class="o">/</span><span class="n">BitByBit</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">b2</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>To install edgeR package, start R and enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;http://bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>
+<span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;edgeR&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The full script can be found <a class="reference external" href="https://raw.githubusercontent.com/SherineAwad/BitByBit/master/gexpr.R">here</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">SherineAwad</span><span class="o">/</span><span class="n">BitByBit</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">gexpr</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+<p>You can run the script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Rscript</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">save</span> <span class="n">gexpr</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+<p>Now, lets read the counts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;a1.counts.txt&quot;</span><span class="p">,</span><span class="s2">&quot;a2.counts.txt&quot;</span><span class="p">,</span><span class="s2">&quot;b1.counts.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;b2.counts.txt&quot;</span><span class="p">)</span>
+
+<span class="n">group</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">rep</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">rep</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="p">)</span>
+<span class="n">dge</span>  <span class="o">&lt;-</span> <span class="n">readDGE</span><span class="p">(</span><span class="n">files</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span><span class="n">group</span><span class="p">)</span>
+<span class="n">dge</span>
+</pre></div>
+</div>
+<p>Lets calculate CPM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">countsPerMillion</span> <span class="o">&lt;-</span> <span class="n">cpm</span><span class="p">(</span><span class="n">dge</span><span class="p">)</span>
+<span class="n">summary</span><span class="p">(</span><span class="n">countsPerMillion</span><span class="p">)</span>
+<span class="n">countCheck</span> <span class="o">&lt;-</span> <span class="n">countsPerMillion</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="n">summary</span><span class="p">(</span><span class="n">countCheck</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">countsPerMillion</span><span class="p">,</span> <span class="s2">&quot;cpm_A_B.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Lets do some filtering:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keep</span> <span class="o">&lt;-</span> <span class="n">which</span><span class="p">(</span><span class="n">rowSums</span><span class="p">(</span><span class="n">countCheck</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, we can calculate the dge:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>dge &lt;- dge[keep,]
+summary(cpm(dge))
+dge &lt;- calcNormFactors(dge, method=&quot;TMM&quot;)
+dge &lt;- estimateCommonDisp(dge)
+dge &lt;- estimateTagwiseDisp(dge)
+dge &lt;- estimateTrendedDisp(dge)
+et &lt;- exactTest(dge, pair=c(&quot;A&quot;,&quot;B&quot;))
+etp &lt;- topTags(et, n= 100000, adjust.method=&quot;BH&quot;, sort.by=&quot;PValue&quot;, p.value = 1)
+write.csv(etp$table, &quot;dge_A_B.csv&quot;)
+</pre></div>
+</div>
+<p>Now, we can do some plotting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>labels=c(&quot;A1&quot;, &quot;A2&quot;, &quot;B1&quot;, &quot;B2&quot;)
+pdf(&quot;MA_A_B.pdf&quot;)
+plot(
+        etp$table$logCPM,
+        etp$table$logFC,
+        xlim=c(-3, 20), ylim=c(-12, 12), pch=20, cex=.3,
+        col = ifelse( etp$table$FDR &lt; 0.2, &quot;black&quot;, &quot;red&quot; ) )
+dev.off()
+
+pdf(&quot;MDS_A_B.pdf&quot;)
+plotMDS(dge, labels=labels)
+dev.off()
+
+
+pdf(&quot;volcano_A_B.pdf&quot;)
+res &lt;- etp$table
+with(res, plot(logFC, -log10(PValue), pch=20, main=&quot;A vs B&quot;, xlim=c(-12,12)))
+
+# Add colored points: red if FDR&lt;0.05, orange of log2FC&gt;1, green if both)
+with(subset(res, FDR&lt;.05 ), points(logFC, -log10(PValue), pch=20, col=&quot;red&quot;))
+with(subset(res, abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;orange&quot;))
+with(subset(res, FDR&lt;.05 &amp; abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;green&quot;))
+dev.off()
+
+
+pdf(&quot;A_B_heatmap.pdf&quot;)
+logCPM = countsPerMillion
+o = rownames(etp$table[abs(etp$table$logFC)&gt;1 &amp; etp$table$PValue&lt;0.05, ])
+logCPM &lt;- logCPM[o[1:25],]
+colnames(logCPM) = labels
+logCPM &lt;- t(scale(t(logCPM)))
+require(&quot;RColorBrewer&quot;)
+require(&quot;gplots&quot;)
+myCol &lt;- colorRampPalette(c(&quot;dodgerblue&quot;, &quot;black&quot;, &quot;yellow&quot;))(25)
+myBreaks &lt;- seq(-3, 3, length.out=26)
+heatmap.2(logCPM, col=myCol, breaks=myBreaks,symkey=F, Rowv=TRUE,Colv=TRUE, main=&quot;A vs B&quot;, key=T, keysize=0.7,scale=&quot;none&quot;,trace=&quot;none&quot;, dendrogram=&quot;both&quot;, cexRow=0.7, cexCol=0.9, density.info=&quot;none&quot;,margin=c(10,9), lhei=c(2,10), lwid=c(2,6),reorderfun=function(d,w) reorder(d, w, agglo.FUN=mean),  distfun=function(x) as.dist(1-cor(t(x))), hclustfun=function(x) hclust(x, method=&quot;ward.D2&quot;))
+dev.off()
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>RNASeq Tutorial</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>

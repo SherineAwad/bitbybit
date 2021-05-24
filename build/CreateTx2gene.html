@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transcripts to Genes &#8212; BitByBit  documentation</title>
+    <link rel="stylesheet" href="_static/css/adctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="BitByBit  documentation" href="index.html" />
+    <link rel="next" title="RNA Deconvolution" href="deconvolution.html" />
+    <link rel="prev" title="Pathway Analysis for RNASeq and Microarrays" href="pathwayanalysis.html" />
+    <link media="only screen and (max-device-width: 480px)" href="_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>BitByBit  documentation</p>
+</div>
+<div id="header">
+    <div id="title"><h1>Transcripts to Genes</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="genindex.html" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="deconvolution.html" title="RNA Deconvolution" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="pathwayanalysis.html" title="Pathway Analysis for RNASeq and Microarrays" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="index.html">Main Page</a></li></ul>
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rvassocanalysis.html"><strong>Rare Variants Association Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="snparray.html"><strong>SNP Array Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wholegenomes.html"><strong>Whole Genomes Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGS.html"><strong>Next Generation Sequencing Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseq.html"><strong>RNASeq Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html"><strong>Mapping using Salmon</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling1.html"><strong>Samtools Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variantcalling2.html"><strong>GATK Variant Calling</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcfrandom.html"><strong>VCF Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SV.html"><strong>Structural Variation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="RNAseqvariants.html"><strong>Variant Calling for RNASeq Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="somatics.html"><strong>Somatic Mutations from RNAseq</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lncRNA.html"><strong>Long nonCoding RNA Prediction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnaseqexpressions.html"><strong>RNASeq Gene Expressions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pathwayanalysis.html"><strong>Pathway Analysis for RNASeq and Microarrays</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Transcripts to Genes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deconvolution.html"><strong>RNA Deconvolution</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinship.html"><strong>Kinship and Relatedness</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metagenomics.html"><strong>Metagenomics Toolkit</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><strong>Installation Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html"><strong>External Resources</strong></a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="_sources/CreateTx2gene.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="search.html" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="transcripts-to-genes">
+<h1><strong>Transcripts to Genes</strong><a class="headerlink" href="#transcripts-to-genes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-to-convert-from-transcripts-to-genes-ids">
+<span id="txtogene"></span><h2>How to convert from transcripts to Genes ids<a class="headerlink" href="#how-to-convert-from-transcripts-to-genes-ids" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mouse-genome-example-using-txdb-mmusculus-ucsc">
+<h3>Mouse Genome Example using TxDb.Mmusculus.UCSC<a class="headerlink" href="#mouse-genome-example-using-txdb-mmusculus-ucsc" title="Permalink to this headline">¶</a></h3>
+<p>Let install TxDb.Mmusculus.UCSC.mm10.knownGene, to use knowngene conventions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;https://bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>
+<span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;TxDb.Mmusculus.UCSC.mm10.knownGene&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or to use ensemble conventions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;https://bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>
+<span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;TxDb.Mmusculus.UCSC.mm10.ensGene&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then in our R script we need to include tximport library</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">tximport</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then we can use this script for conversion</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span><span class="p">)</span>
+<span class="n">txdb</span> <span class="o">&lt;-</span> <span class="n">TxDb</span><span class="o">.</span><span class="n">Mmusculus</span><span class="o">.</span><span class="n">UCSC</span><span class="o">.</span><span class="n">mm10</span><span class="o">.</span><span class="n">ensGene</span>
+<span class="n">k</span> <span class="o">&lt;-</span> <span class="n">keys</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span>  <span class="n">columns</span> <span class="o">=</span> <span class="s2">&quot;TXNAME&quot;</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
+<span class="n">tx2gene</span> <span class="o">&lt;-</span> <span class="n">df</span><span class="p">[,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">head</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">,</span> <span class="s1">&#39;tx2gene.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="a-human-genome-example-using-maketxdbfromgff">
+<h3>A Human Genome Example using makeTxDbFromGFF<a class="headerlink" href="#a-human-genome-example-using-maketxdbfromgff" title="Permalink to this headline">¶</a></h3>
+<p>Let download your annotated GFF file, here, we download Refseq annotated GRCh37:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ncbi</span><span class="o">.</span><span class="n">nlm</span><span class="o">.</span><span class="n">nih</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">refseq</span><span class="o">/</span><span class="n">H_sapiens</span><span class="o">/</span><span class="n">annotation</span><span class="o">/</span><span class="n">GRCh37_latest</span><span class="o">/</span><span class="n">refseq_identifiers</span><span class="o">/</span><span class="n">GRCh37_latest_genomic</span><span class="o">.</span><span class="n">gff</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>Then use txdb to create tx2gene for Human Genome</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">txdb</span> <span class="o">&lt;-</span><span class="n">makeTxDbFromGFF</span><span class="p">(</span><span class="s2">&quot;GRCh37_latest_genomic.gff.gz&quot;</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">&lt;-</span> <span class="n">keys</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">txdb</span><span class="p">,</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span>  <span class="n">columns</span> <span class="o">=</span> <span class="s2">&quot;TXNAME&quot;</span><span class="p">,</span> <span class="n">keytype</span> <span class="o">=</span> <span class="s2">&quot;GENEID&quot;</span><span class="p">)</span>
+<span class="n">tx2gene</span> <span class="o">&lt;-</span> <span class="n">df</span><span class="p">[,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">head</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">tx2gene</span><span class="p">,</span> <span class="s1">&#39;tx2gene.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dowload conversions data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ebi</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">databases</span><span class="o">/</span><span class="n">gencode</span><span class="o">/</span><span class="n">Gencode_mouse</span><span class="o">/</span><span class="n">release_M17</span><span class="o">/</span><span class="n">gencode</span><span class="o">.</span><span class="n">vM17</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">MGI</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2018, Sherine Awad.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 3.2.1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> 0.1.
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                <strong>Transcripts to Genes</strong>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="_static/js/toc.js"></script>
+  </body>
+</html>
