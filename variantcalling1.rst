@@ -1,5 +1,5 @@
 ====================================
-**Variant Calling** 
+**Samtools Variant Calling** 
 ====================================
 
 
@@ -67,19 +67,3 @@ Here, we will call variants using samtools ::
 
 
 
-Annovar Annotations 
-#####################
-
-Lets annotate our vcf file using Annovar :: 
-
-  table_annovar.pl sampleA.vcf humandb/ -buildver hg19 -out annotated_vcf -remove -protocol refGene,ensGene,cytoBand,exac03,gnomad_exome,avsnp147,\
-  dbnsfp30a,clinvar_20170130,mitimpact2,revel -operation g,g,f,f,f,f,f,f,f,f  -nastring . -vcfinput 
-
-Now you can filter the annotated vcf. 
-
-Notes on variants filtering 
-#############################
-
-.. topic:: Be Cautious 
-
-  Be very cautious  with hard filtering. Filtering means throwing data. 

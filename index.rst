@@ -28,9 +28,10 @@ In progress
    NGS.rst
    rnaseq.rst
    mapping.rst 
-   variantcalling.rst
+   variantcalling1.rst
+   variantcalling2.rst
    vcfrandom.rst 
-   #SV.rst 
+   SV.rst 
    RNAseqvariants.rst 
    somatics.rst  
    lncRNA.rst 
