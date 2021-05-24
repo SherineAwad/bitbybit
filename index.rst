@@ -6,17 +6,12 @@
 Welcome to BitByBit Bioinformatics Tutorials
 ===============================================
 
-Lessons in Bioinformatics
-###########################
-
 
 In progress 
 ------------
 
 
 :Author: **Sherine Awad**
-
-
 
 .. toctree::
    :maxdepth: 1 
