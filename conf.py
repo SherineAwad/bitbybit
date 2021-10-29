@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'BioinformaticsWithSherine'
-copyright = u'2018, Sherine Awad'
+copyright = u'2021, Sherine Awad'
 author = u'Sherine Awad'
 
 # The version info for the project you're documenting, acts as replacement for
